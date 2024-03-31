@@ -11,7 +11,7 @@
 /// @note tested with gcc version 6.3.0 (MinGW.org GCC-6.3.0-1)
 ///
 /// @date 2024-3-26
-/// @since 2024-3-26
+/// @since 2024-3-31
 ///
 /// @see [AES primary source](https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.197.pdf)
 /// @see AES implementations in C from [GitHub](https://github.com/m3y54m/aes-in-c/tree/main)
