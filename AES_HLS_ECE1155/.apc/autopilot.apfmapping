@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="AES_HLS" path="C:\Users\tyqca\OneDrive\School\GitHub\hardware-encryption\AES_HLS"/>
+    <originFiles name="aes_hw.cpp" path="C:\Users\pacel\Documents\Spring_2024\ECE1155\hardware-encryption\AES_HLS_ECE1155\src\aes_hw.cpp"/>
+    <originFiles name="aes_hw.hpp" path="C:\Users\pacel\Documents\Spring_2024\ECE1155\hardware-encryption\AES_HLS_ECE1155\src\aes_hw.hpp"/>
+    <originFiles name="aes_sw.cpp" path="C:\Users\pacel\Documents\Spring_2024\ECE1155\hardware-encryption\AES_HLS_ECE1155\src\aes_sw.cpp"/>
+    <originFiles name="aes_sw.hpp" path="C:\Users\pacel\Documents\Spring_2024\ECE1155\hardware-encryption\AES_HLS_ECE1155\src\aes_sw.hpp"/>
   </source>
-  <testbench/>
+  <testbench>
+    <originFiles name="aes_test.cpp" path="C:\Users\pacel\Documents\Spring_2024\ECE1155\hardware-encryption\AES_HLS_ECE1155\src\aes_test.cpp"/>
+  </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

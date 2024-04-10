@@ -1,0 +1,14 @@
+aes128_encrypt_bldEe
+aes128_encrypt_bleOg
+aes128_expand_keybkb
+aes128_expand_keycud
+aes128_encrypt_blg8j
+aes128_encrypt_blibs
+aes128_expand_key_hw
+aes128_extract_round
+aes128_add_round_key
+aes128_shift_rows_hw
+gmul_hw
+aes128_mix_column_hw
+aes128_mix_columns_h
+aes128_encrypt_block_hw

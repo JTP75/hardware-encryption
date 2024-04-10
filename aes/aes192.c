@@ -8,12 +8,12 @@
 /// @cite https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.197.pdf
 /// @cite https://github.com/m3y54m/aes-in-c/tree/main
 
-void aes192_expand_key(const uint8_t *key, uint8_t *expanded_key);
+void aes192_expand_key_hw(const uint8_t *key, uint8_t *expanded_key);
 
-void aes192_sub_bytes(uint8_t *state);
-void aes192_sub_bytes_inv(uint8_t *state);
+void aes192_sub_bytes_hw(uint8_t *state);
+void aes192_sub_bytes_inv_hw(uint8_t *state);
 
-void aes192_shift_row(uint8_t *state, uint8_t n);
+void aes192_shift_row_hw(uint8_t *state, uint8_t n);
 void aes192_shift_row_inv(uint8_t *state, uint8_t n);
 void aes192_shift_rows(uint8_t *state);
 void aes192_shift_rows_inv(uint8_t *state);
@@ -42,17 +42,17 @@ void aes192_encrypt_block(const uint8_t *in, const uint8_t *key, uint8_t *out) {
             state[i + 4*j] = in[4*i + j];
         }
     }
-    aes192_expand_key(key, expanded_key);
+    aes192_expand_key_hw(key, expanded_key);
     aes192_extract_round_key(expanded_key, round_key);
     aes192_add_round_key(state, round_key);
     for (i=1; i<12; i++) {
         aes192_extract_round_key((expanded_key + 16*i), round_key);
-        aes192_sub_bytes(state);
+        aes192_sub_bytes_hw(state);
         aes192_shift_rows(state);
         aes192_mix_columns(state);
         aes192_add_round_key(state, round_key);
     }
-    aes192_sub_bytes(state);
+    aes192_sub_bytes_hw(state);
     aes192_shift_rows(state);
     aes192_extract_round_key((expanded_key + 192), round_key);
     aes192_add_round_key(state, round_key);
@@ -77,18 +77,18 @@ void aes192_decrypt_block(const uint8_t *in, const uint8_t *key, uint8_t *out) {
             state[i + 4*j] = in[4*i + j];
         }
     }
-    aes192_expand_key(key, expanded_key);
+    aes192_expand_key_hw(key, expanded_key);
     aes192_extract_round_key((expanded_key + 192), round_key);
     aes192_add_round_key(state, round_key);
     for (i=11; i>0; i--) {
         aes192_extract_round_key((expanded_key + 16*i), round_key);
         aes192_shift_rows_inv(state);
-        aes192_sub_bytes_inv(state);
+        aes192_sub_bytes_inv_hw(state);
         aes192_add_round_key(state, round_key);
         aes192_mix_columns_inv(state);
     }
     aes192_shift_rows_inv(state);
-    aes192_sub_bytes_inv(state);
+    aes192_sub_bytes_inv_hw(state);
     aes192_extract_round_key(expanded_key, round_key);
     aes192_add_round_key(state, round_key);
 
@@ -102,7 +102,7 @@ void aes192_decrypt_block(const uint8_t *in, const uint8_t *key, uint8_t *out) {
 /// @brief expands a 24 byte key to a 16*(12+1) byte expanded key
 /// @param key 24 byte input
 /// @param expanded_key 208 byte output
-void aes192_expand_key(const uint8_t *key, uint8_t *expanded_key) {
+void aes192_expand_key_hw(const uint8_t *key, uint8_t *expanded_key) {
     int i=0, j=1, size=0;
     uint8_t tmp[4];
 
@@ -130,7 +130,7 @@ void aes192_expand_key(const uint8_t *key, uint8_t *expanded_key) {
 
 /// @brief substitute each byte of a block using sbox table in box.h
 /// @param state ref
-void aes192_sub_bytes(uint8_t *state) {
+void aes192_sub_bytes_hw(uint8_t *state) {
     for (int i=0; i<16; i++) {
         state[i] = sbox[state[i]];
     }
@@ -138,7 +138,7 @@ void aes192_sub_bytes(uint8_t *state) {
 
 /// @brief substitute each byte of a block using rsbox table in box.h
 /// @param state ref
-void aes192_sub_bytes_inv(uint8_t *state) {
+void aes192_sub_bytes_inv_hw(uint8_t *state) {
     for (int i=0; i<16; i++) {
         state[i] = rsbox[state[i]];
     }
@@ -147,7 +147,7 @@ void aes192_sub_bytes_inv(uint8_t *state) {
 /// @brief rotate four byte row left by n positions
 /// @param state ref
 /// @param n shift amount
-void aes192_shift_row(uint8_t *state, uint8_t n) {
+void aes192_shift_row_hw(uint8_t *state, uint8_t n) {
     uint8_t tmp;
     for (int i=0; i<n; i++) {
         tmp = state[0];
@@ -171,7 +171,7 @@ void aes192_shift_row_inv(uint8_t *state, uint8_t n) {
 /// @brief shift each row of a block
 /// @param state ref
 void aes192_shift_rows(uint8_t *state) {
-    for (int i=0; i<4; i++) aes192_shift_row(state + 4*i, i);
+    for (int i=0; i<4; i++) aes192_shift_row_hw(state + 4*i, i);
 }
 
 /// @brief shift each row of a block inverse

@@ -4,13 +4,19 @@
 ## Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project AES_HLS_ECE1155
-set_top AES_HLS
-add_files AES_HLS
+set_top aes128_encrypt_block_hw
+add_files AES_HLS_ECE1155/src/aes_hw.cpp
+add_files AES_HLS_ECE1155/src/aes_hw.hpp
+add_files AES_HLS_ECE1155/src/aes_sw.cpp
+add_files AES_HLS_ECE1155/src/aes_sw.hpp
+add_files -tb AES_HLS_ECE1155/src/aes_test.cpp
 open_solution "solution1"
-set_part {xa7z010clg225-1i}
+set_part {xc7z020clg400-1}
 create_clock -period 10 -name default
+config_compile  
+config_sdx -optimization_level none -target none
 #source "./AES_HLS_ECE1155/solution1/directives.tcl"
-#csim_design
+csim_design
 csynth_design
-#cosim_design
-export_design -format ip_catalog
+cosim_design
+export_design -rtl verilog -format ip_catalog

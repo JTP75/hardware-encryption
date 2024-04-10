@@ -1,0 +1,415 @@
+
+
+================================================================
+== Vivado HLS Report for 'aes128_expand_key_hw'
+================================================================
+* Date:           Tue Apr  9 20:29:30 2024
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        AES_HLS_ECE1155
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.498|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+------+-----+------+---------+
+    |   Latency  |  Interval  | Pipeline|
+    | min |  max | min |  max |   Type  |
+    +-----+------+-----+------+---------+
+    |  994|  1794|  994|  1794|   none  |
+    +-----+------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+------+----------+-----------+-----------+------+----------+
+        |             |   Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |   32|    32|         2|          -|          -|    16|    no    |
+        |- Loop 2     |  960|  1760|  24 ~ 44 |          -|          -|    40|    no    |
+        | + Loop 2.1  |   12|    12|         3|          -|          -|     4|    no    |
+        | + Loop 2.2  |    6|     6|         2|          -|          -|     3|    no    |
+        | + Loop 2.3  |   12|    12|         3|          -|          -|     4|    no    |
+        | + Loop 2.4  |    8|     8|         2|          -|          -|     4|    no    |
+        +-------------+-----+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 15
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond3)
+	4  / (exitcond3)
+3 --> 
+	2  / true
+4 --> 
+	5  / (tmp_16)
+5 --> 
+	6  / (!exitcond2)
+	13  / (exitcond2 & !tmp_17)
+	8  / (exitcond2 & tmp_17)
+6 --> 
+	7  / true
+7 --> 
+	5  / true
+8 --> 
+	9  / (!exitcond_i)
+	10  / (exitcond_i)
+9 --> 
+	8  / true
+10 --> 
+	11  / (!exitcond1)
+	13  / (exitcond1)
+11 --> 
+	12  / true
+12 --> 
+	10  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / (!exitcond)
+	4  / (exitcond)
+15 --> 
+	14  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 16 [1/1] (1.76ns)   --->   "br label %1" [AES_HLS_ECE1155/src/aes_hw.cpp:53]   --->   Operation 16 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 2.32>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%size = phi i5 [ 0, %0 ], [ %tmp_s, %2 ]" [AES_HLS_ECE1155/src/aes_hw.cpp:54]   --->   Operation 17 'phi' 'size' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (1.36ns)   --->   "%exitcond3 = icmp eq i5 %size, -16" [AES_HLS_ECE1155/src/aes_hw.cpp:53]   --->   Operation 18 'icmp' 'exitcond3' <Predicate = true> <Delay = 1.36> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)"   --->   Operation 19 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (1.78ns)   --->   "%tmp_s = add i5 %size, 1" [AES_HLS_ECE1155/src/aes_hw.cpp:54]   --->   Operation 20 'add' 'tmp_s' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "br i1 %exitcond3, label %.preheader4.preheader, label %2" [AES_HLS_ECE1155/src/aes_hw.cpp:53]   --->   Operation 21 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_14 = zext i5 %size to i64" [AES_HLS_ECE1155/src/aes_hw.cpp:54]   --->   Operation 22 'zext' 'tmp_14' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%key_addr = getelementptr [16 x i8]* %key, i64 0, i64 %tmp_14" [AES_HLS_ECE1155/src/aes_hw.cpp:54]   --->   Operation 23 'getelementptr' 'key_addr' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_2 : Operation 24 [2/2] (2.32ns)   --->   "%key_load = load i8* %key_addr, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:54]   --->   Operation 24 'load' 'key_load' <Predicate = (!exitcond3)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 176> <RAM>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%j = alloca i32"   --->   Operation 25 'alloca' 'j' <Predicate = (exitcond3)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (1.76ns)   --->   "store i32 1, i32* %j"   --->   Operation 26 'store' <Predicate = (exitcond3)> <Delay = 1.76>
+ST_2 : Operation 27 [1/1] (1.76ns)   --->   "br label %.preheader4" [AES_HLS_ECE1155/src/aes_hw.cpp:57]   --->   Operation 27 'br' <Predicate = (exitcond3)> <Delay = 1.76>
+
+State 3 <SV = 2> <Delay = 5.57>
+ST_3 : Operation 28 [1/2] (2.32ns)   --->   "%key_load = load i8* %key_addr, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:54]   --->   Operation 28 'load' 'key_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 176> <RAM>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_15 = zext i5 %tmp_s to i64" [AES_HLS_ECE1155/src/aes_hw.cpp:54]   --->   Operation 29 'zext' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%expanded_key_addr = getelementptr [176 x i8]* %expanded_key, i64 0, i64 %tmp_15" [AES_HLS_ECE1155/src/aes_hw.cpp:54]   --->   Operation 30 'getelementptr' 'expanded_key_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (3.25ns)   --->   "store i8 %key_load, i8* %expanded_key_addr, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:54]   --->   Operation 31 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 176> <RAM>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "br label %1" [AES_HLS_ECE1155/src/aes_hw.cpp:55]   --->   Operation 32 'br' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 1.76>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_3 = phi i8 [ undef, %.preheader4.preheader ], [ %tmp_3_5, %.preheader4.loopexit ]" [AES_HLS_ECE1155/src/aes_hw.cpp:66]   --->   Operation 33 'phi' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_2 = phi i8 [ undef, %.preheader4.preheader ], [ %tmp_2_5, %.preheader4.loopexit ]" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 34 'phi' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_1 = phi i8 [ undef, %.preheader4.preheader ], [ %tmp_1_5, %.preheader4.loopexit ]" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 35 'phi' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_0 = phi i8 [ undef, %.preheader4.preheader ], [ %tmp_0_1, %.preheader4.loopexit ]" [AES_HLS_ECE1155/src/aes_hw.cpp:66]   --->   Operation 36 'phi' 'tmp_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%size_1 = phi i8 [ 16, %.preheader4.preheader ], [ %size_3, %.preheader4.loopexit ]"   --->   Operation 37 'phi' 'size_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 38 [1/1] (1.55ns)   --->   "%tmp_16 = icmp ult i8 %size_1, -80" [AES_HLS_ECE1155/src/aes_hw.cpp:57]   --->   Operation 38 'icmp' 'tmp_16' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%empty_10 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 40, i64 40, i64 40)"   --->   Operation 39 'speclooptripcount' 'empty_10' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "br i1 %tmp_16, label %.preheader.preheader, label %10" [AES_HLS_ECE1155/src/aes_hw.cpp:57]   --->   Operation 40 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 41 [1/1] (1.76ns)   --->   "br label %.preheader" [AES_HLS_ECE1155/src/aes_hw.cpp:28->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 41 'br' <Predicate = (tmp_16)> <Delay = 1.76>
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "ret void" [AES_HLS_ECE1155/src/aes_hw.cpp:73]   --->   Operation 42 'ret' <Predicate = (!tmp_16)> <Delay = 0.00>
+
+State 5 <SV = 3> <Delay = 5.16>
+ST_5 : Operation 43 [1/1] (0.00ns)   --->   "%word_3_read_assign = phi i8 [ %tmp_3, %.preheader.preheader ], [ %word_3_read_assign_s, %.preheader.backedge ]" [AES_HLS_ECE1155/src/aes_hw.cpp:66]   --->   Operation 43 'phi' 'word_3_read_assign' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 44 [1/1] (0.00ns)   --->   "%word_2_read_assign = phi i8 [ %tmp_2, %.preheader.preheader ], [ %word_2_read_assign_s, %.preheader.backedge ]" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 44 'phi' 'word_2_read_assign' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%word_1_read_assign = phi i8 [ %tmp_1, %.preheader.preheader ], [ %word_1_read_assign_s, %.preheader.backedge ]" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 45 'phi' 'word_1_read_assign' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_33 = phi i8 [ %tmp_0, %.preheader.preheader ], [ %tmp_29_be, %.preheader.backedge ]" [AES_HLS_ECE1155/src/aes_hw.cpp:66]   --->   Operation 46 'phi' 'tmp_33' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%i = phi i3 [ 0, %.preheader.preheader ], [ %i_7, %.preheader.backedge ]"   --->   Operation 47 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 48 [1/1] (1.13ns)   --->   "%exitcond2 = icmp eq i3 %i, -4" [AES_HLS_ECE1155/src/aes_hw.cpp:58]   --->   Operation 48 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 49 'speclooptripcount' 'empty_11' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 50 [1/1] (1.65ns)   --->   "%i_7 = add i3 %i, 1" [AES_HLS_ECE1155/src/aes_hw.cpp:58]   --->   Operation 50 'add' 'i_7' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %4, label %3" [AES_HLS_ECE1155/src/aes_hw.cpp:58]   --->   Operation 51 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 52 [1/1] (0.00ns) (grouped into LUT with out node tmp_18)   --->   "%tmp = xor i3 %i, -4" [AES_HLS_ECE1155/src/aes_hw.cpp:59]   --->   Operation 52 'xor' 'tmp' <Predicate = (!exitcond2)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 53 [1/1] (0.00ns) (grouped into LUT with out node tmp_18)   --->   "%tmp_cast_cast = sext i3 %tmp to i8" [AES_HLS_ECE1155/src/aes_hw.cpp:59]   --->   Operation 53 'sext' 'tmp_cast_cast' <Predicate = (!exitcond2)> <Delay = 0.00>
+ST_5 : Operation 54 [1/1] (1.91ns) (out node of the LUT)   --->   "%tmp_18 = add i8 %size_1, %tmp_cast_cast" [AES_HLS_ECE1155/src/aes_hw.cpp:59]   --->   Operation 54 'add' 'tmp_18' <Predicate = (!exitcond2)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "%tmp_19 = zext i8 %tmp_18 to i64" [AES_HLS_ECE1155/src/aes_hw.cpp:59]   --->   Operation 55 'zext' 'tmp_19' <Predicate = (!exitcond2)> <Delay = 0.00>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%expanded_key_addr_1 = getelementptr [176 x i8]* %expanded_key, i64 0, i64 %tmp_19" [AES_HLS_ECE1155/src/aes_hw.cpp:59]   --->   Operation 56 'getelementptr' 'expanded_key_addr_1' <Predicate = (!exitcond2)> <Delay = 0.00>
+ST_5 : Operation 57 [2/2] (3.25ns)   --->   "%tmp_0_6 = load i8* %expanded_key_addr_1, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:59]   --->   Operation 57 'load' 'tmp_0_6' <Predicate = (!exitcond2)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 176> <RAM>
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_30 = trunc i3 %i to i2" [AES_HLS_ECE1155/src/aes_hw.cpp:59]   --->   Operation 58 'trunc' 'tmp_30' <Predicate = (!exitcond2)> <Delay = 0.00>
+ST_5 : Operation 59 [1/1] (0.00ns)   --->   "%tmp_29 = trunc i8 %size_1 to i4" [AES_HLS_ECE1155/src/aes_hw.cpp:57]   --->   Operation 59 'trunc' 'tmp_29' <Predicate = (exitcond2)> <Delay = 0.00>
+ST_5 : Operation 60 [1/1] (1.30ns)   --->   "%tmp_17 = icmp eq i4 %tmp_29, 0" [AES_HLS_ECE1155/src/aes_hw.cpp:61]   --->   Operation 60 'icmp' 'tmp_17' <Predicate = (exitcond2)> <Delay = 1.30> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 61 [1/1] (1.76ns)   --->   "br i1 %tmp_17, label %branch0.i.preheader, label %._crit_edge" [AES_HLS_ECE1155/src/aes_hw.cpp:61]   --->   Operation 61 'br' <Predicate = (exitcond2)> <Delay = 1.76>
+ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%word_i = alloca i8"   --->   Operation 62 'alloca' 'word_i' <Predicate = (exitcond2 & tmp_17)> <Delay = 0.00>
+ST_5 : Operation 63 [1/1] (1.76ns)   --->   "br label %branch0.i" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 63 'br' <Predicate = (exitcond2 & tmp_17)> <Delay = 1.76>
+
+State 6 <SV = 4> <Delay = 3.25>
+ST_6 : Operation 64 [1/2] (3.25ns)   --->   "%tmp_0_6 = load i8* %expanded_key_addr_1, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:59]   --->   Operation 64 'load' 'tmp_0_6' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 176> <RAM>
+ST_6 : Operation 65 [1/1] (1.76ns)   --->   "switch i2 %tmp_30, label %branch7 [
+    i2 0, label %.preheader.backedge
+    i2 1, label %branch5
+    i2 -2, label %branch6
+  ]" [AES_HLS_ECE1155/src/aes_hw.cpp:59]   --->   Operation 65 'switch' <Predicate = true> <Delay = 1.76>
+ST_6 : Operation 66 [1/1] (1.76ns)   --->   "br label %.preheader.backedge" [AES_HLS_ECE1155/src/aes_hw.cpp:59]   --->   Operation 66 'br' <Predicate = (tmp_30 == 2)> <Delay = 1.76>
+ST_6 : Operation 67 [1/1] (1.76ns)   --->   "br label %.preheader.backedge" [AES_HLS_ECE1155/src/aes_hw.cpp:59]   --->   Operation 67 'br' <Predicate = (tmp_30 == 1)> <Delay = 1.76>
+ST_6 : Operation 68 [1/1] (1.76ns)   --->   "br label %.preheader.backedge" [AES_HLS_ECE1155/src/aes_hw.cpp:59]   --->   Operation 68 'br' <Predicate = (tmp_30 == 3)> <Delay = 1.76>
+
+State 7 <SV = 5> <Delay = 0.00>
+ST_7 : Operation 69 [1/1] (0.00ns)   --->   "%word_3_read_assign_s = phi i8 [ %tmp_0_6, %branch7 ], [ %word_3_read_assign, %branch6 ], [ %word_3_read_assign, %branch5 ], [ %word_3_read_assign, %3 ]"   --->   Operation 69 'phi' 'word_3_read_assign_s' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 70 [1/1] (0.00ns)   --->   "%word_2_read_assign_s = phi i8 [ %word_2_read_assign, %branch7 ], [ %tmp_0_6, %branch6 ], [ %word_2_read_assign, %branch5 ], [ %word_2_read_assign, %3 ]"   --->   Operation 70 'phi' 'word_2_read_assign_s' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 71 [1/1] (0.00ns)   --->   "%word_1_read_assign_s = phi i8 [ %word_1_read_assign, %branch7 ], [ %word_1_read_assign, %branch6 ], [ %tmp_0_6, %branch5 ], [ %word_1_read_assign, %3 ]"   --->   Operation 71 'phi' 'word_1_read_assign_s' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 72 [1/1] (0.00ns)   --->   "%tmp_29_be = phi i8 [ %tmp_33, %branch7 ], [ %tmp_33, %branch6 ], [ %tmp_33, %branch5 ], [ %tmp_0_6, %3 ]"   --->   Operation 72 'phi' 'tmp_29_be' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 73 [1/1] (0.00ns)   --->   "br label %.preheader"   --->   Operation 73 'br' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 4> <Delay = 1.95>
+ST_8 : Operation 74 [1/1] (0.00ns)   --->   "%write_flag_i = phi i1 [ %write_flag_be_i, %branch5.i ], [ false, %branch0.i.preheader ]" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 74 'phi' 'write_flag_i' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 75 [1/1] (0.00ns)   --->   "%tmp_2_2 = phi i8 [ %word2_be_i, %branch5.i ], [ %word_2_read_assign, %branch0.i.preheader ]" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 75 'phi' 'tmp_2_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 76 [1/1] (0.00ns)   --->   "%tmp_1_2 = phi i8 [ %word12_be_i, %branch5.i ], [ %word_1_read_assign, %branch0.i.preheader ]" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 76 'phi' 'tmp_1_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 77 [1/1] (0.00ns)   --->   "%i_i = phi i2 [ %i_8, %branch5.i ], [ 0, %branch0.i.preheader ]"   --->   Operation 77 'phi' 'i_i' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 78 [1/1] (0.95ns)   --->   "%exitcond_i = icmp eq i2 %i_i, -1" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 78 'icmp' 'exitcond_i' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 79 [1/1] (0.00ns)   --->   "%empty_12 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 79 'speclooptripcount' 'empty_12' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 80 [1/1] (1.56ns)   --->   "%i_8 = add i2 %i_i, 1" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 80 'add' 'i_8' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 81 [1/1] (0.00ns)   --->   "br i1 %exitcond_i, label %rotate_word_hw.exit, label %5" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 81 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 82 [1/1] (1.81ns)   --->   "switch i2 %i_i, label %branch7.i [
+    i2 0, label %branch5.i
+    i2 1, label %branch6.i
+  ]" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 82 'switch' <Predicate = (!exitcond_i)> <Delay = 1.81>
+ST_8 : Operation 83 [1/1] (1.81ns)   --->   "br label %branch5.i" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 83 'br' <Predicate = (!exitcond_i & i_i == 1)> <Delay = 1.81>
+ST_8 : Operation 84 [1/1] (1.81ns)   --->   "br label %branch5.i" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 84 'br' <Predicate = (!exitcond_i & i_i != 0 & i_i != 1)> <Delay = 1.81>
+ST_8 : Operation 85 [1/1] (1.95ns)   --->   "%write_flag_be_i = call i1 @_ssdm_op_Mux.ap_auto.4i1.i2(i1 true, i1 %write_flag_i, i1 %write_flag_i, i1 %write_flag_i, i2 %i_i)" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 85 'mux' 'write_flag_be_i' <Predicate = (!exitcond_i)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 86 [1/1] (0.00ns)   --->   "%word_i_load = load i8* %word_i" [AES_HLS_ECE1155/src/aes_hw.cpp:31->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 86 'load' 'word_i_load' <Predicate = (exitcond_i)> <Delay = 0.00>
+ST_8 : Operation 87 [1/1] (1.24ns)   --->   "%tmp_0_4 = select i1 %write_flag_i, i8 %word_i_load, i8 %tmp_33" [AES_HLS_ECE1155/src/aes_hw.cpp:31->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 87 'select' 'tmp_0_4' <Predicate = (exitcond_i)> <Delay = 1.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 88 [1/1] (1.76ns)   --->   "br label %branch0" [AES_HLS_ECE1155/src/aes_hw.cpp:63]   --->   Operation 88 'br' <Predicate = (exitcond_i)> <Delay = 1.76>
+
+State 9 <SV = 5> <Delay = 1.95>
+ST_9 : Operation 89 [1/1] (0.00ns)   --->   "%word_i_13 = phi i8 [ %tmp_2_2, %branch6.i ], [ %word_3_read_assign, %branch7.i ], [ %tmp_1_2, %5 ]"   --->   Operation 89 'phi' 'word_i_13' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 90 [1/1] (0.00ns)   --->   "%word_i_load_1 = load i8* %word_i"   --->   Operation 90 'load' 'word_i_load_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 91 [1/1] (1.95ns)   --->   "%word12_be_i = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %tmp_1_2, i8 %word_i_13, i8 %tmp_1_2, i8 %tmp_1_2, i2 %i_i)" [AES_HLS_ECE1155/src/aes_hw.cpp:64]   --->   Operation 91 'mux' 'word12_be_i' <Predicate = true> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 92 [1/1] (1.95ns)   --->   "%word2_be_i = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %tmp_2_2, i8 %tmp_2_2, i8 %word_i_13, i8 %word_i_13, i2 %i_i)" [AES_HLS_ECE1155/src/aes_hw.cpp:64]   --->   Operation 92 'mux' 'word2_be_i' <Predicate = true> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 93 [1/1] (1.95ns)   --->   "%word_be_i = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %word_i_13, i8 %word_i_load_1, i8 %word_i_load_1, i8 %word_i_load_1, i2 %i_i)" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 93 'mux' 'word_be_i' <Predicate = true> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 94 [1/1] (0.00ns)   --->   "store i8 %word_be_i, i8* %word_i" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 94 'store' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 95 [1/1] (0.00ns)   --->   "br label %branch0.i"   --->   Operation 95 'br' <Predicate = true> <Delay = 0.00>
+
+State 10 <SV = 5> <Delay = 5.21>
+ST_10 : Operation 96 [1/1] (0.00ns)   --->   "%tmp_3_3 = phi i8 [ %tmp_33, %rotate_word_hw.exit ], [ %tmp_3_3_be, %branch0.backedge ]"   --->   Operation 96 'phi' 'tmp_3_3' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 97 [1/1] (0.00ns)   --->   "%tmp_2_3 = phi i8 [ %tmp_2_2, %rotate_word_hw.exit ], [ %tmp_2_3_be, %branch0.backedge ]"   --->   Operation 97 'phi' 'tmp_2_3' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 98 [1/1] (0.00ns)   --->   "%tmp_1_3 = phi i8 [ %tmp_1_2, %rotate_word_hw.exit ], [ %tmp_1_3_be, %branch0.backedge ]"   --->   Operation 98 'phi' 'tmp_1_3' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 99 [1/1] (0.00ns)   --->   "%tmp_0_s = phi i8 [ %tmp_0_4, %rotate_word_hw.exit ], [ %tmp_0_be, %branch0.backedge ]"   --->   Operation 99 'phi' 'tmp_0_s' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 100 [1/1] (0.00ns)   --->   "%i_1 = phi i3 [ 0, %rotate_word_hw.exit ], [ %i_9, %branch0.backedge ]"   --->   Operation 100 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 101 [1/1] (1.13ns)   --->   "%exitcond1 = icmp eq i3 %i_1, -4" [AES_HLS_ECE1155/src/aes_hw.cpp:63]   --->   Operation 101 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 102 [1/1] (0.00ns)   --->   "%empty_14 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 102 'speclooptripcount' 'empty_14' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 103 [1/1] (1.65ns)   --->   "%i_9 = add i3 %i_1, 1" [AES_HLS_ECE1155/src/aes_hw.cpp:63]   --->   Operation 103 'add' 'i_9' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 104 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %7, label %6" [AES_HLS_ECE1155/src/aes_hw.cpp:63]   --->   Operation 104 'br' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 105 [1/1] (0.00ns)   --->   "%tmp_31 = trunc i3 %i_1 to i2" [AES_HLS_ECE1155/src/aes_hw.cpp:64]   --->   Operation 105 'trunc' 'tmp_31' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_10 : Operation 106 [1/1] (1.95ns)   --->   "%tmp_21 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %tmp_0_s, i8 %tmp_1_3, i8 %tmp_2_3, i8 %tmp_3_3, i2 %tmp_31)" [AES_HLS_ECE1155/src/aes_hw.cpp:64]   --->   Operation 106 'mux' 'tmp_21' <Predicate = (!exitcond1)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 107 [1/1] (0.00ns)   --->   "%tmp_22 = zext i8 %tmp_21 to i64" [AES_HLS_ECE1155/src/aes_hw.cpp:64]   --->   Operation 107 'zext' 'tmp_22' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_10 : Operation 108 [1/1] (0.00ns)   --->   "%sbox_hw_addr = getelementptr inbounds [256 x i8]* @sbox_hw, i64 0, i64 %tmp_22" [AES_HLS_ECE1155/src/aes_hw.cpp:64]   --->   Operation 108 'getelementptr' 'sbox_hw_addr' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_10 : Operation 109 [2/2] (3.25ns)   --->   "%tmp_0_7 = load i8* %sbox_hw_addr, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:64]   --->   Operation 109 'load' 'tmp_0_7' <Predicate = (!exitcond1)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 255> <ROM>
+ST_10 : Operation 110 [1/1] (0.00ns)   --->   "%j_load = load i32* %j" [AES_HLS_ECE1155/src/aes_hw.cpp:66]   --->   Operation 110 'load' 'j_load' <Predicate = (exitcond1)> <Delay = 0.00>
+ST_10 : Operation 111 [1/1] (2.55ns)   --->   "%j_5 = add nsw i32 %j_load, 1" [AES_HLS_ECE1155/src/aes_hw.cpp:66]   --->   Operation 111 'add' 'j_5' <Predicate = (exitcond1)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 112 [1/1] (0.00ns)   --->   "%tmp_20 = sext i32 %j_load to i64" [AES_HLS_ECE1155/src/aes_hw.cpp:66]   --->   Operation 112 'sext' 'tmp_20' <Predicate = (exitcond1)> <Delay = 0.00>
+ST_10 : Operation 113 [1/1] (0.00ns)   --->   "%rcon_hw_addr = getelementptr inbounds [255 x i8]* @rcon_hw, i64 0, i64 %tmp_20" [AES_HLS_ECE1155/src/aes_hw.cpp:66]   --->   Operation 113 'getelementptr' 'rcon_hw_addr' <Predicate = (exitcond1)> <Delay = 0.00>
+ST_10 : Operation 114 [2/2] (3.25ns)   --->   "%rcon_hw_load = load i8* %rcon_hw_addr, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:66]   --->   Operation 114 'load' 'rcon_hw_load' <Predicate = (exitcond1)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 255> <ROM>
+ST_10 : Operation 115 [1/1] (1.76ns)   --->   "store i32 %j_5, i32* %j" [AES_HLS_ECE1155/src/aes_hw.cpp:66]   --->   Operation 115 'store' <Predicate = (exitcond1)> <Delay = 1.76>
+
+State 11 <SV = 6> <Delay = 3.25>
+ST_11 : Operation 116 [1/2] (3.25ns)   --->   "%tmp_0_7 = load i8* %sbox_hw_addr, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:64]   --->   Operation 116 'load' 'tmp_0_7' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 255> <ROM>
+ST_11 : Operation 117 [1/1] (1.76ns)   --->   "switch i2 %tmp_31, label %branch3 [
+    i2 0, label %branch0.backedge
+    i2 1, label %branch1
+    i2 -2, label %branch2
+  ]" [AES_HLS_ECE1155/src/aes_hw.cpp:64]   --->   Operation 117 'switch' <Predicate = true> <Delay = 1.76>
+ST_11 : Operation 118 [1/1] (1.76ns)   --->   "br label %branch0.backedge" [AES_HLS_ECE1155/src/aes_hw.cpp:64]   --->   Operation 118 'br' <Predicate = (tmp_31 == 2)> <Delay = 1.76>
+ST_11 : Operation 119 [1/1] (1.76ns)   --->   "br label %branch0.backedge" [AES_HLS_ECE1155/src/aes_hw.cpp:64]   --->   Operation 119 'br' <Predicate = (tmp_31 == 1)> <Delay = 1.76>
+ST_11 : Operation 120 [1/1] (1.76ns)   --->   "br label %branch0.backedge" [AES_HLS_ECE1155/src/aes_hw.cpp:64]   --->   Operation 120 'br' <Predicate = (tmp_31 == 3)> <Delay = 1.76>
+
+State 12 <SV = 7> <Delay = 0.00>
+ST_12 : Operation 121 [1/1] (0.00ns)   --->   "%tmp_3_3_be = phi i8 [ %tmp_0_7, %branch3 ], [ %tmp_3_3, %branch2 ], [ %tmp_3_3, %branch1 ], [ %tmp_3_3, %6 ]"   --->   Operation 121 'phi' 'tmp_3_3_be' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 122 [1/1] (0.00ns)   --->   "%tmp_2_3_be = phi i8 [ %tmp_2_3, %branch3 ], [ %tmp_0_7, %branch2 ], [ %tmp_2_3, %branch1 ], [ %tmp_2_3, %6 ]"   --->   Operation 122 'phi' 'tmp_2_3_be' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 123 [1/1] (0.00ns)   --->   "%tmp_1_3_be = phi i8 [ %tmp_1_3, %branch3 ], [ %tmp_1_3, %branch2 ], [ %tmp_0_7, %branch1 ], [ %tmp_1_3, %6 ]"   --->   Operation 123 'phi' 'tmp_1_3_be' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 124 [1/1] (0.00ns)   --->   "%tmp_0_be = phi i8 [ %tmp_0_s, %branch3 ], [ %tmp_0_s, %branch2 ], [ %tmp_0_s, %branch1 ], [ %tmp_0_7, %6 ]"   --->   Operation 124 'phi' 'tmp_0_be' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 125 [1/1] (0.00ns)   --->   "br label %branch0"   --->   Operation 125 'br' <Predicate = true> <Delay = 0.00>
+
+State 13 <SV = 6> <Delay = 6.01>
+ST_13 : Operation 126 [1/2] (3.25ns)   --->   "%rcon_hw_load = load i8* %rcon_hw_addr, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:66]   --->   Operation 126 'load' 'rcon_hw_load' <Predicate = (tmp_17)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 255> <ROM>
+ST_13 : Operation 127 [1/1] (0.99ns)   --->   "%tmp_0_3 = xor i8 %rcon_hw_load, %tmp_0_s" [AES_HLS_ECE1155/src/aes_hw.cpp:66]   --->   Operation 127 'xor' 'tmp_0_3' <Predicate = (tmp_17)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 128 [1/1] (1.76ns)   --->   "br label %._crit_edge" [AES_HLS_ECE1155/src/aes_hw.cpp:67]   --->   Operation 128 'br' <Predicate = (tmp_17)> <Delay = 1.76>
+ST_13 : Operation 129 [1/1] (0.00ns)   --->   "%tmp_3_5 = phi i8 [ %tmp_3_3, %7 ], [ %word_3_read_assign, %4 ]" [AES_HLS_ECE1155/src/aes_hw.cpp:66]   --->   Operation 129 'phi' 'tmp_3_5' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 130 [1/1] (0.00ns)   --->   "%tmp_2_5 = phi i8 [ %tmp_2_3, %7 ], [ %word_2_read_assign, %4 ]" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 130 'phi' 'tmp_2_5' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 131 [1/1] (0.00ns)   --->   "%tmp_1_5 = phi i8 [ %tmp_1_3, %7 ], [ %word_1_read_assign, %4 ]" [AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62]   --->   Operation 131 'phi' 'tmp_1_5' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 132 [1/1] (0.00ns)   --->   "%tmp_0_1 = phi i8 [ %tmp_0_3, %7 ], [ %tmp_33, %4 ]"   --->   Operation 132 'phi' 'tmp_0_1' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 133 [1/1] (1.91ns)   --->   "%size_3 = add i8 %size_1, 4" [AES_HLS_ECE1155/src/aes_hw.cpp:54]   --->   Operation 133 'add' 'size_3' <Predicate = true> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 134 [1/1] (1.76ns)   --->   "br label %8" [AES_HLS_ECE1155/src/aes_hw.cpp:68]   --->   Operation 134 'br' <Predicate = true> <Delay = 1.76>
+
+State 14 <SV = 7> <Delay = 5.16>
+ST_14 : Operation 135 [1/1] (0.00ns)   --->   "%i_2 = phi i3 [ 0, %._crit_edge ], [ %i_10, %9 ]"   --->   Operation 135 'phi' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 136 [1/1] (0.00ns)   --->   "%size_2 = phi i8 [ %size_1, %._crit_edge ], [ %size_4, %9 ]"   --->   Operation 136 'phi' 'size_2' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 137 [1/1] (1.13ns)   --->   "%exitcond = icmp eq i3 %i_2, -4" [AES_HLS_ECE1155/src/aes_hw.cpp:68]   --->   Operation 137 'icmp' 'exitcond' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 138 [1/1] (0.00ns)   --->   "%empty_15 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 138 'speclooptripcount' 'empty_15' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 139 [1/1] (1.65ns)   --->   "%i_10 = add i3 %i_2, 1" [AES_HLS_ECE1155/src/aes_hw.cpp:68]   --->   Operation 139 'add' 'i_10' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 140 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %.preheader4.loopexit, label %9" [AES_HLS_ECE1155/src/aes_hw.cpp:68]   --->   Operation 140 'br' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 141 [1/1] (1.91ns)   --->   "%tmp_23 = add i8 -16, %size_2" [AES_HLS_ECE1155/src/aes_hw.cpp:69]   --->   Operation 141 'add' 'tmp_23' <Predicate = (!exitcond)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 142 [1/1] (0.00ns)   --->   "%tmp_24 = zext i8 %tmp_23 to i64" [AES_HLS_ECE1155/src/aes_hw.cpp:69]   --->   Operation 142 'zext' 'tmp_24' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_14 : Operation 143 [1/1] (0.00ns)   --->   "%expanded_key_addr_2 = getelementptr [176 x i8]* %expanded_key, i64 0, i64 %tmp_24" [AES_HLS_ECE1155/src/aes_hw.cpp:69]   --->   Operation 143 'getelementptr' 'expanded_key_addr_2' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_14 : Operation 144 [2/2] (3.25ns)   --->   "%expanded_key_load = load i8* %expanded_key_addr_2, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:69]   --->   Operation 144 'load' 'expanded_key_load' <Predicate = (!exitcond)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 176> <RAM>
+ST_14 : Operation 145 [1/1] (0.00ns)   --->   "%tmp_32 = trunc i3 %i_2 to i2" [AES_HLS_ECE1155/src/aes_hw.cpp:69]   --->   Operation 145 'trunc' 'tmp_32' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_14 : Operation 146 [1/1] (1.95ns)   --->   "%tmp_25 = call i8 @_ssdm_op_Mux.ap_auto.4i8.i2(i8 %tmp_0_1, i8 %tmp_1_5, i8 %tmp_2_5, i8 %tmp_3_5, i2 %tmp_32)" [AES_HLS_ECE1155/src/aes_hw.cpp:69]   --->   Operation 146 'mux' 'tmp_25' <Predicate = (!exitcond)> <Delay = 1.95> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.95> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 147 [1/1] (0.00ns)   --->   "br label %.preheader4"   --->   Operation 147 'br' <Predicate = (exitcond)> <Delay = 0.00>
+
+State 15 <SV = 8> <Delay = 7.49>
+ST_15 : Operation 148 [1/2] (3.25ns)   --->   "%expanded_key_load = load i8* %expanded_key_addr_2, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:69]   --->   Operation 148 'load' 'expanded_key_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 176> <RAM>
+ST_15 : Operation 149 [1/1] (0.99ns)   --->   "%tmp_26 = xor i8 %expanded_key_load, %tmp_25" [AES_HLS_ECE1155/src/aes_hw.cpp:69]   --->   Operation 149 'xor' 'tmp_26' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 150 [1/1] (0.00ns)   --->   "%tmp_27 = zext i8 %size_2 to i64" [AES_HLS_ECE1155/src/aes_hw.cpp:69]   --->   Operation 150 'zext' 'tmp_27' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 151 [1/1] (0.00ns)   --->   "%expanded_key_addr_3 = getelementptr [176 x i8]* %expanded_key, i64 0, i64 %tmp_27" [AES_HLS_ECE1155/src/aes_hw.cpp:69]   --->   Operation 151 'getelementptr' 'expanded_key_addr_3' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 152 [1/1] (3.25ns)   --->   "store i8 %tmp_26, i8* %expanded_key_addr_3, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:69]   --->   Operation 152 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 176> <RAM>
+ST_15 : Operation 153 [1/1] (1.91ns)   --->   "%size_4 = add i8 1, %size_2" [AES_HLS_ECE1155/src/aes_hw.cpp:70]   --->   Operation 153 'add' 'size_4' <Predicate = true> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 154 [1/1] (0.00ns)   --->   "br label %8" [AES_HLS_ECE1155/src/aes_hw.cpp:68]   --->   Operation 154 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('size', AES_HLS_ECE1155/src/aes_hw.cpp:54) with incoming values : ('tmp_s', AES_HLS_ECE1155/src/aes_hw.cpp:54) [7]  (1.77 ns)
+
+ <State 2>: 2.32ns
+The critical path consists of the following:
+	'phi' operation ('size', AES_HLS_ECE1155/src/aes_hw.cpp:54) with incoming values : ('tmp_s', AES_HLS_ECE1155/src/aes_hw.cpp:54) [7]  (0 ns)
+	'getelementptr' operation ('key_addr', AES_HLS_ECE1155/src/aes_hw.cpp:54) [14]  (0 ns)
+	'load' operation ('key_load', AES_HLS_ECE1155/src/aes_hw.cpp:54) on array 'key' [15]  (2.32 ns)
+
+ <State 3>: 5.58ns
+The critical path consists of the following:
+	'load' operation ('key_load', AES_HLS_ECE1155/src/aes_hw.cpp:54) on array 'key' [15]  (2.32 ns)
+	'store' operation (AES_HLS_ECE1155/src/aes_hw.cpp:54) of variable 'key_load', AES_HLS_ECE1155/src/aes_hw.cpp:54 on array 'expanded_key' [18]  (3.25 ns)
+
+ <State 4>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('word[3]', AES_HLS_ECE1155/src/aes_hw.cpp:66) with incoming values : ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:59) ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:64) ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:66) [36]  (1.77 ns)
+
+ <State 5>: 5.17ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', AES_HLS_ECE1155/src/aes_hw.cpp:58) [40]  (0 ns)
+	'xor' operation ('tmp', AES_HLS_ECE1155/src/aes_hw.cpp:59) [46]  (0 ns)
+	'add' operation ('tmp_18', AES_HLS_ECE1155/src/aes_hw.cpp:59) [48]  (1.92 ns)
+	'getelementptr' operation ('expanded_key_addr_1', AES_HLS_ECE1155/src/aes_hw.cpp:59) [50]  (0 ns)
+	'load' operation ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:59) on array 'expanded_key' [51]  (3.25 ns)
+
+ <State 6>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:59) on array 'expanded_key' [51]  (3.25 ns)
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 1.96ns
+The critical path consists of the following:
+	'phi' operation ('write_flag_i', AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62) with incoming values : ('write_flag_be_i', AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62) [74]  (0 ns)
+	'mux' operation ('write_flag_be_i', AES_HLS_ECE1155/src/aes_hw.cpp:29->AES_HLS_ECE1155/src/aes_hw.cpp:62) [94]  (1.96 ns)
+
+ <State 9>: 1.96ns
+The critical path consists of the following:
+	'phi' operation ('tmp[2]') with incoming values : ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:59) ('word12_be_i', AES_HLS_ECE1155/src/aes_hw.cpp:64) ('word2_be_i', AES_HLS_ECE1155/src/aes_hw.cpp:64) ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:64) ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:66) [89]  (0 ns)
+	'mux' operation ('word12_be_i', AES_HLS_ECE1155/src/aes_hw.cpp:64) [91]  (1.96 ns)
+
+ <State 10>: 5.21ns
+The critical path consists of the following:
+	'phi' operation ('tmp[3]') with incoming values : ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:59) ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:64) ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:66) [102]  (0 ns)
+	'mux' operation ('tmp_21', AES_HLS_ECE1155/src/aes_hw.cpp:64) [113]  (1.96 ns)
+	'getelementptr' operation ('sbox_hw_addr', AES_HLS_ECE1155/src/aes_hw.cpp:64) [115]  (0 ns)
+	'load' operation ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:64) on array 'sbox_hw' [116]  (3.25 ns)
+
+ <State 11>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:64) on array 'sbox_hw' [116]  (3.25 ns)
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+ <State 13>: 6.01ns
+The critical path consists of the following:
+	'load' operation ('rcon_hw_load', AES_HLS_ECE1155/src/aes_hw.cpp:66) on array 'rcon_hw' [135]  (3.25 ns)
+	'xor' operation ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:66) [136]  (0.99 ns)
+	multiplexor before 'phi' operation ('tmp[0]') with incoming values : ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:59) ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:66) [143]  (1.77 ns)
+	'phi' operation ('tmp[0]') with incoming values : ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:59) ('tmp[0]', AES_HLS_ECE1155/src/aes_hw.cpp:66) [143]  (0 ns)
+
+ <State 14>: 5.17ns
+The critical path consists of the following:
+	'phi' operation ('size') with incoming values : ('size', AES_HLS_ECE1155/src/aes_hw.cpp:54) ('size', AES_HLS_ECE1155/src/aes_hw.cpp:70) [148]  (0 ns)
+	'add' operation ('tmp_23', AES_HLS_ECE1155/src/aes_hw.cpp:69) [154]  (1.92 ns)
+	'getelementptr' operation ('expanded_key_addr_2', AES_HLS_ECE1155/src/aes_hw.cpp:69) [156]  (0 ns)
+	'load' operation ('expanded_key_load', AES_HLS_ECE1155/src/aes_hw.cpp:69) on array 'expanded_key' [157]  (3.25 ns)
+
+ <State 15>: 7.5ns
+The critical path consists of the following:
+	'load' operation ('expanded_key_load', AES_HLS_ECE1155/src/aes_hw.cpp:69) on array 'expanded_key' [157]  (3.25 ns)
+	'xor' operation ('tmp_26', AES_HLS_ECE1155/src/aes_hw.cpp:69) [160]  (0.99 ns)
+	'store' operation (AES_HLS_ECE1155/src/aes_hw.cpp:69) of variable 'tmp_26', AES_HLS_ECE1155/src/aes_hw.cpp:69 on array 'expanded_key' [163]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,213 @@
+
+
+================================================================
+== Vivado HLS Report for 'aes128_mix_column_hw'
+================================================================
+* Date:           Tue Apr  9 20:29:32 2024
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        AES_HLS_ECE1155
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     3.869|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   15|   15|   15|   15|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------+---------+-----+-----+-----+-----+---------+
+        |                    |         |  Latency  |  Interval | Pipeline|
+        |      Instance      |  Module | min | max | min | max |   Type  |
+        +--------------------+---------+-----+-----+-----+-----+---------+
+        |grp_gmul_hw_fu_89   |gmul_hw  |    9|    9|    9|    9|   none  |
+        |grp_gmul_hw_fu_96   |gmul_hw  |    9|    9|    9|    9|   none  |
+        |grp_gmul_hw_fu_103  |gmul_hw  |    9|    9|    9|    9|   none  |
+        |grp_gmul_hw_fu_110  |gmul_hw  |    9|    9|    9|    9|   none  |
+        |grp_gmul_hw_fu_117  |gmul_hw  |    9|    9|    9|    9|   none  |
+        |grp_gmul_hw_fu_124  |gmul_hw  |    9|    9|    9|    9|   none  |
+        |grp_gmul_hw_fu_131  |gmul_hw  |    9|    9|    9|    9|   none  |
+        |grp_gmul_hw_fu_138  |gmul_hw  |    9|    9|    9|    9|   none  |
+        |grp_gmul_hw_fu_145  |gmul_hw  |    9|    9|    9|    9|   none  |
+        |grp_gmul_hw_fu_152  |gmul_hw  |    9|    9|    9|    9|   none  |
+        |grp_gmul_hw_fu_159  |gmul_hw  |    9|    9|    9|    9|   none  |
+        |grp_gmul_hw_fu_166  |gmul_hw  |    9|    9|    9|    9|   none  |
+        +--------------------+---------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    4|    4|         1|          -|          -|     4|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    119|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|     396|   1413|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     66|
+|Register         |        -|      -|     114|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|     510|   1598|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |      3|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+-------+----+-----+
+    |         Instance         |        Module        | BRAM_18K| DSP48E| FF | LUT |
+    +--------------------------+----------------------+---------+-------+----+-----+
+    |aes128_encrypt_bleOg_U21  |aes128_encrypt_bleOg  |        0|      0|   0|   21|
+    |grp_gmul_hw_fu_89         |gmul_hw               |        0|      0|  33|  116|
+    |grp_gmul_hw_fu_96         |gmul_hw               |        0|      0|  33|  116|
+    |grp_gmul_hw_fu_103        |gmul_hw               |        0|      0|  33|  116|
+    |grp_gmul_hw_fu_110        |gmul_hw               |        0|      0|  33|  116|
+    |grp_gmul_hw_fu_117        |gmul_hw               |        0|      0|  33|  116|
+    |grp_gmul_hw_fu_124        |gmul_hw               |        0|      0|  33|  116|
+    |grp_gmul_hw_fu_131        |gmul_hw               |        0|      0|  33|  116|
+    |grp_gmul_hw_fu_138        |gmul_hw               |        0|      0|  33|  116|
+    |grp_gmul_hw_fu_145        |gmul_hw               |        0|      0|  33|  116|
+    |grp_gmul_hw_fu_152        |gmul_hw               |        0|      0|  33|  116|
+    |grp_gmul_hw_fu_159        |gmul_hw               |        0|      0|  33|  116|
+    |grp_gmul_hw_fu_166        |gmul_hw               |        0|      0|  33|  116|
+    +--------------------------+----------------------+---------+-------+----+-----+
+    |Total                     |                      |        0|      0| 396| 1413|
+    +--------------------------+----------------------+---------+-------+----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |          Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |i_5_fu_179_p2                    |     +    |      0|  0|  12|           3|           1|
+    |exitcond_fu_173_p2               |   icmp   |      0|  0|   9|           3|           4|
+    |ap_block_state3_on_subcall_done  |    or    |      0|  0|   2|           1|           1|
+    |column_0_write_assi_fu_255_p2    |    xor   |      0|  0|   8|           8|           8|
+    |column_1_write_assi_fu_273_p2    |    xor   |      0|  0|   8|           8|           8|
+    |column_2_write_assi_fu_291_p2    |    xor   |      0|  0|   8|           8|           8|
+    |column_3_write_assi_fu_309_p2    |    xor   |      0|  0|   8|           8|           8|
+    |tmp10_fu_297_p2                  |    xor   |      0|  0|   8|           8|           8|
+    |tmp11_fu_303_p2                  |    xor   |      0|  0|   8|           8|           8|
+    |tmp4_fu_243_p2                   |    xor   |      0|  0|   8|           8|           8|
+    |tmp5_fu_249_p2                   |    xor   |      0|  0|   8|           8|           8|
+    |tmp6_fu_261_p2                   |    xor   |      0|  0|   8|           8|           8|
+    |tmp7_fu_267_p2                   |    xor   |      0|  0|   8|           8|           8|
+    |tmp8_fu_279_p2                   |    xor   |      0|  0|   8|           8|           8|
+    |tmp9_fu_285_p2                   |    xor   |      0|  0|   8|           8|           8|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |Total                            |          |      0|  0| 119|         103|         102|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------+----+-----------+-----+-----------+
+    |     Name    | LUT| Input Size| Bits| Total Bits|
+    +-------------+----+-----------+-----+-----------+
+    |ap_NS_fsm    |  21|          4|    1|          4|
+    |ap_return_0  |   9|          2|    8|         16|
+    |ap_return_1  |   9|          2|    8|         16|
+    |ap_return_2  |   9|          2|    8|         16|
+    |ap_return_3  |   9|          2|    8|         16|
+    |i_reg_78     |   9|          2|    3|          6|
+    +-------------+----+-----------+-----+-----------+
+    |Total        |  66|         14|   36|         74|
+    +-------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------+---+----+-----+-----------+
+    |               Name              | FF| LUT| Bits| Const Bits|
+    +---------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                        |  3|   0|    3|          0|
+    |ap_return_0_preg                 |  8|   0|    8|          0|
+    |ap_return_1_preg                 |  8|   0|    8|          0|
+    |ap_return_2_preg                 |  8|   0|    8|          0|
+    |ap_return_3_preg                 |  8|   0|    8|          0|
+    |copy_3_1_fu_42                   |  8|   0|    8|          0|
+    |copy_3_1_load_reg_401            |  8|   0|    8|          0|
+    |copy_3_2_fu_46                   |  8|   0|    8|          0|
+    |copy_3_2_load_reg_408            |  8|   0|    8|          0|
+    |copy_3_3_fu_50                   |  8|   0|    8|          0|
+    |copy_3_3_load_reg_415            |  8|   0|    8|          0|
+    |copy_3_fu_38                     |  8|   0|    8|          0|
+    |copy_3_load_reg_394              |  8|   0|    8|          0|
+    |grp_gmul_hw_fu_103_ap_start_reg  |  1|   0|    1|          0|
+    |grp_gmul_hw_fu_110_ap_start_reg  |  1|   0|    1|          0|
+    |grp_gmul_hw_fu_117_ap_start_reg  |  1|   0|    1|          0|
+    |grp_gmul_hw_fu_124_ap_start_reg  |  1|   0|    1|          0|
+    |grp_gmul_hw_fu_131_ap_start_reg  |  1|   0|    1|          0|
+    |grp_gmul_hw_fu_138_ap_start_reg  |  1|   0|    1|          0|
+    |grp_gmul_hw_fu_145_ap_start_reg  |  1|   0|    1|          0|
+    |grp_gmul_hw_fu_152_ap_start_reg  |  1|   0|    1|          0|
+    |grp_gmul_hw_fu_159_ap_start_reg  |  1|   0|    1|          0|
+    |grp_gmul_hw_fu_166_ap_start_reg  |  1|   0|    1|          0|
+    |grp_gmul_hw_fu_89_ap_start_reg   |  1|   0|    1|          0|
+    |grp_gmul_hw_fu_96_ap_start_reg   |  1|   0|    1|          0|
+    |i_reg_78                         |  3|   0|    3|          0|
+    +---------------------------------+---+----+-----+-----------+
+    |Total                            |114|   0|  114|          0|
+    +---------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------+-----+-----+------------+----------------------+--------------+
+|   RTL Ports   | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++---------------+-----+-----+------------+----------------------+--------------+
+|ap_clk         |  in |    1| ap_ctrl_hs | aes128_mix_column_hw | return value |
+|ap_rst         |  in |    1| ap_ctrl_hs | aes128_mix_column_hw | return value |
+|ap_start       |  in |    1| ap_ctrl_hs | aes128_mix_column_hw | return value |
+|ap_done        | out |    1| ap_ctrl_hs | aes128_mix_column_hw | return value |
+|ap_idle        | out |    1| ap_ctrl_hs | aes128_mix_column_hw | return value |
+|ap_ready       | out |    1| ap_ctrl_hs | aes128_mix_column_hw | return value |
+|ap_return_0    | out |    8| ap_ctrl_hs | aes128_mix_column_hw | return value |
+|ap_return_1    | out |    8| ap_ctrl_hs | aes128_mix_column_hw | return value |
+|ap_return_2    | out |    8| ap_ctrl_hs | aes128_mix_column_hw | return value |
+|ap_return_3    | out |    8| ap_ctrl_hs | aes128_mix_column_hw | return value |
+|column_0_read  |  in |    8|   ap_none  |     column_0_read    |    scalar    |
+|column_1_read  |  in |    8|   ap_none  |     column_1_read    |    scalar    |
+|column_2_read  |  in |    8|   ap_none  |     column_2_read    |    scalar    |
+|column_3_read  |  in |    8|   ap_none  |     column_3_read    |    scalar    |
++---------------+-----+-----+------------+----------------------+--------------+
+

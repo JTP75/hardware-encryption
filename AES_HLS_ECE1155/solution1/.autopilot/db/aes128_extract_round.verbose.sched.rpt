@@ -1,0 +1,178 @@
+
+
+================================================================
+== Vivado HLS Report for 'aes128_extract_round'
+================================================================
+* Date:           Tue Apr  9 20:29:30 2024
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        AES_HLS_ECE1155
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     6.904|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   41|   41|   41|   41|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |   40|   40|        10|          -|          -|     4|    no    |
+        | + Loop 1.1  |    8|    8|         2|          -|          -|     4|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond1)
+3 --> 
+	4  / (!exitcond)
+	2  / (exitcond)
+4 --> 
+	3  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%expanded_key_offset_s = call i10 @_ssdm_op_Read.ap_auto.i10(i10 %expanded_key_offset)" [AES_HLS_ECE1155/src/aes_hw.cpp:176]   --->   Operation 5 'read' 'expanded_key_offset_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%tmp_14 = trunc i10 %expanded_key_offset_s to i8" [AES_HLS_ECE1155/src/aes_hw.cpp:179]   --->   Operation 6 'trunc' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (1.76ns)   --->   "br label %.loopexit" [AES_HLS_ECE1155/src/aes_hw.cpp:177]   --->   Operation 7 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 1.76>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%i = phi i3 [ 0, %0 ], [ %i_6, %.loopexit.loopexit ]"   --->   Operation 8 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%i_cast = zext i3 %i to i4" [AES_HLS_ECE1155/src/aes_hw.cpp:177]   --->   Operation 9 'zext' 'i_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (1.13ns)   --->   "%exitcond1 = icmp eq i3 %i, -4" [AES_HLS_ECE1155/src/aes_hw.cpp:177]   --->   Operation 10 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 11 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (1.65ns)   --->   "%i_6 = add i3 %i, 1" [AES_HLS_ECE1155/src/aes_hw.cpp:177]   --->   Operation 12 'add' 'i_6' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %2, label %.preheader.preheader" [AES_HLS_ECE1155/src/aes_hw.cpp:177]   --->   Operation 13 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%tmp_15 = trunc i3 %i to i2" [AES_HLS_ECE1155/src/aes_hw.cpp:177]   --->   Operation 14 'trunc' 'tmp_15' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%tmp = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %tmp_15, i2 0)" [AES_HLS_ECE1155/src/aes_hw.cpp:179]   --->   Operation 15 'bitconcatenate' 'tmp' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (1.76ns)   --->   "br label %.preheader" [AES_HLS_ECE1155/src/aes_hw.cpp:178]   --->   Operation 16 'br' <Predicate = (!exitcond1)> <Delay = 1.76>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "ret void" [AES_HLS_ECE1155/src/aes_hw.cpp:182]   --->   Operation 17 'ret' <Predicate = (exitcond1)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 6.90>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%j = phi i3 [ %j_4, %1 ], [ 0, %.preheader.preheader ]"   --->   Operation 18 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%j_cast = zext i3 %j to i4" [AES_HLS_ECE1155/src/aes_hw.cpp:178]   --->   Operation 19 'zext' 'j_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (1.13ns)   --->   "%exitcond = icmp eq i3 %j, -4" [AES_HLS_ECE1155/src/aes_hw.cpp:178]   --->   Operation 20 'icmp' 'exitcond' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 21 'speclooptripcount' 'empty_9' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (1.65ns)   --->   "%j_4 = add i3 %j, 1" [AES_HLS_ECE1155/src/aes_hw.cpp:178]   --->   Operation 22 'add' 'j_4' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %.loopexit.loopexit, label %1" [AES_HLS_ECE1155/src/aes_hw.cpp:178]   --->   Operation 23 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (1.73ns)   --->   "%tmp_s = add i4 %j_cast, %tmp" [AES_HLS_ECE1155/src/aes_hw.cpp:179]   --->   Operation 24 'add' 'tmp_s' <Predicate = (!exitcond)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_23_cast = zext i4 %tmp_s to i8" [AES_HLS_ECE1155/src/aes_hw.cpp:179]   --->   Operation 25 'zext' 'tmp_23_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (1.91ns)   --->   "%sum = add i8 %tmp_14, %tmp_23_cast" [AES_HLS_ECE1155/src/aes_hw.cpp:179]   --->   Operation 26 'add' 'sum' <Predicate = (!exitcond)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%sum_cast = zext i8 %sum to i64" [AES_HLS_ECE1155/src/aes_hw.cpp:179]   --->   Operation 27 'zext' 'sum_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%expanded_key_addr = getelementptr [176 x i8]* %expanded_key, i64 0, i64 %sum_cast" [AES_HLS_ECE1155/src/aes_hw.cpp:179]   --->   Operation 28 'getelementptr' 'expanded_key_addr' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_3 : Operation 29 [2/2] (3.25ns)   --->   "%expanded_key_load = load i8* %expanded_key_addr, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:179]   --->   Operation 29 'load' 'expanded_key_load' <Predicate = (!exitcond)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_16 = trunc i3 %j to i2" [AES_HLS_ECE1155/src/aes_hw.cpp:178]   --->   Operation 30 'trunc' 'tmp_16' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_11 = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %tmp_16, i2 0)" [AES_HLS_ECE1155/src/aes_hw.cpp:179]   --->   Operation 31 'bitconcatenate' 'tmp_11' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (1.73ns)   --->   "%tmp_12 = add i4 %tmp_11, %i_cast" [AES_HLS_ECE1155/src/aes_hw.cpp:179]   --->   Operation 32 'add' 'tmp_12' <Predicate = (!exitcond)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 33 'br' <Predicate = (exitcond)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 5.57>
+ST_4 : Operation 34 [1/2] (3.25ns)   --->   "%expanded_key_load = load i8* %expanded_key_addr, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:179]   --->   Operation 34 'load' 'expanded_key_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_13 = zext i4 %tmp_12 to i64" [AES_HLS_ECE1155/src/aes_hw.cpp:179]   --->   Operation 35 'zext' 'tmp_13' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 36 [1/1] (0.00ns)   --->   "%round_key_addr = getelementptr [16 x i8]* %round_key, i64 0, i64 %tmp_13" [AES_HLS_ECE1155/src/aes_hw.cpp:179]   --->   Operation 36 'getelementptr' 'round_key_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 37 [1/1] (2.32ns)   --->   "store i8 %expanded_key_load, i8* %round_key_addr, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:179]   --->   Operation 37 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "br label %.preheader" [AES_HLS_ECE1155/src/aes_hw.cpp:178]   --->   Operation 38 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', AES_HLS_ECE1155/src/aes_hw.cpp:177) [8]  (1.77 ns)
+
+ <State 2>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', AES_HLS_ECE1155/src/aes_hw.cpp:178) [19]  (1.77 ns)
+
+ <State 3>: 6.9ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', AES_HLS_ECE1155/src/aes_hw.cpp:178) [19]  (0 ns)
+	'add' operation ('tmp_s', AES_HLS_ECE1155/src/aes_hw.cpp:179) [26]  (1.74 ns)
+	'add' operation ('sum', AES_HLS_ECE1155/src/aes_hw.cpp:179) [28]  (1.92 ns)
+	'getelementptr' operation ('expanded_key_addr', AES_HLS_ECE1155/src/aes_hw.cpp:179) [30]  (0 ns)
+	'load' operation ('expanded_key_load', AES_HLS_ECE1155/src/aes_hw.cpp:179) on array 'expanded_key' [31]  (3.25 ns)
+
+ <State 4>: 5.58ns
+The critical path consists of the following:
+	'load' operation ('expanded_key_load', AES_HLS_ECE1155/src/aes_hw.cpp:179) on array 'expanded_key' [31]  (3.25 ns)
+	'store' operation (AES_HLS_ECE1155/src/aes_hw.cpp:179) of variable 'expanded_key_load', AES_HLS_ECE1155/src/aes_hw.cpp:179 on array 'round_key' [37]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

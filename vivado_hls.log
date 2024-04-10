@@ -1,0 +1,227 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'pacel' on host 'pacel-windows' (Windows NT_amd64 version 6.2) on Tue Apr 09 20:29:20 -0400 2024
+INFO: [HLS 200-10] In directory 'C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption'
+INFO: [HLS 200-10] Opening project 'C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155'.
+INFO: [HLS 200-10] Adding design file 'AES_HLS_ECE1155/src/aes_hw.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'AES_HLS_ECE1155/src/aes_hw.hpp' to the project
+INFO: [HLS 200-10] Adding design file 'AES_HLS_ECE1155/src/aes_sw.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'AES_HLS_ECE1155/src/aes_sw.hpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'AES_HLS_ECE1155/src/aes_test.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [HLS 200-10] Analyzing design file 'AES_HLS_ECE1155/src/aes_sw.cpp' ... 
+WARNING: [HLS 200-40] In file included from AES_HLS_ECE1155/src/aes_sw.cpp:1:
+AES_HLS_ECE1155/src/aes_sw.cpp:36:12: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+    printf(msg);
+           ^~~
+1 warning generated.
+INFO: [HLS 200-10] Analyzing design file 'AES_HLS_ECE1155/src/aes_hw.cpp' ... 
+WARNING: [HLS 200-40] In file included from AES_HLS_ECE1155/src/aes_hw.cpp:1:
+AES_HLS_ECE1155/src/aes_hw.cpp:39:12: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+    printf(msg);
+           ^~~
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 105.305 ; gain = 20.531
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 105.305 ; gain = 20.531
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 106.742 ; gain = 21.969
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'rotate_word_hw' into 'aes128_expand_key_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:62) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes128_shift_row_hw' into 'aes128_shift_rows_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:118) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes128_sub_bytes_hw' into 'aes128_encrypt_block_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:209) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 107.066 ; gain = 22.293
+INFO: [XFORM 203-102] Automatically partitioning small array 'column' (AES_HLS_ECE1155/src/aes_hw.cpp:153) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'copy' (AES_HLS_ECE1155/src/aes_hw.cpp:130) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'tmp' (AES_HLS_ECE1155/src/aes_hw.cpp:51) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'column' (AES_HLS_ECE1155/src/aes_hw.cpp:153) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'copy' (AES_HLS_ECE1155/src/aes_hw.cpp:130) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'tmp' (AES_HLS_ECE1155/src/aes_hw.cpp:51) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'aes128_shift_row_hw' into 'aes128_shift_rows_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:118) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes128_sub_bytes_hw' into 'aes128_encrypt_block_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:209) automatically.
+WARNING: [XFORM 203-561] Updating loop upper bound from 255 to 3 for loop 'Loop-0-0' in function 'aes128_shift_rows_hw'.
+INFO: [XFORM 203-602] Inlining function 'rotate_word_hw' into 'aes128_expand_key_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:62) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'aes128_mix_column_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:129)...12 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 128.301 ; gain = 43.527
+WARNING: [XFORM 203-631] Renaming function 'aes128_mix_columns_hw' to 'aes128_mix_columns_h' (AES_HLS_ECE1155/src/aes_hw.cpp:154:24)
+WARNING: [XFORM 203-631] Renaming function 'aes128_extract_round_key_hw' to 'aes128_extract_round' (AES_HLS_ECE1155/src/aes_hw.cpp:177:28)
+WARNING: [XFORM 203-631] Renaming function 'aes128_add_round_key_hw' to 'aes128_add_round_key' (AES_HLS_ECE1155/src/aes_hw.cpp:188:25)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 189.676 ; gain = 104.902
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'aes128_encrypt_block_hw' ...
+WARNING: [SYN 201-107] Renaming port name 'aes128_encrypt_block_hw/in' to 'aes128_encrypt_block_hw/in_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'aes128_encrypt_block_hw/out' to 'aes128_encrypt_block_hw/out_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_expand_key_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.45 seconds; current allocated memory: 147.872 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 148.417 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_extract_round' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.094 seconds; current allocated memory: 148.559 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.028 seconds; current allocated memory: 148.672 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_add_round_key' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.038 seconds; current allocated memory: 148.714 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.024 seconds; current allocated memory: 148.781 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_shift_rows_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.039 seconds; current allocated memory: 148.919 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.028 seconds; current allocated memory: 149.051 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gmul_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.043 seconds; current allocated memory: 149.121 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.026 seconds; current allocated memory: 149.220 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_mix_column_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.055 seconds; current allocated memory: 149.362 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.056 seconds; current allocated memory: 149.576 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_mix_columns_h' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.117 seconds; current allocated memory: 149.828 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.063 seconds; current allocated memory: 150.102 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_encrypt_block_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 150.467 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 150.954 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_expand_key_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'aes128_expand_key_hw_sbox_hw' to 'aes128_expand_keybkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'aes128_expand_key_hw_rcon_hw' to 'aes128_expand_keycud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'aes128_encrypt_block_hw_mux_42_1_1_1' to 'aes128_encrypt_bldEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'aes128_encrypt_block_hw_mux_42_8_1_1' to 'aes128_encrypt_bleOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'aes128_encrypt_bldEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'aes128_encrypt_bleOg': 5 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_expand_key_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.236 seconds; current allocated memory: 151.884 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_extract_round' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_extract_round'.
+INFO: [HLS 200-111]  Elapsed time: 0.339 seconds; current allocated memory: 152.278 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_add_round_key' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_add_round_key'.
+INFO: [HLS 200-111]  Elapsed time: 0.116 seconds; current allocated memory: 152.427 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_shift_rows_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_shift_rows_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.081 seconds; current allocated memory: 152.676 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gmul_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gmul_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.131 seconds; current allocated memory: 152.874 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_mix_column_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'aes128_encrypt_bleOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_mix_column_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.116 seconds; current allocated memory: 153.404 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_mix_columns_h' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'aes128_encrypt_bleOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_mix_columns_h'.
+INFO: [HLS 200-111]  Elapsed time: 0.253 seconds; current allocated memory: 153.976 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_encrypt_block_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_encrypt_block_hw/in_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_encrypt_block_hw/key' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_encrypt_block_hw/out_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'aes128_encrypt_block_hw' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'aes128_encrypt_block_hw_sbox_hw' to 'aes128_encrypt_blfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'aes128_encrypt_block_hw_state' to 'aes128_encrypt_blg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'aes128_encrypt_block_hw_round_key' to 'aes128_encrypt_blhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'aes128_encrypt_block_hw_expanded_key' to 'aes128_encrypt_blibs' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_encrypt_block_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.267 seconds; current allocated memory: 155.014 MB.
+INFO: [RTMG 210-279] Implementing memory 'aes128_expand_keybkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'aes128_expand_keycud_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'aes128_encrypt_blg8j_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'aes128_encrypt_blibs_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 214.270 ; gain = 129.496
+INFO: [SYSC 207-301] Generating SystemC RTL for aes128_encrypt_block_hw.
+INFO: [VHDL 208-304] Generating VHDL RTL for aes128_encrypt_block_hw.
+INFO: [VLOG 209-307] Generating Verilog RTL for aes128_encrypt_block_hw.
+INFO: [HLS 200-112] Total elapsed time: 14.588 seconds; peak allocated memory: 155.014 MB.

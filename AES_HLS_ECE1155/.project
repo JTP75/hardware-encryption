@@ -29,37 +29,57 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>C:/Users/tyqca/OneDrive/School/GitHub/hardware-encryption/AES_HLS_ECE1155/.apc/.src</location>
+			<location>C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>C:/Users/tyqca/OneDrive/School/GitHub/hardware-encryption/AES_HLS_ECE1155/.apc/.tb</location>
+			<location>C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/.apc/.tb</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
-			<location>C:/Users/tyqca/OneDrive/School/GitHub/hardware-encryption/AES_HLS_ECE1155/solution1/.tcls</location>
+			<location>C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.tcls</location>
 		</link>
 		<link>
-			<name>source/AES_HLS</name>
+			<name>source/aes_hw.cpp</name>
 			<type>1</type>
-			<location>C:/Users/tyqca/OneDrive/School/GitHub/hardware-encryption/AES_HLS</location>
+			<location>C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/src/aes_hw.cpp</location>
+		</link>
+		<link>
+			<name>source/aes_hw.hpp</name>
+			<type>1</type>
+			<location>C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/src/aes_hw.hpp</location>
+		</link>
+		<link>
+			<name>source/aes_sw.cpp</name>
+			<type>1</type>
+			<location>C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/src/aes_sw.cpp</location>
+		</link>
+		<link>
+			<name>source/aes_sw.hpp</name>
+			<type>1</type>
+			<location>C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/src/aes_sw.hpp</location>
+		</link>
+		<link>
+			<name>testbench/aes_test.cpp</name>
+			<type>1</type>
+			<location>C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/src/aes_test.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/Users/tyqca/OneDrive/School/GitHub/hardware-encryption/AES_HLS_ECE1155/solution1/solution1.directive</location>
+			<location>C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/solution1.directive</location>
 		</link>
 		<link>
 			<name>solution1/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/Users/tyqca/OneDrive/School/GitHub/hardware-encryption/AES_HLS_ECE1155/solution1/directives.tcl</location>
+			<location>C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/directives.tcl</location>
 		</link>
 		<link>
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/Users/tyqca/OneDrive/School/GitHub/hardware-encryption/AES_HLS_ECE1155/solution1/script.tcl</location>
+			<location>C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>
