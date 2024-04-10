@@ -19,14 +19,24 @@ module aes128_add_round_key (
         state_we0,
         state_d0,
         state_q0,
+        state_address1,
+        state_ce1,
+        state_we1,
+        state_d1,
+        state_q1,
         round_key_address0,
         round_key_ce0,
-        round_key_q0
+        round_key_q0,
+        round_key_address1,
+        round_key_ce1,
+        round_key_q1
 );
 
-parameter    ap_ST_fsm_state1 = 3'd1;
-parameter    ap_ST_fsm_state2 = 3'd2;
-parameter    ap_ST_fsm_state3 = 3'd4;
+parameter    ap_ST_fsm_state1 = 5'd1;
+parameter    ap_ST_fsm_state2 = 5'd2;
+parameter    ap_ST_fsm_state3 = 5'd4;
+parameter    ap_ST_fsm_state4 = 5'd8;
+parameter    ap_ST_fsm_state5 = 5'd16;
 
 input   ap_clk;
 input   ap_rst;
@@ -39,9 +49,17 @@ output   state_ce0;
 output   state_we0;
 output  [7:0] state_d0;
 input  [7:0] state_q0;
+output  [3:0] state_address1;
+output   state_ce1;
+output   state_we1;
+output  [7:0] state_d1;
+input  [7:0] state_q1;
 output  [3:0] round_key_address0;
 output   round_key_ce0;
 input  [7:0] round_key_q0;
+output  [3:0] round_key_address1;
+output   round_key_ce1;
+input  [7:0] round_key_q1;
 
 reg ap_done;
 reg ap_idle;
@@ -49,23 +67,46 @@ reg ap_ready;
 reg[3:0] state_address0;
 reg state_ce0;
 reg state_we0;
+reg[3:0] state_address1;
+reg state_ce1;
+reg state_we1;
+reg[3:0] round_key_address0;
 reg round_key_ce0;
+reg[3:0] round_key_address1;
+reg round_key_ce1;
 
-(* fsm_encoding = "none" *) reg   [2:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [4:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-wire   [4:0] i_15_fu_59_p2;
-reg   [4:0] i_15_reg_81;
-wire    ap_CS_fsm_state2;
-wire   [0:0] exitcond_fu_53_p2;
-reg   [3:0] state_addr_reg_91;
-reg   [4:0] i_reg_42;
+wire   [7:0] grp_fu_115_p2;
+reg   [7:0] reg_127;
 wire    ap_CS_fsm_state3;
-wire   [63:0] tmp_fu_65_p1;
-reg   [2:0] ap_NS_fsm;
+wire    ap_CS_fsm_state4;
+wire   [7:0] grp_fu_121_p2;
+reg   [7:0] reg_132;
+wire    ap_CS_fsm_state2;
+wire   [0:0] exitcond_fu_137_p2;
+reg   [3:0] state_addr_reg_201;
+wire   [3:0] tmp_16_fu_149_p1;
+reg   [3:0] tmp_16_reg_206;
+reg   [3:0] state_addr_34_reg_217;
+wire   [4:0] i_15_3_fu_165_p2;
+reg   [4:0] i_15_3_reg_222;
+reg   [3:0] state_addr_35_reg_232;
+reg   [3:0] state_addr_36_reg_242;
+reg   [4:0] i_reg_104;
+wire    ap_CS_fsm_state5;
+wire   [63:0] tmp_fu_143_p1;
+wire   [63:0] tmp_1_fu_159_p1;
+wire   [63:0] tmp_2_fu_176_p1;
+wire   [63:0] tmp_3_fu_187_p1;
+wire   [3:0] i_15_s_fu_153_p2;
+wire   [3:0] i_15_1_fu_171_p2;
+wire   [3:0] i_15_2_fu_182_p2;
+reg   [4:0] ap_NS_fsm;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 3'd1;
+#0 ap_CS_fsm = 5'd1;
 end
 
 always @ (posedge ap_clk) begin
@@ -77,27 +118,39 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        i_reg_104 <= i_15_3_reg_222;
+    end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+        i_reg_104 <= 5'd0;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((exitcond_fu_137_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+        i_15_3_reg_222 <= i_15_3_fu_165_p2;
+        state_addr_34_reg_217[3 : 1] <= tmp_1_fu_159_p1[3 : 1];
+        state_addr_reg_201 <= tmp_fu_143_p1;
+        tmp_16_reg_206 <= tmp_16_fu_149_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
+        reg_127 <= grp_fu_115_p2;
+        reg_132 <= grp_fu_121_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        i_reg_42 <= i_15_reg_81;
-    end else if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        i_reg_42 <= 5'd0;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
-        i_15_reg_81 <= i_15_fu_59_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((exitcond_fu_53_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        state_addr_reg_91 <= tmp_fu_65_p1;
+        state_addr_35_reg_232[0] <= tmp_2_fu_176_p1[0];
+state_addr_35_reg_232[3 : 2] <= tmp_2_fu_176_p1[3 : 2];
+        state_addr_36_reg_242[3 : 2] <= tmp_3_fu_187_p1[3 : 2];
     end
 end
 
 always @ (*) begin
-    if ((((exitcond_fu_53_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2)) | ((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)))) begin
+    if ((((exitcond_fu_137_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2)) | ((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -113,7 +166,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((exitcond_fu_53_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+    if (((exitcond_fu_137_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -121,7 +174,27 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
+    if ((1'b1 == ap_CS_fsm_state3)) begin
+        round_key_address0 = tmp_2_fu_176_p1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        round_key_address0 = tmp_fu_143_p1;
+    end else begin
+        round_key_address0 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state3)) begin
+        round_key_address1 = tmp_3_fu_187_p1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        round_key_address1 = tmp_1_fu_159_p1;
+    end else begin
+        round_key_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state3))) begin
         round_key_ce0 = 1'b1;
     end else begin
         round_key_ce0 = 1'b0;
@@ -129,17 +202,43 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
-        state_address0 = state_addr_reg_91;
+    if (((1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state3))) begin
+        round_key_ce1 = 1'b1;
+    end else begin
+        round_key_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        state_address0 = state_addr_35_reg_232;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        state_address0 = state_addr_reg_201;
+    end else if ((1'b1 == ap_CS_fsm_state3)) begin
+        state_address0 = tmp_2_fu_176_p1;
     end else if ((1'b1 == ap_CS_fsm_state2)) begin
-        state_address0 = tmp_fu_65_p1;
+        state_address0 = tmp_fu_143_p1;
     end else begin
         state_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state3) | (1'b1 == ap_CS_fsm_state2))) begin
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        state_address1 = state_addr_36_reg_242;
+    end else if ((1'b1 == ap_CS_fsm_state4)) begin
+        state_address1 = state_addr_34_reg_217;
+    end else if ((1'b1 == ap_CS_fsm_state3)) begin
+        state_address1 = tmp_3_fu_187_p1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        state_address1 = tmp_1_fu_159_p1;
+    end else begin
+        state_address1 = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
         state_ce0 = 1'b1;
     end else begin
         state_ce0 = 1'b0;
@@ -147,7 +246,15 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
+    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state2) | (1'b1 == ap_CS_fsm_state4) | (1'b1 == ap_CS_fsm_state3))) begin
+        state_ce1 = 1'b1;
+    end else begin
+        state_ce1 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
         state_we0 = 1'b1;
     end else begin
         state_we0 = 1'b0;
@@ -155,22 +262,36 @@ always @ (*) begin
 end
 
 always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state5) | (1'b1 == ap_CS_fsm_state4))) begin
+        state_we1 = 1'b1;
+    end else begin
+        state_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+            if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((exitcond_fu_53_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+            if (((exitcond_fu_137_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end
         end
         ap_ST_fsm_state3 : begin
+            ap_NS_fsm = ap_ST_fsm_state4;
+        end
+        ap_ST_fsm_state4 : begin
+            ap_NS_fsm = ap_ST_fsm_state5;
+        end
+        ap_ST_fsm_state5 : begin
             ap_NS_fsm = ap_ST_fsm_state2;
         end
         default : begin
@@ -185,14 +306,42 @@ assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
 assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
-assign exitcond_fu_53_p2 = ((i_reg_42 == 5'd16) ? 1'b1 : 1'b0);
+assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
-assign i_15_fu_59_p2 = (i_reg_42 + 5'd1);
+assign ap_CS_fsm_state5 = ap_CS_fsm[32'd4];
 
-assign round_key_address0 = tmp_fu_65_p1;
+assign exitcond_fu_137_p2 = ((i_reg_104 == 5'd16) ? 1'b1 : 1'b0);
 
-assign state_d0 = (state_q0 ^ round_key_q0);
+assign grp_fu_115_p2 = (state_q0 ^ round_key_q0);
 
-assign tmp_fu_65_p1 = i_reg_42;
+assign grp_fu_121_p2 = (state_q1 ^ round_key_q1);
+
+assign i_15_1_fu_171_p2 = (tmp_16_reg_206 | 4'd2);
+
+assign i_15_2_fu_182_p2 = (tmp_16_reg_206 | 4'd3);
+
+assign i_15_3_fu_165_p2 = (5'd4 + i_reg_104);
+
+assign i_15_s_fu_153_p2 = (tmp_16_fu_149_p1 | 4'd1);
+
+assign state_d0 = reg_127;
+
+assign state_d1 = reg_132;
+
+assign tmp_16_fu_149_p1 = i_reg_104[3:0];
+
+assign tmp_1_fu_159_p1 = i_15_s_fu_153_p2;
+
+assign tmp_2_fu_176_p1 = i_15_1_fu_171_p2;
+
+assign tmp_3_fu_187_p1 = i_15_2_fu_182_p2;
+
+assign tmp_fu_143_p1 = i_reg_104;
+
+always @ (posedge ap_clk) begin
+    state_addr_34_reg_217[0] <= 1'b1;
+    state_addr_35_reg_232[1] <= 1'b1;
+    state_addr_36_reg_242[1:0] <= 2'b11;
+end
 
 endmodule //aes128_add_round_key

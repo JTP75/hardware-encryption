@@ -28,20 +28,6 @@ void rotate_word(uint8_t *word) {
     word[3] = tmp;
 }
 
-/// @brief prints a message and byte array formatted as "{msg}{block}\n"
-/// @param msg cstr message preceding bytes
-/// @param block immut byte array ref
-/// @param num_bytes length of byte array
-void print_block(const char *msg, const uint8_t *bytes, int num_bytes) {
-    printf(msg);
-    for (int i=0; i<num_bytes-1; i++) {
-        printf("%02x:", bytes[i]);
-    }
-    printf("%02x\n", bytes[num_bytes-1]);
-}
-
-
-
 /// @brief expands a 16 byte key to a 16*(10+1) byte expanded key
 /// @param key 16 byte input
 /// @param expanded_key 176 byte output

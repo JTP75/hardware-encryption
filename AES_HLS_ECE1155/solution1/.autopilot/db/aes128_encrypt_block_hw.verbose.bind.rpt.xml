@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'aes128_encrypt_block_hw'" level="0">
-<item name = "Date">Tue Apr  9 20:29:31 2024
+<item name = "Date">Tue Apr  9 22:40:15 2024
 </item>
 <item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
 <item name = "Project">AES_HLS_ECE1155</item>
@@ -24,29 +24,24 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">3802, 5650, 3802, 5650, none</column>
+<column name="">756, 1236, 756, 1236, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_aes128_mix_columns_h_fu_239">aes128_mix_columns_h, 141, 141, 141, 141, none</column>
-<column name="grp_aes128_expand_key_hw_fu_244">aes128_expand_key_hw, 994, 1794, 994, 1794, none</column>
-<column name="grp_aes128_shift_rows_hw_fu_255">aes128_shift_rows_hw, 9, 117, 9, 117, none</column>
-<column name="grp_aes128_extract_round_fu_260">aes128_extract_round, 41, 41, 41, 41, none</column>
-<column name="grp_aes128_add_round_key_fu_269">aes128_add_round_key, 33, 33, 33, 33, none</column>
+<column name="grp_aes128_expand_key_hw_fu_554">aes128_expand_key_hw, 88, 88, 88, 88, none</column>
+<column name="grp_aes128_extract_round_fu_563">aes128_extract_round, 8, 8, 8, 8, none</column>
+<column name="grp_aes128_sub_bytes_hw_fu_572">aes128_sub_bytes_hw, 15, 15, 15, 15, none</column>
+<column name="grp_aes128_mix_column_hw_fu_579">aes128_mix_column_hw, 0, 0, 0, 0, none</column>
+<column name="grp_aes128_add_round_key_fu_587">aes128_add_round_key, 17, 17, 17, 17, none</column>
+<column name="grp_aes128_shift_row_hw_fu_593">aes128_shift_row_hw, 1, 13, 1, 13, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">40, 40, 10, -, -, 4, no</column>
-<column name=" + Loop 1.1">8, 8, 2, -, -, 4, no</column>
-<column name="- Loop 2">2520, 3492, 280 ~ 388, -, -, 9, no</column>
-<column name=" + Loop 2.1">48, 48, 3, -, -, 16, no</column>
-<column name="- Loop 3">48, 48, 3, -, -, 16, no</column>
-<column name="- Loop 4">40, 40, 10, -, -, 4, no</column>
-<column name=" + Loop 4.1">8, 8, 2, -, -, 4, no</column>
+<column name="- Loop 1">576, 1008, 64 ~ 112, -, -, 9, no</column>
 </table>
 </item>
 </section>

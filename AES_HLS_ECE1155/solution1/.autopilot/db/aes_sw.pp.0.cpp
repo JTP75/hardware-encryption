@@ -818,8 +818,7 @@ void aes256_extract_round_key(const uint8_t *expanded_key, uint8_t *round_key);
 void aes256_add_round_key(uint8_t *state, const uint8_t *round_key);
 void aes256_encrypt_block(const uint8_t *in, const uint8_t *key, uint8_t *out);
 void aes256_decrypt_block(const uint8_t *in, const uint8_t *key, uint8_t *out);
-# 1 "AES_HLS_ECE1155/src/aes_sw.cpp" 2
-
+# 2 "AES_HLS_ECE1155/src/aes_sw.cpp" 2
 
 
 
@@ -848,20 +847,6 @@ void rotate_word(uint8_t *word) {
     for (int i=0; i<3; i++) word[i] = word[i+1];
     word[3] = tmp;
 }
-
-
-
-
-
-void print_block(const char *msg, const uint8_t *bytes, int num_bytes) {
-    printf(msg);
-    for (int i=0; i<num_bytes-1; i++) {
-        printf("%02x:", bytes[i]);
-    }
-    printf("%02x\n", bytes[num_bytes-1]);
-}
-
-
 
 
 

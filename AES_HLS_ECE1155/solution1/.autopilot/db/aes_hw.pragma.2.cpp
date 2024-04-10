@@ -7145,8 +7145,8 @@ void aes256_decrypt_block_hw(const uint8_t *in, const uint8_t *key, uint8_t *out
 uint8_t gmul_hw(uint8_t a, uint8_t b) {
     uint8_t rslt = 0;
     for (int i=0; i<8; i++) {
-
-        if (b & 1) {
+_ssdm_Unroll(1, 0, 8, "");
+ if (b & 1) {
             rslt ^= a;
         } if (a & 0x80) {
             a = (a<<1) ^ 0x1b;
@@ -7162,21 +7162,11 @@ uint8_t gmul_hw(uint8_t a, uint8_t b) {
 
 void rotate_word_hw(uint8_t word[4]) {_ssdm_SpecArrayDimSize(word, 4);
     uint8_t tmp = word[0];
-    for (int i=0; i<3; i++) word[i] = word[i+1];
-    word[3] = tmp;
-}
-
-
-
-
-
-
-void print_block_hw(const char *msg, const uint8_t *bytes, int num_bytes) {
-    printf(msg);
-    for (int i=0; i<num_bytes-1; i++) {
-        printf("%02x:", bytes[i]);
+    for (int i=0; i<3; i++) {
+_ssdm_Unroll(1, 0, 4, "");
+ word[i] = word[i+1];
     }
-    printf("%02x\n", bytes[num_bytes-1]);
+    word[3] = tmp;
 }
 
 
@@ -7187,22 +7177,27 @@ void aes128_expand_key_hw(const uint8_t key[16], uint8_t expanded_key[176]) {_ss
     uint8_t tmp[4];
 
     while (size<16) {
-        expanded_key[size] = key[size++];
+_ssdm_Unroll(1, 0, 16, "");
+ expanded_key[size] = key[size++];
     }
 
     while (size<176) {
-        for (i=0; i<4; i++) {
-            tmp[i] = expanded_key[i + size-4];
+_ssdm_Unroll(1, 0, 176, "");
+ for (i=0; i<4; i++) {
+_ssdm_Unroll(1, 0, 4, "");
+ tmp[i] = expanded_key[i + size-4];
         }
         if (size%16==0) {
             rotate_word_hw(tmp);
             for (i=0; i<4; i++) {
-                tmp[i] = sbox_hw[tmp[i]];
+_ssdm_Unroll(1, 0, 4, "");
+ tmp[i] = sbox_hw[tmp[i]];
             }
             tmp[0] ^= rcon_hw[j++];
         }
         for (i=0; i<4; i++) {
-            expanded_key[size] = expanded_key[size-16] ^ tmp[i];
+_ssdm_Unroll(1, 0, 4, "");
+ expanded_key[size] = expanded_key[size-16] ^ tmp[i];
             size++;
         }
     }
@@ -7212,7 +7207,8 @@ void aes128_expand_key_hw(const uint8_t key[16], uint8_t expanded_key[176]) {_ss
 
 void aes128_sub_bytes_hw(uint8_t state[16]) {_ssdm_SpecArrayDimSize(state, 16);
     for (int i=0; i<16; i++) {
-        state[i] = sbox_hw[state[i]];
+_ssdm_Unroll(1, 0, 16, "");
+ state[i] = sbox_hw[state[i]];
     }
 }
 
@@ -7220,7 +7216,8 @@ void aes128_sub_bytes_hw(uint8_t state[16]) {_ssdm_SpecArrayDimSize(state, 16);
 
 void aes128_sub_bytes_inv_hw(uint8_t state[16]) {_ssdm_SpecArrayDimSize(state, 16);
     for (int i=0; i<16; i++) {
-        state[i] = rsbox_hw[state[i]];
+_ssdm_Unroll(1, 0, 16, "");
+ state[i] = rsbox_hw[state[i]];
     }
 }
 
@@ -7231,7 +7228,10 @@ void aes128_shift_row_hw(uint8_t state[4], uint8_t n) {_ssdm_SpecArrayDimSize(st
     uint8_t tmp;
     for (int i=0; i<n; i++) {
         tmp = state[0];
-        for (int j=0; j<3; j++) state[j] = state[j+1];
+        for (int j=0; j<3; j++) {
+_ssdm_Unroll(1, 0, 3, "");
+ state[j] = state[j+1];
+        }
         state[3] = tmp;
     }
 }
@@ -7243,7 +7243,10 @@ void aes128_shift_row_inv_hw(uint8_t state[4], uint8_t n) {_ssdm_SpecArrayDimSiz
     uint8_t tmp;
     for (int i=0; i<n; i++) {
         tmp = state[3];
-        for (int j=3; j>0; j--) state[j] = state[j-1];
+        for (int j=3; j>0; j--) {
+_ssdm_Unroll(1, 0, 3, "");
+ state[j] = state[j-1];
+        }
         state[0] = tmp;
     }
 }
@@ -7251,20 +7254,29 @@ void aes128_shift_row_inv_hw(uint8_t state[4], uint8_t n) {_ssdm_SpecArrayDimSiz
 
 
 void aes128_shift_rows_hw(uint8_t state[16]) {_ssdm_SpecArrayDimSize(state, 16);
-    for (int i=0; i<4; i++) aes128_shift_row_hw(state + 4*i, i);
+    for (int i=0; i<4; i++) {
+_ssdm_Unroll(1, 0, 4, "");
+ aes128_shift_row_hw(state + 4*i, i);
+    }
 }
 
 
 
 void aes128_shift_rows_inv_hw(uint8_t state[16]) {_ssdm_SpecArrayDimSize(state, 16);
-    for (int i=0; i<4; i++) aes128_shift_row_inv_hw(state + 4*i, i);
+    for (int i=0; i<4; i++) {
+_ssdm_Unroll(1, 0, 4, "");
+ aes128_shift_row_inv_hw(state + 4*i, i);
+    }
 }
 
 
 
 void aes128_mix_column_hw(uint8_t column[4]) {_ssdm_SpecArrayDimSize(column, 4);
     uint8_t copy[4];
-    for (int i=0; i<4; i++) copy[i] = column[i];
+    for (int i=0; i<4; i++) {
+_ssdm_Unroll(1, 0, 4, "");
+ copy[i] = column[i];
+    }
     column[0] = gmul_hw(copy[0],2) ^ gmul_hw(copy[1],3) ^ gmul_hw(copy[2],1) ^ gmul_hw(copy[3],1);
     column[1] = gmul_hw(copy[0],1) ^ gmul_hw(copy[1],2) ^ gmul_hw(copy[2],3) ^ gmul_hw(copy[3],1);
     column[2] = gmul_hw(copy[0],1) ^ gmul_hw(copy[1],1) ^ gmul_hw(copy[2],2) ^ gmul_hw(copy[3],3);
@@ -7275,7 +7287,10 @@ void aes128_mix_column_hw(uint8_t column[4]) {_ssdm_SpecArrayDimSize(column, 4);
 
 void aes128_mix_column_inv_hw(uint8_t column[4]) {_ssdm_SpecArrayDimSize(column, 4);
     uint8_t copy[4];
-    for (int i=0; i<4; i++) copy[i] = column[i];
+    for (int i=0; i<4; i++) {
+_ssdm_Unroll(1, 0, 4, "");
+ copy[i] = column[i];
+    }
     column[0] = gmul_hw(copy[0],14) ^ gmul_hw(copy[1],11) ^ gmul_hw(copy[2],13) ^ gmul_hw(copy[3],9);
     column[1] = gmul_hw(copy[0],9) ^ gmul_hw(copy[1],14) ^ gmul_hw(copy[2],11) ^ gmul_hw(copy[3],13);
     column[2] = gmul_hw(copy[0],13) ^ gmul_hw(copy[1],9) ^ gmul_hw(copy[2],14) ^ gmul_hw(copy[3],11);
@@ -7288,9 +7303,16 @@ void aes128_mix_columns_hw(uint8_t state[16]) {_ssdm_SpecArrayDimSize(state, 16)
     int i,j;
     uint8_t column[4];
     for (i=0; i<4; i++) {
-        for (j=0; j<4; j++) column[j] = state[i + 4*j];
+_ssdm_Unroll(1, 0, 4, "");
+ for (j=0; j<4; j++) {
+_ssdm_Unroll(1, 0, 4, "");
+ column[j] = state[i + 4*j];
+        }
         aes128_mix_column_hw(column);
-        for (j=0; j<4; j++) state[i + 4*j] = column[j];
+        for (j=0; j<4; j++) {
+_ssdm_Unroll(1, 0, 4, "");
+ state[i + 4*j] = column[j];
+        }
     }
 }
 
@@ -7300,9 +7322,16 @@ void aes128_mix_columns_inv_hw(uint8_t state[16]) {_ssdm_SpecArrayDimSize(state,
     int i,j;
     uint8_t column[4];
     for (i=0; i<4; i++) {
-        for (j=0; j<4; j++) column[j] = state[i + 4*j];
+_ssdm_Unroll(1, 0, 4, "");
+ for (j=0; j<4; j++) {
+_ssdm_Unroll(1, 0, 4, "");
+ column[j] = state[i + 4*j];
+        }
         aes128_mix_column_inv_hw(column);
-        for (j=0; j<4; j++) state[i + 4*j] = column[j];
+        for (j=0; j<4; j++) {
+_ssdm_Unroll(1, 0, 4, "");
+ state[i + 4*j] = column[j];
+        }
     }
 }
 
@@ -7311,8 +7340,10 @@ void aes128_mix_columns_inv_hw(uint8_t state[16]) {_ssdm_SpecArrayDimSize(state,
 
 void aes128_extract_round_key_hw(const uint8_t expanded_key[176], uint8_t round_key[16]) {_ssdm_SpecArrayDimSize(expanded_key, 176);_ssdm_SpecArrayDimSize(round_key, 16);
     for (int i=0; i<4; i++) {
-        for (int j=0; j<4; j++) {
-            round_key[i + 4*j] = expanded_key[4*i + j];
+_ssdm_Unroll(1, 0, 4, "");
+ for (int j=0; j<4; j++) {
+_ssdm_Unroll(1, 0, 4, "");
+ round_key[i + 4*j] = expanded_key[4*i + j];
         }
     }
 }
@@ -7321,7 +7352,10 @@ void aes128_extract_round_key_hw(const uint8_t expanded_key[176], uint8_t round_
 
 
 void aes128_add_round_key_hw(uint8_t state[16], const uint8_t round_key[16]) {_ssdm_SpecArrayDimSize(state, 16);_ssdm_SpecArrayDimSize(round_key, 16);
-    for (int i=0; i<16; i++) state[i] ^= round_key[i];
+    for (int i=0; i<16; i++) {
+_ssdm_Unroll(1, 0, 4, "");
+ state[i] ^= round_key[i];
+    }
 }
 
 
@@ -7333,8 +7367,10 @@ void aes128_encrypt_block_hw(const uint8_t in[16], const uint8_t key[16], uint8_
     uint8_t state[16], round_key[16], expanded_key[176];
 
     for (i=0; i<4; i++) {
-        for (j=0; j<4; j++) {
-            state[i + 4*j] = in[4*i + j];
+_ssdm_Unroll(1, 0, 4, "");
+ for (j=0; j<4; j++) {
+_ssdm_Unroll(1, 0, 4, "");
+ state[i + 4*j] = in[4*i + j];
         }
     }
     aes128_expand_key_hw(key, expanded_key);
@@ -7353,8 +7389,10 @@ void aes128_encrypt_block_hw(const uint8_t in[16], const uint8_t key[16], uint8_
     aes128_add_round_key_hw(state, round_key);
 
     for (i=0; i<4; i++) {
-        for (j=0; j<4; j++) {
-            out[4*i + j] = state[i + 4*j];
+_ssdm_Unroll(1, 0, 4, "");
+ for (j=0; j<4; j++) {
+_ssdm_Unroll(1, 0, 4, "");
+ out[4*i + j] = state[i + 4*j];
         }
     }
 }
@@ -7368,8 +7406,10 @@ void aes128_decrypt_block_hw(const uint8_t in[16], const uint8_t key[16], uint8_
     uint8_t state[16], round_key[16], expanded_key[176];
 
     for (i=0; i<4; i++) {
-        for (j=0; j<4; j++) {
-            state[i + 4*j] = in[4*i + j];
+_ssdm_Unroll(1, 0, 4, "");
+ for (j=0; j<4; j++) {
+_ssdm_Unroll(1, 0, 4, "");
+ state[i + 4*j] = in[4*i + j];
         }
     }
     aes128_expand_key_hw(key, expanded_key);
@@ -7388,8 +7428,10 @@ void aes128_decrypt_block_hw(const uint8_t in[16], const uint8_t key[16], uint8_
     aes128_add_round_key_hw(state, round_key);
 
     for (i=0; i<4; i++) {
-        for (j=0; j<4; j++) {
-            out[4*i + j] = state[i + 4*j];
+_ssdm_Unroll(1, 0, 4, "");
+ for (j=0; j<4; j++) {
+_ssdm_Unroll(1, 0, 4, "");
+ out[4*i + j] = state[i + 4*j];
         }
     }
 }

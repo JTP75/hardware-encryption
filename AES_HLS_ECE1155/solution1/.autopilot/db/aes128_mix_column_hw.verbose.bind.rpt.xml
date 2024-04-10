@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'aes128_mix_column_hw'" level="0">
-<item name = "Date">Tue Apr  9 20:29:31 2024
+<item name = "Date">Tue Apr  9 22:40:14 2024
 </item>
 <item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
 <item name = "Project">AES_HLS_ECE1155</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 3.869, 1.25</column>
+<column name="ap_clk">10.00, 4.338, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,30 +24,29 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">15, 15, 15, 15, none</column>
+<column name="">0, 0, 0, 0, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_gmul_hw_fu_89">gmul_hw, 9, 9, 9, 9, none</column>
-<column name="grp_gmul_hw_fu_96">gmul_hw, 9, 9, 9, 9, none</column>
-<column name="grp_gmul_hw_fu_103">gmul_hw, 9, 9, 9, 9, none</column>
-<column name="grp_gmul_hw_fu_110">gmul_hw, 9, 9, 9, 9, none</column>
-<column name="grp_gmul_hw_fu_117">gmul_hw, 9, 9, 9, 9, none</column>
-<column name="grp_gmul_hw_fu_124">gmul_hw, 9, 9, 9, 9, none</column>
-<column name="grp_gmul_hw_fu_131">gmul_hw, 9, 9, 9, 9, none</column>
-<column name="grp_gmul_hw_fu_138">gmul_hw, 9, 9, 9, 9, none</column>
-<column name="grp_gmul_hw_fu_145">gmul_hw, 9, 9, 9, 9, none</column>
-<column name="grp_gmul_hw_fu_152">gmul_hw, 9, 9, 9, 9, none</column>
-<column name="grp_gmul_hw_fu_159">gmul_hw, 9, 9, 9, 9, none</column>
-<column name="grp_gmul_hw_fu_166">gmul_hw, 9, 9, 9, 9, none</column>
+<column name="tmp_gmul_hw_fu_44">gmul_hw, 0, 0, 0, 0, none</column>
+<column name="tmp_s_gmul_hw_fu_52">gmul_hw, 0, 0, 0, 0, none</column>
+<column name="tmp_9_gmul_hw_fu_60">gmul_hw, 0, 0, 0, 0, none</column>
+<column name="tmp_1_gmul_hw_fu_68">gmul_hw, 0, 0, 0, 0, none</column>
+<column name="tmp_4_gmul_hw_fu_76">gmul_hw, 0, 0, 0, 0, none</column>
+<column name="tmp_5_gmul_hw_fu_84">gmul_hw, 0, 0, 0, 0, none</column>
+<column name="tmp_6_gmul_hw_fu_92">gmul_hw, 0, 0, 0, 0, none</column>
+<column name="tmp_2_gmul_hw_fu_100">gmul_hw, 0, 0, 0, 0, none</column>
+<column name="tmp_3_gmul_hw_fu_108">gmul_hw, 0, 0, 0, 0, none</column>
+<column name="tmp_7_gmul_hw_fu_116">gmul_hw, 0, 0, 0, 0, none</column>
+<column name="tmp_8_gmul_hw_fu_124">gmul_hw, 0, 0, 0, 0, none</column>
+<column name="tmp_10_gmul_hw_fu_132">gmul_hw, 0, 0, 0, 0, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">4, 4, 1, -, -, 4, no</column>
 </table>
 </item>
 </section>

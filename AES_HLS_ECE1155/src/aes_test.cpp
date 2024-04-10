@@ -47,7 +47,7 @@ int main() {
 	uint8_t ciphertext_s[16],plaintext_out_s[16],
 			ciphertext_h[16],plaintext_out_h[16];
 
-	printf("PERFORMING SOFTWARE ENCRYPTION...\t");
+	printf("PERFORMING SOFTWARE ENCRYPTION... ");
 	aes128_encrypt_block(plaintext, key128, ciphertext_s);
 	aes128_decrypt_block(ciphertext_s, key128, plaintext_out_s);
 	if (eq(plaintext,plaintext_out_s)) {
@@ -56,7 +56,7 @@ int main() {
 		printf("FAILED\r\n");
 	}
 
-	printf("PERFORMING HARDWARE ENCRYPTION...\t");
+	printf("PERFORMING HARDWARE ENCRYPTION... ");
 	aes128_encrypt_block_hw(plaintext, key128, ciphertext_h);
 	aes128_decrypt_block_hw(ciphertext_h, key128, plaintext_out_h);
 	if (eq(plaintext,plaintext_out_h)) {

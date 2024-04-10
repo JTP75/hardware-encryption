@@ -1,49 +1,107 @@
 // ==============================================================
-// File generated on Tue Apr 09 20:29:33 -0400 2024
+// File generated on Tue Apr 09 22:40:19 -0400 2024
 // Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
 // SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 // IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
+`timescale 1 ns / 1 ps
+module aes128_encrypt_bldEe_ram (addr0, ce0, d0, we0, q0, addr1, ce1, d1, we1, q1,  clk);
 
-`timescale 1ns/1ps
+parameter DWIDTH = 8;
+parameter AWIDTH = 4;
+parameter MEM_SIZE = 16;
 
-module aes128_encrypt_bldEe #(
-parameter
-    ID                = 0,
-    NUM_STAGE         = 1,
-    din0_WIDTH       = 32,
-    din1_WIDTH       = 32,
-    din2_WIDTH       = 32,
-    din3_WIDTH       = 32,
-    din4_WIDTH         = 32,
-    dout_WIDTH            = 32
-)(
-    input  [0 : 0]     din0,
-    input  [0 : 0]     din1,
-    input  [0 : 0]     din2,
-    input  [0 : 0]     din3,
-    input  [1 : 0]    din4,
-    output [0 : 0]   dout);
+input[AWIDTH-1:0] addr0;
+input ce0;
+input[DWIDTH-1:0] d0;
+input we0;
+output reg[DWIDTH-1:0] q0;
+input[AWIDTH-1:0] addr1;
+input ce1;
+input[DWIDTH-1:0] d1;
+input we1;
+output reg[DWIDTH-1:0] q1;
+input clk;
 
-// puts internal signals
-wire [1 : 0]     sel;
-// level 1 signals
-wire [0 : 0]         mux_1_0;
-wire [0 : 0]         mux_1_1;
-// level 2 signals
-wire [0 : 0]         mux_2_0;
+(* ram_style = "block" *)reg [DWIDTH-1:0] ram[0:MEM_SIZE-1];
 
-assign sel = din4;
 
-// Generate level 1 logic
-assign mux_1_0 = (sel[0] == 0)? din0 : din1;
-assign mux_1_1 = (sel[0] == 0)? din2 : din3;
 
-// Generate level 2 logic
-assign mux_2_0 = (sel[1] == 0)? mux_1_0 : mux_1_1;
 
-// output logic
-assign dout = mux_2_0;
+always @(posedge clk)  
+begin 
+    if (ce0) 
+    begin
+        if (we0) 
+        begin 
+            ram[addr0] <= d0; 
+        end 
+        q0 <= ram[addr0];
+    end
+end
+
+
+always @(posedge clk)  
+begin 
+    if (ce1) 
+    begin
+        if (we1) 
+        begin 
+            ram[addr1] <= d1; 
+        end 
+        q1 <= ram[addr1];
+    end
+end
+
 
 endmodule
+
+`timescale 1 ns / 1 ps
+module aes128_encrypt_bldEe(
+    reset,
+    clk,
+    address0,
+    ce0,
+    we0,
+    d0,
+    q0,
+    address1,
+    ce1,
+    we1,
+    d1,
+    q1);
+
+parameter DataWidth = 32'd8;
+parameter AddressRange = 32'd16;
+parameter AddressWidth = 32'd4;
+input reset;
+input clk;
+input[AddressWidth - 1:0] address0;
+input ce0;
+input we0;
+input[DataWidth - 1:0] d0;
+output[DataWidth - 1:0] q0;
+input[AddressWidth - 1:0] address1;
+input ce1;
+input we1;
+input[DataWidth - 1:0] d1;
+output[DataWidth - 1:0] q1;
+
+
+
+aes128_encrypt_bldEe_ram aes128_encrypt_bldEe_ram_U(
+    .clk( clk ),
+    .addr0( address0 ),
+    .ce0( ce0 ),
+    .we0( we0 ),
+    .d0( d0 ),
+    .q0( q0 ),
+    .addr1( address1 ),
+    .ce1( ce1 ),
+    .we1( we1 ),
+    .d1( d1 ),
+    .q1( q1 ));
+
+endmodule
+

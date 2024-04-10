@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'aes128_expand_key_hw'" level="0">
-<item name = "Date">Tue Apr  9 20:29:30 2024
+<item name = "Date">Tue Apr  9 22:40:13 2024
 </item>
 <item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
 <item name = "Project">AES_HLS_ECE1155</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">994, 1794, 994, 1794, none</column>
+<column name="">88, 88, 88, 88, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,12 +35,6 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">32, 32, 2, -, -, 16, no</column>
-<column name="- Loop 2">960, 1760, 24 ~ 44, -, -, 40, no</column>
-<column name=" + Loop 2.1">12, 12, 3, -, -, 4, no</column>
-<column name=" + Loop 2.2">6, 6, 2, -, -, 3, no</column>
-<column name=" + Loop 2.3">12, 12, 3, -, -, 4, no</column>
-<column name=" + Loop 2.4">8, 8, 2, -, -, 4, no</column>
 </table>
 </item>
 </section>

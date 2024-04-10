@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'aes128_encrypt_block_hw'" level="0">
-<item name = "Date">Tue Apr  9 20:29:31 2024
+<item name = "Date">Tue Apr  9 22:40:14 2024
 </item>
 <item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
 <item name = "Project">AES_HLS_ECE1155</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">3802, 5650, 3802, 5650, none</column>
+<column name="">756, 1236, 756, 1236, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,13 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">40, 40, 10, -, -, 4, no</column>
-<column name=" + Loop 1.1">8, 8, 2, -, -, 4, no</column>
-<column name="- Loop 2">2520, 3492, 280 ~ 388, -, -, 9, no</column>
-<column name=" + Loop 2.1">48, 48, 3, -, -, 16, no</column>
-<column name="- Loop 3">48, 48, 3, -, -, 16, no</column>
-<column name="- Loop 4">40, 40, 10, -, -, 4, no</column>
-<column name=" + Loop 4.1">8, 8, 2, -, -, 4, no</column>
+<column name="- Loop 1">576, 1008, 64 ~ 112, -, -, 9, no</column>
 </table>
 </item>
 </section>

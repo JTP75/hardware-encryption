@@ -1,11 +1,11 @@
 # This script segment is generated automatically by AutoPilot
 
 # Memory (RAM/ROM)  definition:
-set ID 28
+set ID 19
 set hasByteEnable 0
-set MemName aes128_encrypt_blg8j
+set MemName aes128_encrypt_bldEe
 set CoreName ap_simcore_mem
-set PortList { 2 3 }
+set PortList { 2 2 }
 set DataWd 8
 set AddrRange 16
 set AddrWd 4
@@ -86,11 +86,11 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 29
+set ID 20
 set hasByteEnable 0
-set MemName aes128_encrypt_blibs
+set MemName aes128_encrypt_blfYi
 set CoreName ap_simcore_mem
-set PortList { 2 3 }
+set PortList { 2 2 }
 set DataWd 8
 set AddrRange 176
 set AddrWd 8
@@ -181,14 +181,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 30 \
+    id 21 \
     name in_r \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename in_r \
     op interface \
-    ports { in_r_address0 { O 4 vector } in_r_ce0 { O 1 bit } in_r_q0 { I 8 vector } } \
+    ports { in_r_address0 { O 4 vector } in_r_ce0 { O 1 bit } in_r_q0 { I 8 vector } in_r_address1 { O 4 vector } in_r_ce1 { O 1 bit } in_r_q1 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'in_r'"
@@ -200,14 +200,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 31 \
+    id 22 \
     name key \
     reset_level 1 \
     sync_rst true \
     dir I \
     corename key \
     op interface \
-    ports { key_address0 { O 4 vector } key_ce0 { O 1 bit } key_q0 { I 8 vector } } \
+    ports { key_address0 { O 4 vector } key_ce0 { O 1 bit } key_q0 { I 8 vector } key_address1 { O 4 vector } key_ce1 { O 1 bit } key_q1 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'key'"
@@ -219,14 +219,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 32 \
+    id 23 \
     name out_r \
     reset_level 1 \
     sync_rst true \
     dir O \
     corename out_r \
     op interface \
-    ports { out_r_address0 { O 4 vector } out_r_ce0 { O 1 bit } out_r_we0 { O 1 bit } out_r_d0 { O 8 vector } } \
+    ports { out_r_address0 { O 4 vector } out_r_ce0 { O 1 bit } out_r_we0 { O 1 bit } out_r_d0 { O 8 vector } out_r_address1 { O 4 vector } out_r_ce1 { O 1 bit } out_r_we1 { O 1 bit } out_r_d1 { O 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'out_r'"

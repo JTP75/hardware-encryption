@@ -15,12 +15,7 @@
 namespace ap_rtl {
 
 struct gmul_hw : public sc_module {
-    // Port declarations 9
-    sc_in_clk ap_clk;
-    sc_in< sc_logic > ap_rst;
-    sc_in< sc_logic > ap_start;
-    sc_out< sc_logic > ap_done;
-    sc_out< sc_logic > ap_idle;
+    // Port declarations 4
     sc_out< sc_logic > ap_ready;
     sc_in< sc_lv<8> > a;
     sc_in< sc_lv<3> > b;
@@ -35,63 +30,33 @@ struct gmul_hw : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    sc_signal< sc_lv<2> > ap_CS_fsm;
-    sc_signal< sc_logic > ap_CS_fsm_state1;
-    sc_signal< sc_lv<4> > i_1_fu_92_p2;
-    sc_signal< sc_logic > ap_CS_fsm_state2;
-    sc_signal< sc_lv<8> > rslt_0_s_fu_110_p2;
-    sc_signal< sc_lv<1> > exitcond_fu_86_p2;
-    sc_signal< sc_lv<8> > a_assign_2_fu_136_p3;
-    sc_signal< sc_lv<3> > tmp_1_fu_154_p1;
-    sc_signal< sc_lv<4> > i_reg_46;
-    sc_signal< sc_lv<8> > rslt_reg_57;
-    sc_signal< sc_lv<3> > b_assign_1_reg_68;
-    sc_signal< sc_lv<8> > p_0_reg_77;
-    sc_signal< sc_lv<1> > tmp_fu_98_p1;
-    sc_signal< sc_lv<8> > tmp_5_fu_102_p3;
-    sc_signal< sc_lv<8> > tmp_3_fu_124_p2;
-    sc_signal< sc_lv<1> > tmp_2_fu_116_p3;
-    sc_signal< sc_lv<8> > a_assign_fu_130_p2;
-    sc_signal< sc_lv<2> > b_assign_fu_144_p4;
-    sc_signal< sc_lv<8> > ap_return_preg;
-    sc_signal< sc_lv<2> > ap_NS_fsm;
+    sc_signal< sc_lv<1> > tmp_fu_34_p1;
+    sc_signal< sc_lv<8> > tmp_2_fu_54_p2;
+    sc_signal< sc_lv<1> > tmp_1_fu_46_p3;
+    sc_signal< sc_lv<8> > a_assign_fu_60_p2;
+    sc_signal< sc_lv<1> > tmp_3_fu_74_p3;
+    sc_signal< sc_lv<8> > p_1_fu_66_p3;
+    sc_signal< sc_lv<8> > tmp_5_fu_38_p3;
+    sc_signal< sc_lv<8> > tmp_5_1_fu_82_p3;
     static const sc_logic ap_const_logic_1;
-    static const sc_logic ap_const_logic_0;
-    static const sc_lv<2> ap_ST_fsm_state1;
-    static const sc_lv<2> ap_ST_fsm_state2;
-    static const sc_lv<32> ap_const_lv32_0;
-    static const sc_lv<32> ap_const_lv32_1;
-    static const sc_lv<1> ap_const_lv1_0;
-    static const sc_lv<4> ap_const_lv4_0;
+    static const bool ap_const_boolean_1;
     static const sc_lv<8> ap_const_lv8_0;
-    static const sc_lv<4> ap_const_lv4_8;
-    static const sc_lv<4> ap_const_lv4_1;
     static const sc_lv<32> ap_const_lv32_7;
     static const sc_lv<8> ap_const_lv8_1;
     static const sc_lv<8> ap_const_lv8_1B;
-    static const sc_lv<32> ap_const_lv32_2;
-    static const sc_lv<1> ap_const_lv1_1;
-    static const bool ap_const_boolean_1;
+    static const sc_lv<32> ap_const_lv32_1;
+    static const sc_logic ap_const_logic_0;
     // Thread declarations
-    void thread_ap_clk_no_reset_();
-    void thread_a_assign_2_fu_136_p3();
-    void thread_a_assign_fu_130_p2();
-    void thread_ap_CS_fsm_state1();
-    void thread_ap_CS_fsm_state2();
-    void thread_ap_done();
-    void thread_ap_idle();
+    void thread_a_assign_fu_60_p2();
     void thread_ap_ready();
     void thread_ap_return();
-    void thread_b_assign_fu_144_p4();
-    void thread_exitcond_fu_86_p2();
-    void thread_i_1_fu_92_p2();
-    void thread_rslt_0_s_fu_110_p2();
-    void thread_tmp_1_fu_154_p1();
-    void thread_tmp_2_fu_116_p3();
-    void thread_tmp_3_fu_124_p2();
-    void thread_tmp_5_fu_102_p3();
-    void thread_tmp_fu_98_p1();
-    void thread_ap_NS_fsm();
+    void thread_p_1_fu_66_p3();
+    void thread_tmp_1_fu_46_p3();
+    void thread_tmp_2_fu_54_p2();
+    void thread_tmp_3_fu_74_p3();
+    void thread_tmp_5_1_fu_82_p3();
+    void thread_tmp_5_fu_38_p3();
+    void thread_tmp_fu_34_p1();
 };
 
 }

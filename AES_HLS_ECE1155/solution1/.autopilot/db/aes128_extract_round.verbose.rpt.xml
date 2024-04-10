@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'aes128_extract_round'" level="0">
-<item name = "Date">Tue Apr  9 20:29:32 2024
+<item name = "Date">Tue Apr  9 22:40:17 2024
 </item>
 <item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
 <item name = "Project">AES_HLS_ECE1155</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 6.904, 1.25</column>
+<column name="ap_clk">10.00, 5.576, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">41, 41, 41, 41, none</column>
+<column name="">8, 8, 8, 8, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,6 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">40, 40, 10, -, -, 4, no</column>
-<column name=" + Loop 1.1">8, 8, 2, -, -, 4, no</column>
 </table>
 </item>
 </section>
@@ -49,12 +47,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
 <column name="DSP">-, -, -, -</column>
-<column name="Expression">-, -, 0, 83</column>
+<column name="Expression">-, -, 0, 225</column>
 <column name="FIFO">-, -, -, -</column>
 <column name="Instance">-, -, -, -</column>
 <column name="Memory">-, -, -, -</column>
-<column name="Multiplexer">-, -, -, 45</column>
-<column name="Register">-, -, 33, -</column>
+<column name="Multiplexer">-, -, -, 223</column>
+<column name="Register">-, -, 17, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
 </table>
@@ -79,33 +77,36 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_6_fu_93_p2">+, 0, 0, 12, 3, 1</column>
-<column name="j_4_fu_121_p2">+, 0, 0, 12, 3, 1</column>
-<column name="sum_fu_136_p2">+, 0, 0, 15, 8, 8</column>
-<column name="tmp_12_fu_158_p2">+, 0, 0, 13, 4, 4</column>
-<column name="tmp_s_fu_127_p2">+, 0, 0, 13, 4, 4</column>
-<column name="exitcond1_fu_87_p2">icmp, 0, 0, 9, 3, 4</column>
-<column name="exitcond_fu_115_p2">icmp, 0, 0, 9, 3, 4</column>
+<column name="sum_0_1_fu_377_p2">+, 0, 0, 15, 1, 8</column>
+<column name="sum_0_2_fu_388_p2">+, 0, 0, 15, 2, 8</column>
+<column name="sum_0_3_fu_398_p2">+, 0, 0, 15, 2, 8</column>
+<column name="sum_1_1_fu_418_p2">+, 0, 0, 15, 3, 8</column>
+<column name="sum_1_2_fu_428_p2">+, 0, 0, 15, 3, 8</column>
+<column name="sum_1_3_fu_438_p2">+, 0, 0, 15, 3, 8</column>
+<column name="sum_1_fu_408_p2">+, 0, 0, 15, 3, 8</column>
+<column name="sum_2_1_fu_458_p2">+, 0, 0, 15, 4, 8</column>
+<column name="sum_2_2_fu_468_p2">+, 0, 0, 15, 4, 8</column>
+<column name="sum_2_3_fu_478_p2">+, 0, 0, 15, 4, 8</column>
+<column name="sum_2_fu_448_p2">+, 0, 0, 15, 4, 8</column>
+<column name="sum_3_1_fu_498_p2">+, 0, 0, 15, 4, 8</column>
+<column name="sum_3_2_fu_508_p2">+, 0, 0, 15, 4, 8</column>
+<column name="sum_3_3_fu_518_p2">+, 0, 0, 15, 4, 8</column>
+<column name="sum_3_fu_488_p2">+, 0, 0, 15, 4, 8</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">27, 5, 1, 5</column>
-<column name="i_reg_57">9, 2, 3, 6</column>
-<column name="j_reg_68">9, 2, 3, 6</column>
+<column name="ap_NS_fsm">47, 10, 1, 10</column>
+<column name="expanded_key_address0">44, 9, 8, 72</column>
+<column name="expanded_key_address1">44, 9, 8, 72</column>
+<column name="round_key_address0">44, 9, 4, 36</column>
+<column name="round_key_address1">44, 9, 4, 36</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">4, 0, 4, 0</column>
-<column name="i_6_reg_180">3, 0, 3, 0</column>
-<column name="i_cast_reg_172">3, 0, 4, 1</column>
-<column name="i_reg_57">3, 0, 3, 0</column>
-<column name="j_4_reg_193">3, 0, 3, 0</column>
-<column name="j_reg_68">3, 0, 3, 0</column>
-<column name="tmp_12_reg_203">4, 0, 4, 0</column>
-<column name="tmp_14_reg_167">8, 0, 8, 0</column>
-<column name="tmp_reg_185">2, 0, 4, 2</column>
+<column name="ap_CS_fsm">9, 0, 9, 0</column>
+<column name="tmp_reg_533">8, 0, 8, 0</column>
 </table>
 </item>
 </section>
@@ -124,11 +125,18 @@
 <column name="expanded_key_address0">out, 8, ap_memory, expanded_key, array</column>
 <column name="expanded_key_ce0">out, 1, ap_memory, expanded_key, array</column>
 <column name="expanded_key_q0">in, 8, ap_memory, expanded_key, array</column>
+<column name="expanded_key_address1">out, 8, ap_memory, expanded_key, array</column>
+<column name="expanded_key_ce1">out, 1, ap_memory, expanded_key, array</column>
+<column name="expanded_key_q1">in, 8, ap_memory, expanded_key, array</column>
 <column name="expanded_key_offset">in, 10, ap_none, expanded_key_offset, scalar</column>
 <column name="round_key_address0">out, 4, ap_memory, round_key, array</column>
 <column name="round_key_ce0">out, 1, ap_memory, round_key, array</column>
 <column name="round_key_we0">out, 1, ap_memory, round_key, array</column>
 <column name="round_key_d0">out, 8, ap_memory, round_key, array</column>
+<column name="round_key_address1">out, 4, ap_memory, round_key, array</column>
+<column name="round_key_ce1">out, 1, ap_memory, round_key, array</column>
+<column name="round_key_we1">out, 1, ap_memory, round_key, array</column>
+<column name="round_key_d1">out, 8, ap_memory, round_key, array</column>
 </table>
 </item>
 </section>
