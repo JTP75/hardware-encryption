@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'gmul_hw'
 ================================================================
-* Date:           Tue Apr  9 22:40:14 2024
+* Date:           Tue Apr 10 18:51:46 2018
 
 * Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
 * Project:        AES_HLS_ECE1155
@@ -97,7 +97,7 @@ Target clock period: 10ns, clock uncertainty: 1.25ns.
  <State 1>: 1.25ns
 The critical path consists of the following:
 	wire read on port 'b' [3]  (0 ns)
-	'select' operation ('tmp_5', AES_HLS_ECE1155/src/aes_hw.cpp:13) [6]  (0 ns)
+	'select' operation ('tmp_5_1', AES_HLS_ECE1155/src/aes_hw.cpp:13) [12]  (0 ns)
 	'xor' operation ('rslt_0_6', AES_HLS_ECE1155/src/aes_hw.cpp:13) [13]  (1.25 ns)
 
 

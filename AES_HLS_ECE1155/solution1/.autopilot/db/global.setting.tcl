@@ -40,7 +40,7 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z020:clg400:-1
-set SourceFiles {sc {} c {../src/aes_sw.cpp ../src/aes_hw.cpp}}
+set SourceFiles {sc {} c {../src/aes_hw.cpp ../src/aes_sw.cpp}}
 set SourceFlags {sc {} c {{} {}}}
 set DirectiveFile C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/solution1.directive
 set TBFiles {verilog ../src/aes_test.cpp bc ../src/aes_test.cpp vhdl ../src/aes_test.cpp sc ../src/aes_test.cpp cas ../src/aes_test.cpp c {}}

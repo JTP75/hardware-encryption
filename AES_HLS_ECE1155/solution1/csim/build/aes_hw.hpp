@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdint.h>
+#include <ap_axi_sdata.h>
 
 /// @see https://github.com/m3y54m/aes-in-c/blob/main/src/main.c
 const uint8_t sbox_hw[256] = {

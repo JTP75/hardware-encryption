@@ -4,6 +4,10 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <ap_axi_sdata.h>
+#include <hls_stream.h>
+
+typedef ap_axis<8, 1, 1, 1> beat_t;
+typedef hls::stream<beat_t> stream_t;
 
 /// @see https://github.com/m3y54m/aes-in-c/blob/main/src/main.c
 const uint8_t sbox_hw[256] = {
@@ -68,6 +72,9 @@ const uint8_t rcon_hw[255] = {
     0x91, 0x39, 0x72, 0xe4, 0xd3, 0xbd, 0x61, 0xc2, 0x9f, 0x25, 0x4a, 0x94, 0x33,
     0x66, 0xcc, 0x83, 0x1d, 0x3a, 0x74, 0xe8, 0xcb};
 
+void array2stream(uint8_t *array, stream_t &stream);
+void stream2array(stream_t &stream, uint8_t *array);
+
 void aes128_expand_key_hw(const uint8_t *key, uint8_t *expanded_key);
 void aes128_sub_bytes_hw(uint8_t *state);
 void aes128_sub_bytes_inv_hw(uint8_t *state);
@@ -81,7 +88,7 @@ void aes128_mix_columns_hw(uint8_t *state);
 void aes128_mix_columns_inv_hw(uint8_t *state);
 void aes128_extract_round_key_hw(const uint8_t *expanded_key, uint8_t *round_key);
 void aes128_add_round_key_hw(uint8_t *state, const uint8_t *round_key);
-void aes128_encrypt_block_hw(const uint8_t *in, const uint8_t *key, uint8_t *out);
+void aes128_encrypt_block_hw(stream_t &in, stream_t &out);
 void aes128_decrypt_block_hw(const uint8_t *in, const uint8_t *key, uint8_t *out);
 
 void aes192_expand_key_hw(const uint8_t *key, uint8_t *expanded_key);

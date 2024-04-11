@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'aes128_add_round_key'" level="0">
-<item name = "Date">Tue Apr  9 22:40:13 2024
+<item name = "Date">Tue Apr 10 18:51:46 2018
 </item>
 <item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
 <item name = "Project">AES_HLS_ECE1155</item>

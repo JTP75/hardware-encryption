@@ -7133,8 +7133,7 @@ void aes256_extract_round_key_hw(const uint8_t *expanded_key, uint8_t *round_key
 void aes256_add_round_key_hw(uint8_t *state, const uint8_t *round_key);
 void aes256_encrypt_block_hw(const uint8_t *in, const uint8_t *key, uint8_t *out);
 void aes256_decrypt_block_hw(const uint8_t *in, const uint8_t *key, uint8_t *out);
-# 1 "AES_HLS_ECE1155/src/aes_hw.cpp" 2
-
+# 2 "AES_HLS_ECE1155/src/aes_hw.cpp" 2
 
 
 
@@ -7396,6 +7395,8 @@ void aes128_encrypt_block_hw(const uint8_t in[16], const uint8_t key[16], uint8_
         }
     }
 }
+
+
 
 
 

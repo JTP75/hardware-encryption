@@ -226,15 +226,31 @@ void aes128_add_round_key_hw(uint8_t state[16], const uint8_t round_key[16]) {
 /// @param in 128 bit (16 byte) plaintext as byte array
 /// @param key 128 bit (16 byte) key as byte array
 /// @param out 128 bit (16 byte) ciphertext output as byte array
-void aes128_encrypt_block_hw(const uint8_t in[16], const uint8_t key[16], uint8_t out[16]) {
+void aes128_encrypt_block_hw(stream_t &sin, stream_t &sout) {
+
+#pragma HLS INTERFACE ap_ctrl_none port=return
+#pragma HLS INTERFACE axis port=sin
+#pragma HLS INTERFACE axis port=sout
+
+	const uint8_t key[16] = {
+		0x00,0x00,0x00,0x00,
+		0x00,0x00,0x00,0x00,
+		0x00,0x00,0x00,0x00,
+		0x00,0x00,0x00,0x19};
+
+					  // begin func
+	beat_t next,val;
     int i,j;
-    uint8_t state[16], round_key[16], expanded_key[176];
+    uint8_t state[16], round_key[16], expanded_key[176], in[16], out[16];
 
     for (i=0; i<4; i++) {
 #pragma HLS UNROLL factor=4
         for (j=0; j<4; j++) {
 #pragma HLS UNROLL factor=4
-            state[i + 4*j] = in[4*i + j];
+        	if (4*i+j < 16) {
+        		sin >> next;
+        		state[i + 4*j] = next.data(7,0);
+        	}
         }
     }
     aes128_expand_key_hw(key, expanded_key);
@@ -256,7 +272,10 @@ void aes128_encrypt_block_hw(const uint8_t in[16], const uint8_t key[16], uint8_
 #pragma HLS UNROLL factor=4
         for (j=0; j<4; j++) {
 #pragma HLS UNROLL factor=4
-            out[4*i + j] = state[i + 4*j];
+        	val.data(7, 0) = state[i + 4*j];
+        	val.keep(0, 0) = 0x1;
+        	val.last.set_bit(0, 4*i+j==16-1);
+        	sout << val;
         }
     }
 }
@@ -265,6 +284,8 @@ void aes128_encrypt_block_hw(const uint8_t in[16], const uint8_t key[16], uint8_
 /// @param in 128 bit (16 byte) ciphertext byte array
 /// @param key 128 bit (16 byte) key byte array
 /// @param out 128 bit (16 byte) plaintext output byte array
+
+
 void aes128_decrypt_block_hw(const uint8_t in[16], const uint8_t key[16], uint8_t out[16]) {
     int i,j;
     uint8_t state[16], round_key[16], expanded_key[176];

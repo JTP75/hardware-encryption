@@ -7,14 +7,16 @@
     </downStreamTool>
     <config>
         <schedule model="aes128_encrypt_block_hw"/>
-        <config_compile no_signed_zeros="0" unsafe_math_optimizations="0" blackbox=""/>
+        <config_compile blackbox="" no_signed_zeros="0" unsafe_math_optimizations="0"/>
         <config_sdx optimization_level="none" target="none"/>
         <config_bind effort="medium"/>
         <config_schedule effort="medium" relax_ii_for_timing="0"/>
+        <config_export display_name="aes128_encrypt_hw" format="ip_catalog" rtl="vhdl"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
             <Platform>xilinx/zynq/zynq</Platform>
+            <Platform>xilinx/zynq/zynq_fpv6</Platform>
             <customLibs/>
         </UIAutosynConf>
         <UIIPPackagerConf AskAgain="true" DescriptionButton="false" LibraryButton="false" RTLLanguage="verilog" UseNetList="none" VendorButton="false" VersionButton="false" evaluateRTL="false" setup="false">
@@ -43,8 +45,8 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" rtl="verilog" rtlButton="true" rtlCombo="verilog">
-        <Format formatName="ip_catalog"/>
+    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" rtl="verilog" rtlButton="true" rtlCombo="vhdl">
+        <Format display_name="aes128_encrypt_hw" formatName="ip_catalog" description="" vendor="" library="" ipname="" version="" driver_input_dir="" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>
@@ -68,7 +70,7 @@
     </targetInfo>
     <libraryList>
         <library name="DefaultPlatform" value="xilinx/zynq/zynq"/>
-        <library value="xilinx/zynq/zynq_fpv6" name="DefaultPlatform"/>
+        <library name="DefaultPlatform" value="xilinx/zynq/zynq_fpv6"/>
     </libraryList>
     <clockList>
         <clock name="default" default="false" uncertainty="12.5%" period="10"/>

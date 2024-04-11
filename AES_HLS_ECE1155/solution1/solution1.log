@@ -4922,3 +4922,626 @@ INFO: [SYSC 207-301] Generating SystemC RTL for aes128_encrypt_block_hw.
 INFO: [VHDL 208-304] Generating VHDL RTL for aes128_encrypt_block_hw.
 INFO: [VLOG 209-307] Generating Verilog RTL for aes128_encrypt_block_hw.
 INFO: [HLS 200-112] Total elapsed time: 18.892 seconds; peak allocated memory: 176.580 MB.
+==============================================================
+File generated on Wed Apr 10 19:18:06 -0400 2024
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Wed Apr 10 19:28:45 -0400 2024
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Wed Apr 10 19:32:11 -0400 2024
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Wed Apr 10 19:38:21 -0400 2024
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [HLS 200-10] Analyzing design file 'AES_HLS_ECE1155/src/aes_hw.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'AES_HLS_ECE1155/src/aes_sw.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:17 . Memory (MB): peak = 105.383 ; gain = 20.516
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:17 . Memory (MB): peak = 105.383 ; gain = 20.516
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:11) in function 'gmul_hw(unsigned char, unsigned char)': changing partial unrolling into complete unrolling since the unrolling factor (=8) is no less than the loop trip count (=8).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:29) in function 'rotate_word_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=3).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:43) in function 'aes128_expand_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (AES_HLS_ECE1155/src/aes_hw.cpp:48) in function 'aes128_expand_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=176) is no less than the loop trip count (=40).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1' (AES_HLS_ECE1155/src/aes_hw.cpp:50) in function 'aes128_expand_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.2' (AES_HLS_ECE1155/src/aes_hw.cpp:56) in function 'aes128_expand_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.3' (AES_HLS_ECE1155/src/aes_hw.cpp:62) in function 'aes128_expand_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:73) in function 'aes128_sub_bytes_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:95) in function 'aes128_shift_row_hw(unsigned char*, unsigned char)': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:121) in function 'aes128_shift_rows_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:140) in function 'aes128_mix_column_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:169) in function 'aes128_mix_columns_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:171) in function 'aes128_mix_columns_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.2' (AES_HLS_ECE1155/src/aes_hw.cpp:176) in function 'aes128_mix_columns_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:206) in function 'aes128_extract_round_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:208) in function 'aes128_extract_round_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:233) in function 'aes128_encrypt_block_hw(unsigned char const*, unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:235) in function 'aes128_encrypt_block_hw(unsigned char const*, unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (AES_HLS_ECE1155/src/aes_hw.cpp:255) in function 'aes128_encrypt_block_hw(unsigned char const*, unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1' (AES_HLS_ECE1155/src/aes_hw.cpp:257) in function 'aes128_encrypt_block_hw(unsigned char const*, unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 107.160 ; gain = 22.293
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'rotate_word_hw' into 'aes128_expand_key_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes128_shift_row_hw' into 'aes128_shift_rows_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:123) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes128_sub_bytes_hw' into 'aes128_encrypt_block_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:245) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:00 ; elapsed = 00:00:18 . Memory (MB): peak = 107.449 ; gain = 22.582
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:11) in function 'gmul_hw': changing partial unrolling into complete unrolling since the unrolling factor (=8) is no less than the loop trip count (=8).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:11) in function 'gmul_hw' completely with a factor of 8.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:233) in function 'aes128_encrypt_block_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:235) in function 'aes128_encrypt_block_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (AES_HLS_ECE1155/src/aes_hw.cpp:255) in function 'aes128_encrypt_block_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1' (AES_HLS_ECE1155/src/aes_hw.cpp:257) in function 'aes128_encrypt_block_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:233) in function 'aes128_encrypt_block_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:235) in function 'aes128_encrypt_block_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (AES_HLS_ECE1155/src/aes_hw.cpp:255) in function 'aes128_encrypt_block_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (AES_HLS_ECE1155/src/aes_hw.cpp:257) in function 'aes128_encrypt_block_hw' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:169) in function 'aes128_mix_columns_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:171) in function 'aes128_mix_columns_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.2' (AES_HLS_ECE1155/src/aes_hw.cpp:176) in function 'aes128_mix_columns_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:169) in function 'aes128_mix_columns_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:171) in function 'aes128_mix_columns_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.2' (AES_HLS_ECE1155/src/aes_hw.cpp:176) in function 'aes128_mix_columns_hw' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:140) in function 'aes128_mix_column_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:140) in function 'aes128_mix_column_hw' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:121) in function 'aes128_shift_rows_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:121) in function 'aes128_shift_rows_hw' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:73) in function 'aes128_sub_bytes_hw': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:73) in function 'aes128_sub_bytes_hw' completely with a factor of 16.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:219) in function 'aes128_add_round_key_hw' partially with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:43) in function 'aes128_expand_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (AES_HLS_ECE1155/src/aes_hw.cpp:48) in function 'aes128_expand_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=176) is no less than the loop trip count (=40).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1' (AES_HLS_ECE1155/src/aes_hw.cpp:50) in function 'aes128_expand_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.2' (AES_HLS_ECE1155/src/aes_hw.cpp:56) in function 'aes128_expand_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.3' (AES_HLS_ECE1155/src/aes_hw.cpp:62) in function 'aes128_expand_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:43) in function 'aes128_expand_key_hw' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (AES_HLS_ECE1155/src/aes_hw.cpp:48) in function 'aes128_expand_key_hw' completely with a factor of 40.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (AES_HLS_ECE1155/src/aes_hw.cpp:50) in function 'aes128_expand_key_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.2' (AES_HLS_ECE1155/src/aes_hw.cpp:56) in function 'aes128_expand_key_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (AES_HLS_ECE1155/src/aes_hw.cpp:62) in function 'aes128_expand_key_hw' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:29) in function 'rotate_word_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=3).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:29) in function 'rotate_word_hw' completely with a factor of 3.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:95) in function 'aes128_shift_row_hw': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:95) in function 'aes128_shift_row_hw' completely with a factor of 3.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:206) in function 'aes128_extract_round_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:208) in function 'aes128_extract_round_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:206) in function 'aes128_extract_round_key_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:208) in function 'aes128_extract_round_key_hw' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'tmp' (AES_HLS_ECE1155/src/aes_hw.cpp:41) automatically.
+INFO: [XFORM 203-102] Partitioning array 'copy' (AES_HLS_ECE1155/src/aes_hw.cpp:139) automatically.
+INFO: [XFORM 203-102] Partitioning array 'column' (AES_HLS_ECE1155/src/aes_hw.cpp:168) automatically.
+INFO: [XFORM 203-602] Inlining function 'rotate_word_hw' into 'aes128_expand_key_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes128_shift_rows_hw' into 'aes128_encrypt_block_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:246) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes128_mix_columns_hw' into 'aes128_encrypt_block_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:247) automatically.
+WARNING: [XFORM 203-561] Updating loop upper bound from 255 to 3 for loop 'Loop-0' in function 'aes128_shift_row_hw'.
+INFO: [XFORM 203-11] Balancing expressions in function 'gmul_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:9)...6 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'aes128_mix_column_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:138)...12 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 132.180 ; gain = 47.312
+WARNING: [XFORM 203-631] Renaming function 'aes128_extract_round_key_hw' to 'aes128_extract_round' (AES_HLS_ECE1155/src/aes_hw.cpp:210:1)
+WARNING: [XFORM 203-631] Renaming function 'aes128_add_round_key_hw' to 'aes128_add_round_key' (AES_HLS_ECE1155/src/aes_hw.cpp:219:25)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:20 . Memory (MB): peak = 205.145 ; gain = 120.277
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'aes128_encrypt_block_hw' ...
+WARNING: [SYN 201-107] Renaming port name 'aes128_encrypt_block_hw/in' to 'aes128_encrypt_block_hw/in_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'aes128_encrypt_block_hw/out' to 'aes128_encrypt_block_hw/out_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_expand_key_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 20.227 seconds; current allocated memory: 163.125 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.597 seconds; current allocated memory: 165.185 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_extract_round' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.62 seconds; current allocated memory: 165.574 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 165.860 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_add_round_key' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.116 seconds; current allocated memory: 166.012 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 166.146 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_sub_bytes_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.116 seconds; current allocated memory: 166.387 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.105 seconds; current allocated memory: 166.677 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_shift_row_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.128 seconds; current allocated memory: 166.755 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.055 seconds; current allocated memory: 166.862 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gmul_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.069 seconds; current allocated memory: 166.898 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.046 seconds; current allocated memory: 166.965 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_mix_column_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.073 seconds; current allocated memory: 167.041 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 167.189 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_encrypt_block_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.198 seconds; current allocated memory: 167.798 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.732 seconds; current allocated memory: 168.895 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_expand_key_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'aes128_expand_key_hw_sbox_hw' to 'aes128_expand_keybkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_expand_key_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.634 seconds; current allocated memory: 172.324 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_extract_round' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_extract_round'.
+INFO: [HLS 200-111]  Elapsed time: 2.184 seconds; current allocated memory: 173.772 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_add_round_key' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_add_round_key'.
+INFO: [HLS 200-111]  Elapsed time: 0.371 seconds; current allocated memory: 174.037 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_sub_bytes_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'aes128_sub_bytes_hw_sbox_hw' to 'aes128_sub_bytes_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_sub_bytes_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.254 seconds; current allocated memory: 174.581 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_shift_row_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_shift_row_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.353 seconds; current allocated memory: 174.784 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gmul_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gmul_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.207 seconds; current allocated memory: 174.917 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_mix_column_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_mix_column_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.145 seconds; current allocated memory: 175.190 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_encrypt_block_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_encrypt_block_hw/in_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_encrypt_block_hw/key' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_encrypt_block_hw/out_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'aes128_encrypt_block_hw' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'aes128_encrypt_block_hw_state' to 'aes128_encrypt_bldEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'aes128_encrypt_block_hw_round_key' to 'aes128_encrypt_bleOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'aes128_encrypt_block_hw_expanded_key' to 'aes128_encrypt_blfYi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_encrypt_block_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 176.674 MB.
+INFO: [RTMG 210-279] Implementing memory 'aes128_expand_keybkb_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'aes128_encrypt_bldEe_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'aes128_encrypt_blfYi_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:30 . Memory (MB): peak = 247.453 ; gain = 162.586
+INFO: [SYSC 207-301] Generating SystemC RTL for aes128_encrypt_block_hw.
+INFO: [VHDL 208-304] Generating VHDL RTL for aes128_encrypt_block_hw.
+INFO: [VLOG 209-307] Generating Verilog RTL for aes128_encrypt_block_hw.
+INFO: [HLS 200-112] Total elapsed time: 30.181 seconds; peak allocated memory: 176.674 MB.
+==============================================================
+File generated on Wed Apr 10 19:43:24 -0400 2024
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+ERROR: [IMPL 213-28] Failed to generate IP.
+==============================================================
+File generated on Tue Apr 10 18:51:33 -0500 2018
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [HLS 200-10] Analyzing design file 'AES_HLS_ECE1155/src/aes_hw.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'AES_HLS_ECE1155/src/aes_sw.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 105.348 ; gain = 19.793
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 105.348 ; gain = 19.793
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:11) in function 'gmul_hw(unsigned char, unsigned char)': changing partial unrolling into complete unrolling since the unrolling factor (=8) is no less than the loop trip count (=8).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:29) in function 'rotate_word_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=3).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:43) in function 'aes128_expand_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (AES_HLS_ECE1155/src/aes_hw.cpp:48) in function 'aes128_expand_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=176) is no less than the loop trip count (=40).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1' (AES_HLS_ECE1155/src/aes_hw.cpp:50) in function 'aes128_expand_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.2' (AES_HLS_ECE1155/src/aes_hw.cpp:56) in function 'aes128_expand_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.3' (AES_HLS_ECE1155/src/aes_hw.cpp:62) in function 'aes128_expand_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:73) in function 'aes128_sub_bytes_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:95) in function 'aes128_shift_row_hw(unsigned char*, unsigned char)': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:121) in function 'aes128_shift_rows_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:140) in function 'aes128_mix_column_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:169) in function 'aes128_mix_columns_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:171) in function 'aes128_mix_columns_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.2' (AES_HLS_ECE1155/src/aes_hw.cpp:176) in function 'aes128_mix_columns_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:206) in function 'aes128_extract_round_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:208) in function 'aes128_extract_round_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:233) in function 'aes128_encrypt_block_hw(unsigned char const*, unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:235) in function 'aes128_encrypt_block_hw(unsigned char const*, unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (AES_HLS_ECE1155/src/aes_hw.cpp:255) in function 'aes128_encrypt_block_hw(unsigned char const*, unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1' (AES_HLS_ECE1155/src/aes_hw.cpp:257) in function 'aes128_encrypt_block_hw(unsigned char const*, unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 106.957 ; gain = 21.402
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'rotate_word_hw' into 'aes128_expand_key_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes128_shift_row_hw' into 'aes128_shift_rows_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:123) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes128_sub_bytes_hw' into 'aes128_encrypt_block_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:245) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 107.211 ; gain = 21.656
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:11) in function 'gmul_hw': changing partial unrolling into complete unrolling since the unrolling factor (=8) is no less than the loop trip count (=8).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:11) in function 'gmul_hw' completely with a factor of 8.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:233) in function 'aes128_encrypt_block_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:235) in function 'aes128_encrypt_block_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (AES_HLS_ECE1155/src/aes_hw.cpp:255) in function 'aes128_encrypt_block_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1' (AES_HLS_ECE1155/src/aes_hw.cpp:257) in function 'aes128_encrypt_block_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:233) in function 'aes128_encrypt_block_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:235) in function 'aes128_encrypt_block_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (AES_HLS_ECE1155/src/aes_hw.cpp:255) in function 'aes128_encrypt_block_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (AES_HLS_ECE1155/src/aes_hw.cpp:257) in function 'aes128_encrypt_block_hw' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:169) in function 'aes128_mix_columns_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:171) in function 'aes128_mix_columns_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.2' (AES_HLS_ECE1155/src/aes_hw.cpp:176) in function 'aes128_mix_columns_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:169) in function 'aes128_mix_columns_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:171) in function 'aes128_mix_columns_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.2' (AES_HLS_ECE1155/src/aes_hw.cpp:176) in function 'aes128_mix_columns_hw' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:140) in function 'aes128_mix_column_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:140) in function 'aes128_mix_column_hw' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:121) in function 'aes128_shift_rows_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:121) in function 'aes128_shift_rows_hw' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:73) in function 'aes128_sub_bytes_hw': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:73) in function 'aes128_sub_bytes_hw' completely with a factor of 16.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:219) in function 'aes128_add_round_key_hw' partially with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:43) in function 'aes128_expand_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (AES_HLS_ECE1155/src/aes_hw.cpp:48) in function 'aes128_expand_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=176) is no less than the loop trip count (=40).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1' (AES_HLS_ECE1155/src/aes_hw.cpp:50) in function 'aes128_expand_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.2' (AES_HLS_ECE1155/src/aes_hw.cpp:56) in function 'aes128_expand_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.3' (AES_HLS_ECE1155/src/aes_hw.cpp:62) in function 'aes128_expand_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:43) in function 'aes128_expand_key_hw' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (AES_HLS_ECE1155/src/aes_hw.cpp:48) in function 'aes128_expand_key_hw' completely with a factor of 40.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (AES_HLS_ECE1155/src/aes_hw.cpp:50) in function 'aes128_expand_key_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.2' (AES_HLS_ECE1155/src/aes_hw.cpp:56) in function 'aes128_expand_key_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (AES_HLS_ECE1155/src/aes_hw.cpp:62) in function 'aes128_expand_key_hw' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:29) in function 'rotate_word_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=3).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:29) in function 'rotate_word_hw' completely with a factor of 3.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:95) in function 'aes128_shift_row_hw': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:95) in function 'aes128_shift_row_hw' completely with a factor of 3.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:206) in function 'aes128_extract_round_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:208) in function 'aes128_extract_round_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:206) in function 'aes128_extract_round_key_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:208) in function 'aes128_extract_round_key_hw' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'tmp' (AES_HLS_ECE1155/src/aes_hw.cpp:41) automatically.
+INFO: [XFORM 203-102] Partitioning array 'copy' (AES_HLS_ECE1155/src/aes_hw.cpp:139) automatically.
+INFO: [XFORM 203-102] Partitioning array 'column' (AES_HLS_ECE1155/src/aes_hw.cpp:168) automatically.
+INFO: [XFORM 203-602] Inlining function 'rotate_word_hw' into 'aes128_expand_key_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes128_shift_rows_hw' into 'aes128_encrypt_block_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:246) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes128_mix_columns_hw' into 'aes128_encrypt_block_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:247) automatically.
+WARNING: [XFORM 203-561] Updating loop upper bound from 255 to 3 for loop 'Loop-0' in function 'aes128_shift_row_hw'.
+INFO: [XFORM 203-11] Balancing expressions in function 'gmul_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:9)...6 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'aes128_mix_column_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:138)...12 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 131.480 ; gain = 45.926
+WARNING: [XFORM 203-631] Renaming function 'aes128_extract_round_key_hw' to 'aes128_extract_round' (AES_HLS_ECE1155/src/aes_hw.cpp:210:1)
+WARNING: [XFORM 203-631] Renaming function 'aes128_add_round_key_hw' to 'aes128_add_round_key' (AES_HLS_ECE1155/src/aes_hw.cpp:219:25)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 205.027 ; gain = 119.473
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'aes128_encrypt_block_hw' ...
+WARNING: [SYN 201-107] Renaming port name 'aes128_encrypt_block_hw/in' to 'aes128_encrypt_block_hw/in_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'aes128_encrypt_block_hw/out' to 'aes128_encrypt_block_hw/out_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_expand_key_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.027 seconds; current allocated memory: 163.122 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.476 seconds; current allocated memory: 165.181 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_extract_round' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.516 seconds; current allocated memory: 165.570 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.089 seconds; current allocated memory: 165.857 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_add_round_key' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.098 seconds; current allocated memory: 166.008 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.062 seconds; current allocated memory: 166.142 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_sub_bytes_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.094 seconds; current allocated memory: 166.383 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.095 seconds; current allocated memory: 166.673 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_shift_row_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.097 seconds; current allocated memory: 166.751 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.078 seconds; current allocated memory: 166.859 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gmul_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 166.894 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.037 seconds; current allocated memory: 166.962 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_mix_column_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.057 seconds; current allocated memory: 167.053 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.063 seconds; current allocated memory: 167.201 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_encrypt_block_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.345 seconds; current allocated memory: 167.794 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.558 seconds; current allocated memory: 168.891 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_expand_key_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'aes128_expand_key_hw_sbox_hw' to 'aes128_expand_keybkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_expand_key_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.493 seconds; current allocated memory: 172.320 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_extract_round' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_extract_round'.
+INFO: [HLS 200-111]  Elapsed time: 1.865 seconds; current allocated memory: 173.768 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_add_round_key' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_add_round_key'.
+INFO: [HLS 200-111]  Elapsed time: 0.414 seconds; current allocated memory: 174.064 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_sub_bytes_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'aes128_sub_bytes_hw_sbox_hw' to 'aes128_sub_bytes_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_sub_bytes_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.259 seconds; current allocated memory: 174.562 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_shift_row_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_shift_row_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 174.781 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gmul_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gmul_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.187 seconds; current allocated memory: 174.913 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_mix_column_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_mix_column_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.124 seconds; current allocated memory: 175.187 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_encrypt_block_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_encrypt_block_hw/in_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_encrypt_block_hw/key' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_encrypt_block_hw/out_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'aes128_encrypt_block_hw' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'aes128_encrypt_block_hw_state' to 'aes128_encrypt_bldEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'aes128_encrypt_block_hw_round_key' to 'aes128_encrypt_bleOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'aes128_encrypt_block_hw_expanded_key' to 'aes128_encrypt_blfYi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_encrypt_block_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.334 seconds; current allocated memory: 176.670 MB.
+INFO: [RTMG 210-279] Implementing memory 'aes128_expand_keybkb_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'aes128_encrypt_bldEe_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'aes128_encrypt_blfYi_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:21 . Memory (MB): peak = 247.395 ; gain = 161.840
+INFO: [SYSC 207-301] Generating SystemC RTL for aes128_encrypt_block_hw.
+INFO: [VHDL 208-304] Generating VHDL RTL for aes128_encrypt_block_hw.
+INFO: [VLOG 209-307] Generating Verilog RTL for aes128_encrypt_block_hw.
+INFO: [HLS 200-112] Total elapsed time: 21.333 seconds; peak allocated memory: 176.670 MB.
+==============================================================
+File generated on Tue Apr 10 18:52:56 -0500 2018
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
