@@ -1,0 +1,157 @@
+
+
+================================================================
+== Vivado HLS Report for 'aes128_mix_column_hw'
+================================================================
+* Date:           Tue Apr 10 18:51:51 2018
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        AES_HLS_ECE1155
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     4.338|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------+---------+-----+-----+-----+-----+---------+
+        |                       |         |  Latency  |  Interval | Pipeline|
+        |        Instance       |  Module | min | max | min | max |   Type  |
+        +-----------------------+---------+-----+-----+-----+-----+---------+
+        |tmp_gmul_hw_fu_44      |gmul_hw  |    0|    0|    0|    0|   none  |
+        |tmp_s_gmul_hw_fu_52    |gmul_hw  |    0|    0|    0|    0|   none  |
+        |tmp_9_gmul_hw_fu_60    |gmul_hw  |    0|    0|    0|    0|   none  |
+        |tmp_1_gmul_hw_fu_68    |gmul_hw  |    0|    0|    0|    0|   none  |
+        |tmp_4_gmul_hw_fu_76    |gmul_hw  |    0|    0|    0|    0|   none  |
+        |tmp_5_gmul_hw_fu_84    |gmul_hw  |    0|    0|    0|    0|   none  |
+        |tmp_6_gmul_hw_fu_92    |gmul_hw  |    0|    0|    0|    0|   none  |
+        |tmp_2_gmul_hw_fu_100   |gmul_hw  |    0|    0|    0|    0|   none  |
+        |tmp_3_gmul_hw_fu_108   |gmul_hw  |    0|    0|    0|    0|   none  |
+        |tmp_7_gmul_hw_fu_116   |gmul_hw  |    0|    0|    0|    0|   none  |
+        |tmp_8_gmul_hw_fu_124   |gmul_hw  |    0|    0|    0|    0|   none  |
+        |tmp_10_gmul_hw_fu_132  |gmul_hw  |    0|    0|    0|    0|   none  |
+        +-----------------------+---------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|     96|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       0|    480|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|       0|    576|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|       0|      1|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------+---------+---------+-------+---+----+
+    |        Instance       |  Module | BRAM_18K| DSP48E| FF| LUT|
+    +-----------------------+---------+---------+-------+---+----+
+    |tmp_gmul_hw_fu_44      |gmul_hw  |        0|      0|  0|  40|
+    |tmp_s_gmul_hw_fu_52    |gmul_hw  |        0|      0|  0|  40|
+    |tmp_9_gmul_hw_fu_60    |gmul_hw  |        0|      0|  0|  40|
+    |tmp_1_gmul_hw_fu_68    |gmul_hw  |        0|      0|  0|  40|
+    |tmp_4_gmul_hw_fu_76    |gmul_hw  |        0|      0|  0|  40|
+    |tmp_5_gmul_hw_fu_84    |gmul_hw  |        0|      0|  0|  40|
+    |tmp_6_gmul_hw_fu_92    |gmul_hw  |        0|      0|  0|  40|
+    |tmp_2_gmul_hw_fu_100   |gmul_hw  |        0|      0|  0|  40|
+    |tmp_3_gmul_hw_fu_108   |gmul_hw  |        0|      0|  0|  40|
+    |tmp_7_gmul_hw_fu_116   |gmul_hw  |        0|      0|  0|  40|
+    |tmp_8_gmul_hw_fu_124   |gmul_hw  |        0|      0|  0|  40|
+    |tmp_10_gmul_hw_fu_132  |gmul_hw  |        0|      0|  0|  40|
+    +-----------------------+---------+---------+-------+---+----+
+    |Total                  |         |        0|      0|  0| 480|
+    +-----------------------+---------+---------+-------+---+----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------+----------+-------+---+----+------------+------------+
+    |         Variable Name         | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------+----------+-------+---+----+------------+------------+
+    |column_0_write_assi_fu_152_p2  |    xor   |      0|  0|   8|           8|           8|
+    |column_1_write_assi_fu_170_p2  |    xor   |      0|  0|   8|           8|           8|
+    |column_2_write_assi_fu_188_p2  |    xor   |      0|  0|   8|           8|           8|
+    |column_3_write_assi_fu_206_p2  |    xor   |      0|  0|   8|           8|           8|
+    |tmp1_fu_140_p2                 |    xor   |      0|  0|   8|           8|           8|
+    |tmp2_fu_146_p2                 |    xor   |      0|  0|   8|           8|           8|
+    |tmp3_fu_158_p2                 |    xor   |      0|  0|   8|           8|           8|
+    |tmp4_fu_164_p2                 |    xor   |      0|  0|   8|           8|           8|
+    |tmp5_fu_176_p2                 |    xor   |      0|  0|   8|           8|           8|
+    |tmp6_fu_182_p2                 |    xor   |      0|  0|   8|           8|           8|
+    |tmp7_fu_194_p2                 |    xor   |      0|  0|   8|           8|           8|
+    |tmp8_fu_200_p2                 |    xor   |      0|  0|   8|           8|           8|
+    +-------------------------------+----------+-------+---+----+------------+------------+
+    |Total                          |          |      0|  0|  96|          96|          96|
+    +-------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------+-----+-----+------------+----------------------+--------------+
+|   RTL Ports   | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++---------------+-----+-----+------------+----------------------+--------------+
+|ap_ready       | out |    1| ap_ctrl_hs | aes128_mix_column_hw | return value |
+|ap_return_0    | out |    8| ap_ctrl_hs | aes128_mix_column_hw | return value |
+|ap_return_1    | out |    8| ap_ctrl_hs | aes128_mix_column_hw | return value |
+|ap_return_2    | out |    8| ap_ctrl_hs | aes128_mix_column_hw | return value |
+|ap_return_3    | out |    8| ap_ctrl_hs | aes128_mix_column_hw | return value |
+|column_0_read  |  in |    8|   ap_none  |     column_0_read    |    scalar    |
+|column_1_read  |  in |    8|   ap_none  |     column_1_read    |    scalar    |
+|column_2_read  |  in |    8|   ap_none  |     column_2_read    |    scalar    |
+|column_3_read  |  in |    8|   ap_none  |     column_3_read    |    scalar    |
++---------------+-----+-----+------------+----------------------+--------------+
+

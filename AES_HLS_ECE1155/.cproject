@@ -57,9 +57,13 @@
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include/ap_sysc"/>
                                     									
+                                    <listOptionValue builtIn="false" value="C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption"/>
+                                    									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/win64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Users/tyqca/OneDrive/School/GitHub/hardware-encryption"/>
                                     								
                                 </option>
                                 								
@@ -91,9 +95,13 @@
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include/ap_sysc"/>
                                     									
+                                    <listOptionValue builtIn="false" value="C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption"/>
+                                    									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/win64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Users/tyqca/OneDrive/School/GitHub/hardware-encryption"/>
                                     								
                                 </option>
                                 								
@@ -121,7 +129,7 @@
                                 								
                                 <option id="gnu.c.link.option.libs.1644821635" name="Libraries (-l)" superClass="gnu.c.link.option.libs"/>
                                 								
-                                <option id="gnu.c.link.option.ldflags.351873065" name="Linker flags" superClass="gnu.c.link.option.ldflags"/>
+                                <option id="gnu.c.link.option.ldflags.351873065" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="" valueType="string"/>
                                 							
                             </tool>
                             							
@@ -135,7 +143,7 @@
                                 								
                                 <option id="gnu.cpp.link.option.libs.30543973" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs"/>
                                 								
-                                <option id="gnu.cpp.link.option.flags.1141246432" name="Linker flags" superClass="gnu.cpp.link.option.flags"/>
+                                <option id="gnu.cpp.link.option.flags.1141246432" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="" valueType="string"/>
                                 								
                                 <inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1472019347" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
                                     									
@@ -157,9 +165,39 @@
                         					
                     </folderInfo>
                     					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.382528801.2055338317" name="aes_test.cpp" rcbsApplicability="disable" resourcePath="testbench/aes_test.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1206317668.1885926280">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1206317668.1885926280" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1206317668">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.1217232765" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option id="gnu.cpp.compiler.option.include.paths.1449946446" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include/etc"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.1833067842" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1556939348" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
                     <sourceEntries>
                         						
-                        <entry excluding="*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding="solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
@@ -225,9 +263,13 @@
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include/ap_sysc"/>
                                     									
+                                    <listOptionValue builtIn="false" value="C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption"/>
+                                    									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/win64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Users/tyqca/OneDrive/School/GitHub/hardware-encryption"/>
                                     								
                                 </option>
                                 								
@@ -249,9 +291,13 @@
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include/ap_sysc"/>
                                     									
+                                    <listOptionValue builtIn="false" value="C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption"/>
+                                    									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/win64/tools/systemc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include/etc"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="C:/Users/tyqca/OneDrive/School/GitHub/hardware-encryption"/>
                                     								
                                 </option>
                                 								
@@ -269,7 +315,7 @@
                                 								
                                 <option id="gnu.c.link.option.libs.554728485" name="Libraries (-l)" superClass="gnu.c.link.option.libs"/>
                                 								
-                                <option id="gnu.c.link.option.ldflags.57059747" name="Linker flags" superClass="gnu.c.link.option.ldflags"/>
+                                <option id="gnu.c.link.option.ldflags.57059747" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="" valueType="string"/>
                                 							
                             </tool>
                             							
@@ -283,7 +329,7 @@
                                 								
                                 <option id="gnu.cpp.link.option.libs.264547551" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs"/>
                                 								
-                                <option id="gnu.cpp.link.option.flags.2103582842" name="Linker flags" superClass="gnu.cpp.link.option.flags"/>
+                                <option id="gnu.cpp.link.option.flags.2103582842" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="" valueType="string"/>
                                 								
                                 <inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.319314137" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
                                     									
@@ -305,9 +351,39 @@
                         					
                     </folderInfo>
                     					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.88871239.1183461434" name="aes_test.cpp" rcbsApplicability="disable" resourcePath="testbench/aes_test.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.480520467.346943046">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.480520467.346943046" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.480520467">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.1141371607" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option id="gnu.cpp.compiler.option.include.paths.624080716" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/win64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/win64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Xilinx/Vivado/2018.3/include/etc"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.763313299" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1859240502" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
+                    					
                     <sourceEntries>
                         						
-                        <entry excluding="*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding="solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				

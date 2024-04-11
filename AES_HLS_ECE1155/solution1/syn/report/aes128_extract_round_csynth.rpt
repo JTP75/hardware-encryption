@@ -1,0 +1,156 @@
+
+
+================================================================
+== Vivado HLS Report for 'aes128_extract_round'
+================================================================
+* Date:           Tue Apr 10 18:51:50 2018
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        AES_HLS_ECE1155
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     5.576|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    8|    8|    8|    8|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    225|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|    223|
+|Register         |        -|      -|      17|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|      17|    448|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------+----------+-------+---+----+------------+------------+
+    |   Variable Name   | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------+----------+-------+---+----+------------+------------+
+    |sum_0_1_fu_377_p2  |     +    |      0|  0|  15|           1|           8|
+    |sum_0_2_fu_388_p2  |     +    |      0|  0|  15|           2|           8|
+    |sum_0_3_fu_398_p2  |     +    |      0|  0|  15|           2|           8|
+    |sum_1_1_fu_418_p2  |     +    |      0|  0|  15|           3|           8|
+    |sum_1_2_fu_428_p2  |     +    |      0|  0|  15|           3|           8|
+    |sum_1_3_fu_438_p2  |     +    |      0|  0|  15|           3|           8|
+    |sum_1_fu_408_p2    |     +    |      0|  0|  15|           3|           8|
+    |sum_2_1_fu_458_p2  |     +    |      0|  0|  15|           4|           8|
+    |sum_2_2_fu_468_p2  |     +    |      0|  0|  15|           4|           8|
+    |sum_2_3_fu_478_p2  |     +    |      0|  0|  15|           4|           8|
+    |sum_2_fu_448_p2    |     +    |      0|  0|  15|           4|           8|
+    |sum_3_1_fu_498_p2  |     +    |      0|  0|  15|           4|           8|
+    |sum_3_2_fu_508_p2  |     +    |      0|  0|  15|           4|           8|
+    |sum_3_3_fu_518_p2  |     +    |      0|  0|  15|           4|           8|
+    |sum_3_fu_488_p2    |     +    |      0|  0|  15|           4|           8|
+    +-------------------+----------+-------+---+----+------------+------------+
+    |Total              |          |      0|  0| 225|          49|         120|
+    +-------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm              |  47|         10|    1|         10|
+    |expanded_key_address0  |  44|          9|    8|         72|
+    |expanded_key_address1  |  44|          9|    8|         72|
+    |round_key_address0     |  44|          9|    4|         36|
+    |round_key_address1     |  44|          9|    4|         36|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  | 223|         46|   25|        226|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  9|   0|    9|          0|
+    |tmp_reg_533  |  8|   0|    8|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        | 17|   0|   17|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+----------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-----------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                 |  in |    1| ap_ctrl_hs | aes128_extract_round | return value |
+|ap_rst                 |  in |    1| ap_ctrl_hs | aes128_extract_round | return value |
+|ap_start               |  in |    1| ap_ctrl_hs | aes128_extract_round | return value |
+|ap_done                | out |    1| ap_ctrl_hs | aes128_extract_round | return value |
+|ap_idle                | out |    1| ap_ctrl_hs | aes128_extract_round | return value |
+|ap_ready               | out |    1| ap_ctrl_hs | aes128_extract_round | return value |
+|expanded_key_address0  | out |    8|  ap_memory |     expanded_key     |     array    |
+|expanded_key_ce0       | out |    1|  ap_memory |     expanded_key     |     array    |
+|expanded_key_q0        |  in |    8|  ap_memory |     expanded_key     |     array    |
+|expanded_key_address1  | out |    8|  ap_memory |     expanded_key     |     array    |
+|expanded_key_ce1       | out |    1|  ap_memory |     expanded_key     |     array    |
+|expanded_key_q1        |  in |    8|  ap_memory |     expanded_key     |     array    |
+|expanded_key_offset    |  in |   10|   ap_none  |  expanded_key_offset |    scalar    |
+|round_key_address0     | out |    4|  ap_memory |       round_key      |     array    |
+|round_key_ce0          | out |    1|  ap_memory |       round_key      |     array    |
+|round_key_we0          | out |    1|  ap_memory |       round_key      |     array    |
+|round_key_d0           | out |    8|  ap_memory |       round_key      |     array    |
+|round_key_address1     | out |    4|  ap_memory |       round_key      |     array    |
+|round_key_ce1          | out |    1|  ap_memory |       round_key      |     array    |
+|round_key_we1          | out |    1|  ap_memory |       round_key      |     array    |
+|round_key_d1           | out |    8|  ap_memory |       round_key      |     array    |
++-----------------------+-----+-----+------------+----------------------+--------------+
+

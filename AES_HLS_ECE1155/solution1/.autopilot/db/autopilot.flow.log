@@ -1,0 +1,1384 @@
+INFO-FLOW: Workspace C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1 opened at Tue Apr 10 18:51:33 -0500 2018
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 1.25 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.102 sec.
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.105 sec.
+Command     ap_source done; 0.105 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg400-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Execute     config_compile -no_signed_zeros=0 
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+Execute     config_compile -unsafe_math_optimizations=0 
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+Execute     config_sdx -optimization_level=none 
+Execute       get_config_export -vivado_synth_design_args 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_synth_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute       get_config_bind -effort 
+Execute       get_config_schedule -effort 
+Execute     config_sdx -target=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_sdx -optimization_level=none 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+Execute       config_sdx -optimization_level=none 
+Execute         get_config_export -vivado_synth_design_args 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_synth_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute         get_config_bind -effort 
+Execute         get_config_schedule -effort 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -auto_prefix 
+Execute       get_config_rtl -enable_maxiConservative 
+Execute       get_config_interface -m_axi_addr64 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute       set_clock_uncertainty default 
+Execute     config_bind -effort=medium 
+Execute     config_schedule -effort=medium 
+Execute     config_schedule -relax_ii_for_timing=0 
+Execute     config_export -display_name=aes128_encrypt_hw 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=vhdl 
+Command   open_solution done; 0.232 sec.
+Execute   set_part xc7z020clg400-1 
+Execute     add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7z020 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   config_compile -no_signed_zeros=0 -unsafe_math_optimizations=0 
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+Execute   config_sdx -optimization_level none -target none 
+Execute     get_config_export -vivado_synth_design_args 
+Execute     get_config_export -vivado_impl_strategy 
+Execute     get_config_export -vivado_synth_strategy 
+Execute     get_config_export -vivado_phys_opt 
+Execute     get_config_bind -effort 
+Execute     get_config_schedule -effort 
+Execute     get_config_compile -pipeline_loops 
+Execute     get_config_compile -name_max_length 
+Execute     get_config_schedule -relax_ii_for_timing 
+Execute     get_config_schedule -enable_dsp_full_reg 
+Execute     get_config_rtl -register_reset_num 
+Execute     get_config_rtl -auto_prefix 
+Execute     get_config_rtl -enable_maxiConservative 
+Execute     get_config_interface -m_axi_addr64 
+Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute     set_clock_uncertainty default 
+Execute   config_bind -effort medium 
+Execute   config_schedule -effort medium -relax_ii_for_timing=0 
+Execute   config_export -display_name aes128_encrypt_hw -format ip_catalog -rtl vhdl 
+Execute   set_clock_uncertainty 12.5% 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     config_compile -blackbox  
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'AES_HLS_ECE1155/src/aes_hw.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling AES_HLS_ECE1155/src/aes_hw.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted AES_HLS_ECE1155/src/aes_hw.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "AES_HLS_ECE1155/src/aes_hw.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pp.0.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E AES_HLS_ECE1155/src/aes_hw.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pp.0.cpp
+Command       clang done; 0.657 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.304 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pp.0.cpp"  -o "C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pp.0.cpp -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/useless.bc
+Command       clang done; 0.868 sec.
+INFO-FLOW: Done: GCC PP time: 1.8 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pp.0.cpp std=gnu++98 -directive=C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.275 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pp.0.cpp std=gnu++98 -directive=C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.251 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/xilinx-dataflow-lawyer.aes_hw.pp.0.cpp.diag.yml C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/xilinx-dataflow-lawyer.aes_hw.pp.0.cpp.out.log 2> C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/xilinx-dataflow-lawyer.aes_hw.pp.0.cpp.err.log 
+Command       ap_eval done; 0.241 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/tidy-3.1.aes_hw.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/tidy-3.1.aes_hw.pp.0.cpp.out.log 2> C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/tidy-3.1.aes_hw.pp.0.cpp.err.log 
+Command         ap_eval done; 1.053 sec.
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/xilinx-legacy-rewriter.aes_hw.pp.0.cpp.out.log 2> C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/xilinx-legacy-rewriter.aes_hw.pp.0.cpp.err.log 
+Command         ap_eval done; 0.257 sec.
+Command       tidy_31 done; 1.475 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 2 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.363 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.bc
+Command       clang done; 0.846 sec.
+INFO: [HLS 200-10] Analyzing design file 'AES_HLS_ECE1155/src/aes_sw.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling AES_HLS_ECE1155/src/aes_sw.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted AES_HLS_ECE1155/src/aes_sw.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "AES_HLS_ECE1155/src/aes_sw.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pp.0.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E AES_HLS_ECE1155/src/aes_sw.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pp.0.cpp
+Command       clang done; 0.616 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pp.0.cpp"  -o "C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pp.0.cpp -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/useless.bc
+Command       clang done; 0.577 sec.
+INFO-FLOW: Done: GCC PP time: 1.2 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pp.0.cpp std=gnu++98 -directive=C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pp.0.cpp std=gnu++98 -directive=C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/xilinx-dataflow-lawyer.aes_sw.pp.0.cpp.diag.yml C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/xilinx-dataflow-lawyer.aes_sw.pp.0.cpp.out.log 2> C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/xilinx-dataflow-lawyer.aes_sw.pp.0.cpp.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/tidy-3.1.aes_sw.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/tidy-3.1.aes_sw.pp.0.cpp.out.log 2> C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/tidy-3.1.aes_sw.pp.0.cpp.err.log 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/xilinx-legacy-rewriter.aes_sw.pp.0.cpp.out.log 2> C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/xilinx-legacy-rewriter.aes_sw.pp.0.cpp.err.log 
+Command       tidy_31 done; 0.112 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.2 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot -I C:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.bc
+Command       clang done; 0.598 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_hw.g.bc C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes_sw.g.bc -hls-opt -except-internalize aes128_encrypt_block_hw -LC:/Xilinx/Vivado/2018.3/win64/lib -lhlsm -lhlsmc++ -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 0.897 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 105.348 ; gain = 19.793
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 105.348 ; gain = 19.793
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.pp.bc -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2018.3/win64/lib -lfloatconversion -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.415 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -lower-blackbox -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top aes128_encrypt_block_hw -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.g.0.bc -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:11) in function 'gmul_hw(unsigned char, unsigned char)': changing partial unrolling into complete unrolling since the unrolling factor (=8) is no less than the loop trip count (=8).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:29) in function 'rotate_word_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=3).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:43) in function 'aes128_expand_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (AES_HLS_ECE1155/src/aes_hw.cpp:48) in function 'aes128_expand_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=176) is no less than the loop trip count (=40).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1' (AES_HLS_ECE1155/src/aes_hw.cpp:50) in function 'aes128_expand_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.2' (AES_HLS_ECE1155/src/aes_hw.cpp:56) in function 'aes128_expand_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.3' (AES_HLS_ECE1155/src/aes_hw.cpp:62) in function 'aes128_expand_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:73) in function 'aes128_sub_bytes_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:95) in function 'aes128_shift_row_hw(unsigned char*, unsigned char)': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:121) in function 'aes128_shift_rows_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:140) in function 'aes128_mix_column_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:169) in function 'aes128_mix_columns_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:171) in function 'aes128_mix_columns_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.2' (AES_HLS_ECE1155/src/aes_hw.cpp:176) in function 'aes128_mix_columns_hw(unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:206) in function 'aes128_extract_round_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:208) in function 'aes128_extract_round_key_hw(unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:233) in function 'aes128_encrypt_block_hw(unsigned char const*, unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:235) in function 'aes128_encrypt_block_hw(unsigned char const*, unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (AES_HLS_ECE1155/src/aes_hw.cpp:255) in function 'aes128_encrypt_block_hw(unsigned char const*, unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1' (AES_HLS_ECE1155/src/aes_hw.cpp:257) in function 'aes128_encrypt_block_hw(unsigned char const*, unsigned char const*, unsigned char*)': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+Command         transform done; 0.11 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 106.957 ; gain = 21.402
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.g.1.bc -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'rotate_word_hw' into 'aes128_expand_key_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes128_shift_row_hw' into 'aes128_shift_rows_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:123) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes128_sub_bytes_hw' into 'aes128_encrypt_block_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:245) automatically.
+Command         transform done; 0.105 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 107.211 ; gain = 21.656
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.g.1.bc to C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.o.1.bc -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:11) in function 'gmul_hw': changing partial unrolling into complete unrolling since the unrolling factor (=8) is no less than the loop trip count (=8).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:11) in function 'gmul_hw' completely with a factor of 8.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:233) in function 'aes128_encrypt_block_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:235) in function 'aes128_encrypt_block_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (AES_HLS_ECE1155/src/aes_hw.cpp:255) in function 'aes128_encrypt_block_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3.1' (AES_HLS_ECE1155/src/aes_hw.cpp:257) in function 'aes128_encrypt_block_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:233) in function 'aes128_encrypt_block_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:235) in function 'aes128_encrypt_block_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (AES_HLS_ECE1155/src/aes_hw.cpp:255) in function 'aes128_encrypt_block_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (AES_HLS_ECE1155/src/aes_hw.cpp:257) in function 'aes128_encrypt_block_hw' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:169) in function 'aes128_mix_columns_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:171) in function 'aes128_mix_columns_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.2' (AES_HLS_ECE1155/src/aes_hw.cpp:176) in function 'aes128_mix_columns_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:169) in function 'aes128_mix_columns_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:171) in function 'aes128_mix_columns_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.2' (AES_HLS_ECE1155/src/aes_hw.cpp:176) in function 'aes128_mix_columns_hw' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:140) in function 'aes128_mix_column_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:140) in function 'aes128_mix_column_hw' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:121) in function 'aes128_shift_rows_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:121) in function 'aes128_shift_rows_hw' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:73) in function 'aes128_sub_bytes_hw': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:73) in function 'aes128_sub_bytes_hw' completely with a factor of 16.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:219) in function 'aes128_add_round_key_hw' partially with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:43) in function 'aes128_expand_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2' (AES_HLS_ECE1155/src/aes_hw.cpp:48) in function 'aes128_expand_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=176) is no less than the loop trip count (=40).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1' (AES_HLS_ECE1155/src/aes_hw.cpp:50) in function 'aes128_expand_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.2' (AES_HLS_ECE1155/src/aes_hw.cpp:56) in function 'aes128_expand_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.3' (AES_HLS_ECE1155/src/aes_hw.cpp:62) in function 'aes128_expand_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:43) in function 'aes128_expand_key_hw' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (AES_HLS_ECE1155/src/aes_hw.cpp:48) in function 'aes128_expand_key_hw' completely with a factor of 40.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (AES_HLS_ECE1155/src/aes_hw.cpp:50) in function 'aes128_expand_key_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.2' (AES_HLS_ECE1155/src/aes_hw.cpp:56) in function 'aes128_expand_key_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.3' (AES_HLS_ECE1155/src/aes_hw.cpp:62) in function 'aes128_expand_key_hw' completely with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:29) in function 'rotate_word_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=3).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:29) in function 'rotate_word_hw' completely with a factor of 3.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:95) in function 'aes128_shift_row_hw': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:95) in function 'aes128_shift_row_hw' completely with a factor of 3.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:206) in function 'aes128_extract_round_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:208) in function 'aes128_extract_round_key_hw': changing partial unrolling into complete unrolling since the unrolling factor (=4) is no less than the loop trip count (=4).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (AES_HLS_ECE1155/src/aes_hw.cpp:206) in function 'aes128_extract_round_key_hw' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (AES_HLS_ECE1155/src/aes_hw.cpp:208) in function 'aes128_extract_round_key_hw' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'tmp' (AES_HLS_ECE1155/src/aes_hw.cpp:41) automatically.
+INFO: [XFORM 203-102] Partitioning array 'copy' (AES_HLS_ECE1155/src/aes_hw.cpp:139) automatically.
+INFO: [XFORM 203-102] Partitioning array 'column' (AES_HLS_ECE1155/src/aes_hw.cpp:168) automatically.
+INFO: [XFORM 203-602] Inlining function 'rotate_word_hw' into 'aes128_expand_key_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:55) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes128_shift_rows_hw' into 'aes128_encrypt_block_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:246) automatically.
+INFO: [XFORM 203-602] Inlining function 'aes128_mix_columns_hw' into 'aes128_encrypt_block_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:247) automatically.
+Command         transform done; 0.79 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+WARNING: [XFORM 203-561] Updating loop upper bound from 255 to 3 for loop 'Loop-0' in function 'aes128_shift_row_hw'.
+INFO: [XFORM 203-11] Balancing expressions in function 'gmul_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:9)...6 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'aes128_mix_column_hw' (AES_HLS_ECE1155/src/aes_hw.cpp:138)...12 expression(s) balanced.
+Command         transform done; 0.281 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 131.480 ; gain = 45.926
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -cdfg-build C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.o.2.bc -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-631] Renaming function 'aes128_extract_round_key_hw' to 'aes128_extract_round' (AES_HLS_ECE1155/src/aes_hw.cpp:210:1)
+WARNING: [XFORM 203-631] Renaming function 'aes128_add_round_key_hw' to 'aes128_add_round_key' (AES_HLS_ECE1155/src/aes_hw.cpp:219:25)
+Command         transform done; 0.543 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 205.027 ; gain = 119.473
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 2.287 sec.
+Command     elaborate done; 10.775 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'aes128_encrypt_block_hw' ...
+Execute       ap_set_top_model aes128_encrypt_block_hw 
+Execute       get_model_list aes128_encrypt_block_hw -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model aes128_encrypt_block_hw 
+Execute       preproc_iomode -model aes128_mix_column_hw 
+Execute       preproc_iomode -model gmul_hw 
+Execute       preproc_iomode -model aes128_shift_row_hw 
+Execute       preproc_iomode -model aes128_sub_bytes_hw 
+Execute       preproc_iomode -model aes128_add_round_key 
+Execute       preproc_iomode -model aes128_extract_round 
+Execute       preproc_iomode -model aes128_expand_key_hw 
+Execute       get_model_list aes128_encrypt_block_hw -filter all-wo-channel 
+INFO-FLOW: Model list for configure: aes128_expand_key_hw aes128_extract_round aes128_add_round_key aes128_sub_bytes_hw aes128_shift_row_hw gmul_hw aes128_mix_column_hw aes128_encrypt_block_hw
+INFO-FLOW: Configuring Module : aes128_expand_key_hw ...
+Execute       set_default_model aes128_expand_key_hw 
+Execute       apply_spec_resource_limit aes128_expand_key_hw 
+INFO-FLOW: Configuring Module : aes128_extract_round ...
+Execute       set_default_model aes128_extract_round 
+Execute       apply_spec_resource_limit aes128_extract_round 
+INFO-FLOW: Configuring Module : aes128_add_round_key ...
+Execute       set_default_model aes128_add_round_key 
+Execute       apply_spec_resource_limit aes128_add_round_key 
+INFO-FLOW: Configuring Module : aes128_sub_bytes_hw ...
+Execute       set_default_model aes128_sub_bytes_hw 
+Execute       apply_spec_resource_limit aes128_sub_bytes_hw 
+INFO-FLOW: Configuring Module : aes128_shift_row_hw ...
+Execute       set_default_model aes128_shift_row_hw 
+Execute       apply_spec_resource_limit aes128_shift_row_hw 
+INFO-FLOW: Configuring Module : gmul_hw ...
+Execute       set_default_model gmul_hw 
+Execute       apply_spec_resource_limit gmul_hw 
+INFO-FLOW: Configuring Module : aes128_mix_column_hw ...
+Execute       set_default_model aes128_mix_column_hw 
+Execute       apply_spec_resource_limit aes128_mix_column_hw 
+INFO-FLOW: Configuring Module : aes128_encrypt_block_hw ...
+Execute       set_default_model aes128_encrypt_block_hw 
+Execute       apply_spec_resource_limit aes128_encrypt_block_hw 
+INFO-FLOW: Model list for preprocess: aes128_expand_key_hw aes128_extract_round aes128_add_round_key aes128_sub_bytes_hw aes128_shift_row_hw gmul_hw aes128_mix_column_hw aes128_encrypt_block_hw
+INFO-FLOW: Preprocessing Module: aes128_expand_key_hw ...
+Execute       set_default_model aes128_expand_key_hw 
+Execute       cdfg_preprocess -model aes128_expand_key_hw 
+Execute       rtl_gen_preprocess aes128_expand_key_hw 
+INFO-FLOW: Preprocessing Module: aes128_extract_round ...
+Execute       set_default_model aes128_extract_round 
+Execute       cdfg_preprocess -model aes128_extract_round 
+Execute       rtl_gen_preprocess aes128_extract_round 
+INFO-FLOW: Preprocessing Module: aes128_add_round_key ...
+Execute       set_default_model aes128_add_round_key 
+Execute       cdfg_preprocess -model aes128_add_round_key 
+Execute       rtl_gen_preprocess aes128_add_round_key 
+INFO-FLOW: Preprocessing Module: aes128_sub_bytes_hw ...
+Execute       set_default_model aes128_sub_bytes_hw 
+Execute       cdfg_preprocess -model aes128_sub_bytes_hw 
+Execute       rtl_gen_preprocess aes128_sub_bytes_hw 
+INFO-FLOW: Preprocessing Module: aes128_shift_row_hw ...
+Execute       set_default_model aes128_shift_row_hw 
+Execute       cdfg_preprocess -model aes128_shift_row_hw 
+Execute       rtl_gen_preprocess aes128_shift_row_hw 
+INFO-FLOW: Preprocessing Module: gmul_hw ...
+Execute       set_default_model gmul_hw 
+Execute       cdfg_preprocess -model gmul_hw 
+Execute       rtl_gen_preprocess gmul_hw 
+INFO-FLOW: Preprocessing Module: aes128_mix_column_hw ...
+Execute       set_default_model aes128_mix_column_hw 
+Execute       cdfg_preprocess -model aes128_mix_column_hw 
+Execute       rtl_gen_preprocess aes128_mix_column_hw 
+INFO-FLOW: Preprocessing Module: aes128_encrypt_block_hw ...
+Execute       set_default_model aes128_encrypt_block_hw 
+Execute       cdfg_preprocess -model aes128_encrypt_block_hw 
+Execute       rtl_gen_preprocess aes128_encrypt_block_hw 
+WARNING: [SYN 201-107] Renaming port name 'aes128_encrypt_block_hw/in' to 'aes128_encrypt_block_hw/in_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'aes128_encrypt_block_hw/out' to 'aes128_encrypt_block_hw/out_r' to avoid the conflict with HDL keywords or other object names.
+INFO-FLOW: Model list for synthesis: aes128_expand_key_hw aes128_extract_round aes128_add_round_key aes128_sub_bytes_hw aes128_shift_row_hw gmul_hw aes128_mix_column_hw aes128_encrypt_block_hw
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_expand_key_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model aes128_expand_key_hw 
+Execute       schedule -model aes128_expand_key_hw 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.357 sec.
+INFO: [HLS 200-111]  Elapsed time: 12.027 seconds; current allocated memory: 163.122 MB.
+Execute       report -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_expand_key_hw.verbose.sched.rpt -verbose -f 
+Command       report done; 0.191 sec.
+Execute       db_write -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_expand_key_hw.sched.adb -f 
+Command       db_write done; 0.125 sec.
+INFO-FLOW: Finish scheduling aes128_expand_key_hw.
+Execute       set_default_model aes128_expand_key_hw 
+Execute       bind -model aes128_expand_key_hw 
+BIND OPTION: effort=medium
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=aes128_expand_key_hw
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.144 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.476 seconds; current allocated memory: 165.181 MB.
+Execute       report -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_expand_key_hw.verbose.bind.rpt -verbose -f 
+Command       report done; 0.317 sec.
+Execute       db_write -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_expand_key_hw.bind.adb -f 
+Command       db_write done; 0.123 sec.
+INFO-FLOW: Finish binding aes128_expand_key_hw.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_extract_round' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model aes128_extract_round 
+Execute       schedule -model aes128_extract_round 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.516 seconds; current allocated memory: 165.570 MB.
+Execute       report -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_extract_round.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_extract_round.sched.adb -f 
+INFO-FLOW: Finish scheduling aes128_extract_round.
+Execute       set_default_model aes128_extract_round 
+Execute       bind -model aes128_extract_round 
+BIND OPTION: effort=medium
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=aes128_extract_round
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.089 seconds; current allocated memory: 165.857 MB.
+Execute       report -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_extract_round.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_extract_round.bind.adb -f 
+INFO-FLOW: Finish binding aes128_extract_round.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_add_round_key' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model aes128_add_round_key 
+Execute       schedule -model aes128_add_round_key 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.098 seconds; current allocated memory: 166.008 MB.
+Execute       report -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_add_round_key.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+Execute       db_write -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_add_round_key.sched.adb -f 
+INFO-FLOW: Finish scheduling aes128_add_round_key.
+Execute       set_default_model aes128_add_round_key 
+Execute       bind -model aes128_add_round_key 
+BIND OPTION: effort=medium
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=aes128_add_round_key
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.062 seconds; current allocated memory: 166.142 MB.
+Execute       report -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_add_round_key.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_add_round_key.bind.adb -f 
+INFO-FLOW: Finish binding aes128_add_round_key.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_sub_bytes_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model aes128_sub_bytes_hw 
+Execute       schedule -model aes128_sub_bytes_hw 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.094 seconds; current allocated memory: 166.383 MB.
+Execute       report -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_sub_bytes_hw.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_sub_bytes_hw.sched.adb -f 
+INFO-FLOW: Finish scheduling aes128_sub_bytes_hw.
+Execute       set_default_model aes128_sub_bytes_hw 
+Execute       bind -model aes128_sub_bytes_hw 
+BIND OPTION: effort=medium
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=aes128_sub_bytes_hw
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.095 seconds; current allocated memory: 166.673 MB.
+Execute       report -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_sub_bytes_hw.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_sub_bytes_hw.bind.adb -f 
+INFO-FLOW: Finish binding aes128_sub_bytes_hw.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_shift_row_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model aes128_shift_row_hw 
+Execute       schedule -model aes128_shift_row_hw 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.097 seconds; current allocated memory: 166.751 MB.
+Execute       report -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_shift_row_hw.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_shift_row_hw.sched.adb -f 
+INFO-FLOW: Finish scheduling aes128_shift_row_hw.
+Execute       set_default_model aes128_shift_row_hw 
+Execute       bind -model aes128_shift_row_hw 
+BIND OPTION: effort=medium
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=aes128_shift_row_hw
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.078 seconds; current allocated memory: 166.859 MB.
+Execute       report -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_shift_row_hw.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_shift_row_hw.bind.adb -f 
+INFO-FLOW: Finish binding aes128_shift_row_hw.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gmul_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model gmul_hw 
+Execute       schedule -model gmul_hw 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 166.894 MB.
+Execute       report -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/gmul_hw.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/gmul_hw.sched.adb -f 
+INFO-FLOW: Finish scheduling gmul_hw.
+Execute       set_default_model gmul_hw 
+Execute       bind -model gmul_hw 
+BIND OPTION: effort=medium
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=gmul_hw
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.037 seconds; current allocated memory: 166.962 MB.
+Execute       report -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/gmul_hw.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/gmul_hw.bind.adb -f 
+INFO-FLOW: Finish binding gmul_hw.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_mix_column_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model aes128_mix_column_hw 
+Execute       schedule -model aes128_mix_column_hw 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.057 seconds; current allocated memory: 167.053 MB.
+Execute       report -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_mix_column_hw.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_mix_column_hw.sched.adb -f 
+INFO-FLOW: Finish scheduling aes128_mix_column_hw.
+Execute       set_default_model aes128_mix_column_hw 
+Execute       bind -model aes128_mix_column_hw 
+BIND OPTION: effort=medium
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=aes128_mix_column_hw
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.063 seconds; current allocated memory: 167.201 MB.
+Execute       report -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_mix_column_hw.verbose.bind.rpt -verbose -f 
+Command       report done; 0.208 sec.
+Execute       db_write -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_mix_column_hw.bind.adb -f 
+INFO-FLOW: Finish binding aes128_mix_column_hw.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aes128_encrypt_block_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model aes128_encrypt_block_hw 
+Execute       schedule -model aes128_encrypt_block_hw 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.101 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.345 seconds; current allocated memory: 167.794 MB.
+Execute       report -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.sched.adb -f 
+INFO-FLOW: Finish scheduling aes128_encrypt_block_hw.
+Execute       set_default_model aes128_encrypt_block_hw 
+Execute       bind -model aes128_encrypt_block_hw 
+BIND OPTION: effort=medium
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=aes128_encrypt_block_hw
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.44 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.558 seconds; current allocated memory: 168.891 MB.
+Execute       report -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.verbose.bind.rpt -verbose -f 
+Command       report done; 0.29 sec.
+Execute       db_write -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.bind.adb -f 
+INFO-FLOW: Finish binding aes128_encrypt_block_hw.
+Execute       get_model_list aes128_encrypt_block_hw -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess aes128_expand_key_hw 
+Execute       rtl_gen_preprocess aes128_extract_round 
+Execute       rtl_gen_preprocess aes128_add_round_key 
+Execute       rtl_gen_preprocess aes128_sub_bytes_hw 
+Execute       rtl_gen_preprocess aes128_shift_row_hw 
+Execute       rtl_gen_preprocess gmul_hw 
+Execute       rtl_gen_preprocess aes128_mix_column_hw 
+Execute       rtl_gen_preprocess aes128_encrypt_block_hw 
+INFO-FLOW: Model list for RTL generation: aes128_expand_key_hw aes128_extract_round aes128_add_round_key aes128_sub_bytes_hw aes128_shift_row_hw gmul_hw aes128_mix_column_hw aes128_encrypt_block_hw
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_expand_key_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model aes128_expand_key_hw -vendor xilinx -mg_file C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_expand_key_hw.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'aes128_expand_key_hw_sbox_hw' to 'aes128_expand_keybkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_expand_key_hw'.
+Command       create_rtl_model done; 0.137 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.493 seconds; current allocated memory: 172.320 MB.
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl aes128_expand_key_hw -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/systemc/aes128_expand_key_hw -synmodules aes128_expand_key_hw aes128_extract_round aes128_add_round_key aes128_sub_bytes_hw aes128_shift_row_hw gmul_hw aes128_mix_column_hw aes128_encrypt_block_hw 
+Execute       gen_rtl aes128_expand_key_hw -style xilinx -f -lang vhdl -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/vhdl/aes128_expand_key_hw 
+Execute       gen_rtl aes128_expand_key_hw -style xilinx -f -lang vlog -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/verilog/aes128_expand_key_hw 
+Execute       gen_tb_info aes128_expand_key_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_expand_key_hw -p C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db 
+Execute       report -model aes128_expand_key_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/report/aes128_expand_key_hw_csynth.rpt -f 
+Execute       report -model aes128_expand_key_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/report/aes128_expand_key_hw_csynth.xml -f -x 
+Execute       report -model aes128_expand_key_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_expand_key_hw.verbose.rpt -verbose -f 
+Command       report done; 0.325 sec.
+Execute       db_write -model aes128_expand_key_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_expand_key_hw.adb -f 
+Command       db_write done; 0.226 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_extract_round' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model aes128_extract_round -vendor xilinx -mg_file C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_extract_round.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_extract_round'.
+INFO: [HLS 200-111]  Elapsed time: 1.865 seconds; current allocated memory: 173.768 MB.
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl aes128_extract_round -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/systemc/aes128_extract_round -synmodules aes128_expand_key_hw aes128_extract_round aes128_add_round_key aes128_sub_bytes_hw aes128_shift_row_hw gmul_hw aes128_mix_column_hw aes128_encrypt_block_hw 
+Execute       gen_rtl aes128_extract_round -style xilinx -f -lang vhdl -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/vhdl/aes128_extract_round 
+Execute       gen_rtl aes128_extract_round -style xilinx -f -lang vlog -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/verilog/aes128_extract_round 
+Execute       gen_tb_info aes128_extract_round -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_extract_round -p C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db 
+Execute       report -model aes128_extract_round -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/report/aes128_extract_round_csynth.rpt -f 
+Execute       report -model aes128_extract_round -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/report/aes128_extract_round_csynth.xml -f -x 
+Execute       report -model aes128_extract_round -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_extract_round.verbose.rpt -verbose -f 
+Execute       db_write -model aes128_extract_round -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_extract_round.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_add_round_key' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model aes128_add_round_key -vendor xilinx -mg_file C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_add_round_key.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_add_round_key'.
+INFO: [HLS 200-111]  Elapsed time: 0.414 seconds; current allocated memory: 174.064 MB.
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl aes128_add_round_key -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/systemc/aes128_add_round_key -synmodules aes128_expand_key_hw aes128_extract_round aes128_add_round_key aes128_sub_bytes_hw aes128_shift_row_hw gmul_hw aes128_mix_column_hw aes128_encrypt_block_hw 
+Execute       gen_rtl aes128_add_round_key -style xilinx -f -lang vhdl -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/vhdl/aes128_add_round_key 
+Execute       gen_rtl aes128_add_round_key -style xilinx -f -lang vlog -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/verilog/aes128_add_round_key 
+Execute       gen_tb_info aes128_add_round_key -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_add_round_key -p C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db 
+Execute       report -model aes128_add_round_key -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/report/aes128_add_round_key_csynth.rpt -f 
+Execute       report -model aes128_add_round_key -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/report/aes128_add_round_key_csynth.xml -f -x 
+Execute       report -model aes128_add_round_key -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_add_round_key.verbose.rpt -verbose -f 
+Execute       db_write -model aes128_add_round_key -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_add_round_key.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_sub_bytes_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model aes128_sub_bytes_hw -vendor xilinx -mg_file C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_sub_bytes_hw.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'aes128_sub_bytes_hw_sbox_hw' to 'aes128_sub_bytes_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_sub_bytes_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.259 seconds; current allocated memory: 174.562 MB.
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl aes128_sub_bytes_hw -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/systemc/aes128_sub_bytes_hw -synmodules aes128_expand_key_hw aes128_extract_round aes128_add_round_key aes128_sub_bytes_hw aes128_shift_row_hw gmul_hw aes128_mix_column_hw aes128_encrypt_block_hw 
+Execute       gen_rtl aes128_sub_bytes_hw -style xilinx -f -lang vhdl -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/vhdl/aes128_sub_bytes_hw 
+Execute       gen_rtl aes128_sub_bytes_hw -style xilinx -f -lang vlog -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/verilog/aes128_sub_bytes_hw 
+Execute       gen_tb_info aes128_sub_bytes_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_sub_bytes_hw -p C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db 
+Execute       report -model aes128_sub_bytes_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/report/aes128_sub_bytes_hw_csynth.rpt -f 
+Execute       report -model aes128_sub_bytes_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/report/aes128_sub_bytes_hw_csynth.xml -f -x 
+Execute       report -model aes128_sub_bytes_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_sub_bytes_hw.verbose.rpt -verbose -f 
+Execute       db_write -model aes128_sub_bytes_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_sub_bytes_hw.adb -f 
+Command       db_write done; 0.13 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_shift_row_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model aes128_shift_row_hw -vendor xilinx -mg_file C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_shift_row_hw.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_shift_row_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.45 seconds; current allocated memory: 174.781 MB.
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl aes128_shift_row_hw -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/systemc/aes128_shift_row_hw -synmodules aes128_expand_key_hw aes128_extract_round aes128_add_round_key aes128_sub_bytes_hw aes128_shift_row_hw gmul_hw aes128_mix_column_hw aes128_encrypt_block_hw 
+Execute       gen_rtl aes128_shift_row_hw -style xilinx -f -lang vhdl -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/vhdl/aes128_shift_row_hw 
+Execute       gen_rtl aes128_shift_row_hw -style xilinx -f -lang vlog -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/verilog/aes128_shift_row_hw 
+Execute       gen_tb_info aes128_shift_row_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_shift_row_hw -p C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db 
+Execute       report -model aes128_shift_row_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/report/aes128_shift_row_hw_csynth.rpt -f 
+Execute       report -model aes128_shift_row_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/report/aes128_shift_row_hw_csynth.xml -f -x 
+Execute       report -model aes128_shift_row_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_shift_row_hw.verbose.rpt -verbose -f 
+Execute       db_write -model aes128_shift_row_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_shift_row_hw.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gmul_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model gmul_hw -vendor xilinx -mg_file C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/gmul_hw.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gmul_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.187 seconds; current allocated memory: 174.913 MB.
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl gmul_hw -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/systemc/gmul_hw -synmodules aes128_expand_key_hw aes128_extract_round aes128_add_round_key aes128_sub_bytes_hw aes128_shift_row_hw gmul_hw aes128_mix_column_hw aes128_encrypt_block_hw 
+Execute       gen_rtl gmul_hw -style xilinx -f -lang vhdl -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/vhdl/gmul_hw 
+Execute       gen_rtl gmul_hw -style xilinx -f -lang vlog -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/verilog/gmul_hw 
+Execute       gen_tb_info gmul_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/gmul_hw -p C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db 
+Execute       report -model gmul_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/report/gmul_hw_csynth.rpt -f 
+Execute       report -model gmul_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/report/gmul_hw_csynth.xml -f -x 
+Execute       report -model gmul_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/gmul_hw.verbose.rpt -verbose -f 
+Execute       db_write -model gmul_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/gmul_hw.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_mix_column_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model aes128_mix_column_hw -vendor xilinx -mg_file C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_mix_column_hw.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_mix_column_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.124 seconds; current allocated memory: 175.187 MB.
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl aes128_mix_column_hw -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/systemc/aes128_mix_column_hw -synmodules aes128_expand_key_hw aes128_extract_round aes128_add_round_key aes128_sub_bytes_hw aes128_shift_row_hw gmul_hw aes128_mix_column_hw aes128_encrypt_block_hw 
+Execute       gen_rtl aes128_mix_column_hw -style xilinx -f -lang vhdl -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/vhdl/aes128_mix_column_hw 
+Execute       gen_rtl aes128_mix_column_hw -style xilinx -f -lang vlog -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/verilog/aes128_mix_column_hw 
+Execute       gen_tb_info aes128_mix_column_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_mix_column_hw -p C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db 
+Execute       report -model aes128_mix_column_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/report/aes128_mix_column_hw_csynth.rpt -f 
+Execute       report -model aes128_mix_column_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/report/aes128_mix_column_hw_csynth.xml -f -x 
+Execute       report -model aes128_mix_column_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_mix_column_hw.verbose.rpt -verbose -f 
+Execute       db_write -model aes128_mix_column_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_mix_column_hw.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aes128_encrypt_block_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model aes128_encrypt_block_hw -vendor xilinx -mg_file C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_encrypt_block_hw/in_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_encrypt_block_hw/key' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'aes128_encrypt_block_hw/out_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'aes128_encrypt_block_hw' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'aes128_encrypt_block_hw_state' to 'aes128_encrypt_bldEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'aes128_encrypt_block_hw_round_key' to 'aes128_encrypt_bleOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'aes128_encrypt_block_hw_expanded_key' to 'aes128_encrypt_blfYi' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aes128_encrypt_block_hw'.
+INFO: [HLS 200-111]  Elapsed time: 0.334 seconds; current allocated memory: 176.670 MB.
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute       gen_rtl aes128_encrypt_block_hw -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/systemc/aes128_encrypt_block_hw -synmodules aes128_expand_key_hw aes128_extract_round aes128_add_round_key aes128_sub_bytes_hw aes128_shift_row_hw gmul_hw aes128_mix_column_hw aes128_encrypt_block_hw 
+Execute       gen_rtl aes128_encrypt_block_hw -istop -style xilinx -f -lang vhdl -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/vhdl/aes128_encrypt_block_hw 
+Execute       gen_rtl aes128_encrypt_block_hw -istop -style xilinx -f -lang vlog -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/verilog/aes128_encrypt_block_hw 
+Execute       export_constraint_db -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.constraint.tcl -f -tool general 
+Execute       report -model aes128_encrypt_block_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.design.xml -verbose -f -dv 
+Command       report done; 0.134 sec.
+Execute       report -model aes128_encrypt_block_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info aes128_encrypt_block_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw -p C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db 
+Execute       report -model aes128_encrypt_block_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/report/aes128_encrypt_block_hw_csynth.rpt -f 
+Execute       report -model aes128_encrypt_block_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/syn/report/aes128_encrypt_block_hw_csynth.xml -f -x 
+Execute       report -model aes128_encrypt_block_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.verbose.rpt -verbose -f 
+Command       report done; 0.289 sec.
+Execute       db_write -model aes128_encrypt_block_hw -o C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.adb -f 
+Execute       sc_get_clocks aes128_encrypt_block_hw 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain aes128_encrypt_block_hw 
+INFO-FLOW: Model list for RTL component generation: aes128_expand_key_hw aes128_extract_round aes128_add_round_key aes128_sub_bytes_hw aes128_shift_row_hw gmul_hw aes128_mix_column_hw aes128_encrypt_block_hw
+INFO-FLOW: Handling components in module [aes128_expand_key_hw] ... 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_expand_key_hw.compgen.tcl 
+INFO-FLOW: Found component aes128_expand_keybkb.
+INFO-FLOW: Append model aes128_expand_keybkb
+INFO-FLOW: Handling components in module [aes128_extract_round] ... 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_extract_round.compgen.tcl 
+INFO-FLOW: Handling components in module [aes128_add_round_key] ... 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_add_round_key.compgen.tcl 
+INFO-FLOW: Handling components in module [aes128_sub_bytes_hw] ... 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_sub_bytes_hw.compgen.tcl 
+INFO-FLOW: Handling components in module [aes128_shift_row_hw] ... 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_shift_row_hw.compgen.tcl 
+INFO-FLOW: Handling components in module [gmul_hw] ... 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/gmul_hw.compgen.tcl 
+INFO-FLOW: Handling components in module [aes128_mix_column_hw] ... 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_mix_column_hw.compgen.tcl 
+INFO-FLOW: Handling components in module [aes128_encrypt_block_hw] ... 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.compgen.tcl 
+INFO-FLOW: Found component aes128_encrypt_bldEe.
+INFO-FLOW: Append model aes128_encrypt_bldEe
+INFO-FLOW: Found component aes128_encrypt_blfYi.
+INFO-FLOW: Append model aes128_encrypt_blfYi
+INFO-FLOW: Append model aes128_expand_key_hw
+INFO-FLOW: Append model aes128_extract_round
+INFO-FLOW: Append model aes128_add_round_key
+INFO-FLOW: Append model aes128_sub_bytes_hw
+INFO-FLOW: Append model aes128_shift_row_hw
+INFO-FLOW: Append model gmul_hw
+INFO-FLOW: Append model aes128_mix_column_hw
+INFO-FLOW: Append model aes128_encrypt_block_hw
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: aes128_expand_keybkb aes128_encrypt_bldEe aes128_encrypt_blfYi aes128_expand_key_hw aes128_extract_round aes128_add_round_key aes128_sub_bytes_hw aes128_shift_row_hw gmul_hw aes128_mix_column_hw aes128_encrypt_block_hw
+INFO-FLOW: To file: write model aes128_expand_keybkb
+INFO-FLOW: To file: write model aes128_encrypt_bldEe
+INFO-FLOW: To file: write model aes128_encrypt_blfYi
+INFO-FLOW: To file: write model aes128_expand_key_hw
+INFO-FLOW: To file: write model aes128_extract_round
+INFO-FLOW: To file: write model aes128_add_round_key
+INFO-FLOW: To file: write model aes128_sub_bytes_hw
+INFO-FLOW: To file: write model aes128_shift_row_hw
+INFO-FLOW: To file: write model gmul_hw
+INFO-FLOW: To file: write model aes128_mix_column_hw
+INFO-FLOW: To file: write model aes128_encrypt_block_hw
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.111 sec.
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.114 sec.
+Command       ap_source done; 0.114 sec.
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_expand_key_hw.compgen.tcl 
+INFO: [RTMG 210-279] Implementing memory 'aes128_expand_keybkb_rom' using auto ROMs.
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_extract_round.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_add_round_key.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_sub_bytes_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_shift_row_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/gmul_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_mix_column_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'aes128_encrypt_bldEe_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'aes128_encrypt_blfYi_ram (RAM)' using block RAMs.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.103 sec.
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.106 sec.
+Command       ap_source done; 0.106 sec.
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=aes128_encrypt_block_hw xml_exists=0
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_expand_key_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_extract_round.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_add_round_key.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_sub_bytes_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_shift_row_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/gmul_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_mix_column_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_expand_key_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_extract_round.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_add_round_key.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_sub_bytes_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_shift_row_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/gmul_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_mix_column_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.compgen.tcl 
+Execute         source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute         source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute         source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_expand_key_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_extract_round.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_add_round_key.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_sub_bytes_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_shift_row_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/gmul_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_mix_column_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.constraint.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=8
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=3
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=11 #gSsdmPorts=8
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_export -xo 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.constraint.tcl 
+Execute       sc_get_clocks aes128_encrypt_block_hw 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:21 . Memory (MB): peak = 247.395 ; gain = 161.840
+INFO: [SYSC 207-301] Generating SystemC RTL for aes128_encrypt_block_hw.
+INFO: [VHDL 208-304] Generating VHDL RTL for aes128_encrypt_block_hw.
+INFO: [VLOG 209-307] Generating Verilog RTL for aes128_encrypt_block_hw.
+Command     autosyn done; 9.685 sec.
+Execute     get_part 
+Execute     get_config_export -sdx_tcl 
+Command   csynth_design done; 20.476 sec.
+Command ap_source done; 20.778 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1 opened at Tue Apr 10 18:52:56 -0500 2018
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 1.25 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.124 sec.
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.126 sec.
+Command     ap_source done; 0.127 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg400-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Execute     config_compile -no_signed_zeros=0 
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+Execute     config_compile -unsafe_math_optimizations=0 
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+Execute     config_sdx -optimization_level=none 
+Execute       get_config_export -vivado_synth_design_args 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_synth_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute       get_config_bind -effort 
+Execute       get_config_schedule -effort 
+Execute     config_sdx -target=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_sdx -optimization_level=none 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+Execute       config_sdx -optimization_level=none 
+Execute         get_config_export -vivado_synth_design_args 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_synth_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute         get_config_bind -effort 
+Execute         get_config_schedule -effort 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -auto_prefix 
+Execute       get_config_rtl -enable_maxiConservative 
+Execute       get_config_interface -m_axi_addr64 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute       set_clock_uncertainty default 
+Execute     config_bind -effort=medium 
+Execute     config_schedule -effort=medium 
+Execute     config_schedule -relax_ii_for_timing=0 
+Execute     config_export -display_name=aes128_encrypt_hw 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=vhdl 
+Command   open_solution done; 0.26 sec.
+Execute   export_design -rtl vhdl -format ip_catalog -display_name aes128_encrypt_hw 
+Execute     get_config_export -acc 
+Execute     get_config_export -clock_margin 
+Execute     get_config_export -custom_script 
+Execute     get_config_export -description 
+Execute     get_config_export -driver_input_dir 
+Execute     get_config_export -ipname 
+Execute     get_config_export -kernel_drc 
+Execute     get_config_export -library 
+Execute     get_config_export -qor_test 
+Execute     get_config_export -sdaccel 
+Execute     get_config_export -sim 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -use_ip 
+Execute     get_config_export -use_netlist 
+Execute     get_config_export -vendor 
+Execute     get_config_export -version 
+Execute     get_config_export -xo 
+Execute     config_export -display_name=aes128_encrypt_hw -format=ip_catalog -rtl=vhdl 
+INFO-FLOW: DBG:CMD: export_design_wrap: -format ip_catalog -rtl vhdl -display_name aes128_encrypt_hw
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -vivado_clock 
+Execute     get_top 
+Execute     get_config_sdx -target 
+Execute     get_config_rtl -auto_prefix 
+Execute     get_config_sdx -target 
+INFO-FLOW: DBG:CMD:   auto_impl: pack: -export -tool vivado -rtl vhdl -sdx-target none
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.116 sec.
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.119 sec.
+Command     ap_source done; 0.119 sec.
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: automg_wrap -export -pcore_version 1.00.a -rtl vhdl -sdx-target none -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:CMD:     auto_generate -export -pcore_version 1.00.a -rtl vhdl -sdx-target none -tool Vivado -impltomg_flag
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.117 sec.
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.121 sec.
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=aes128_encrypt_block_hw xml_exists=1
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_expand_key_hw.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_extract_round.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_add_round_key.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_sub_bytes_hw.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_shift_row_hw.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/gmul_hw.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_mix_column_hw.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_expand_key_hw.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_extract_round.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_add_round_key.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_sub_bytes_hw.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_shift_row_hw.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/gmul_hw.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_mix_column_hw.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.compgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute       source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_expand_key_hw.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_extract_round.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_add_round_key.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_sub_bytes_hw.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_shift_row_hw.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/gmul_hw.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_mix_column_hw.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.compgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.constraint.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=8
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=3
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=0 g_has_adaptors=false generate_bd_files=0 #modelList=11 #gSsdmPorts=8
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+Execute     get_config_export -xo 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.constraint.tcl 
+Execute     sc_get_clocks aes128_encrypt_block_hw 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+Execute     get_config_sdx -profile 
+Execute     ::config_rtl 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=8
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=aes128_encrypt_block_hw
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_top_info
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=aes128_encrypt_block_hw
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.constraint.tcl 
+INFO-FLOW: DBG:CMD:       generate_ipi_example_script
+INFO-FLOW: DBG:CMD:       generate_syn_sh
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_imp_constraints
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.constraint.tcl 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/aes128_encrypt_block_hw.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       copy-tb-rtl-files
+INFO-FLOW: DBG:CMD:       copy-tb-data-files
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO-FLOW: DBG:CMD: read_platform_lib C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.11 sec.
+Execute         source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.112 sec.
+Command     ap_source done; 0.112 sec.
+Execute     source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:     exec C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/impl/ip/pack.bat
+Command   export_design done; 8.995 sec.
+Command ap_source done; 9.259 sec.
+Execute cleanup_all 
