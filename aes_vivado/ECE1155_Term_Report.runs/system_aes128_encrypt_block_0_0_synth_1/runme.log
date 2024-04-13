@@ -1,0 +1,978 @@
+
+*** Running vivado
+    with args -log system_aes128_encrypt_block_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_aes128_encrypt_block_0_0.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source system_aes128_encrypt_block_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/AES_HLS_ECE1155/solution1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/pacel/Documents/Spring_2023/ECE_1195/git/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.cache/ip 
+Command: synth_design -top system_aes128_encrypt_block_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2540 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 392.910 ; gain = 100.609
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_aes128_encrypt_block_0_0' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ip/system_aes128_encrypt_block_0_0/synth/system_aes128_encrypt_block_0_0.vhd:81]
+INFO: [Synth 8-3491] module 'aes128_encrypt_block_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:12' bound to instance 'U0' of component 'aes128_encrypt_block_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ip/system_aes128_encrypt_block_0_0/synth/system_aes128_encrypt_block_0_0.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'aes128_encrypt_block_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:37]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:317]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:320]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:322]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:324]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:326]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:328]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:330]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:332]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:334]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:336]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:338]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:340]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:342]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:344]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:346]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:348]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:350]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:353]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:355]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:357]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:359]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:361]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:363]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:365]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:367]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:369]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:371]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:373]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:375]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:377]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:379]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:381]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:383]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:385]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:389]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:392]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:396]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:398]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:400]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:418]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:424]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:428]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:432]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:436]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:440]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:444]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:548]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:550]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:554]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:556]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:560]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:562]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:564]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:566]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:569]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:571]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:573]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:575]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:577]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:579]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:581]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:583]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:585]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:587]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:589]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:591]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:593]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:595]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:597]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:599]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:601]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:603]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:605]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:607]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:609]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:611]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 16 - type: integer 
+	Parameter AddressWidth bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'aes128_encrypt_bldEe' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_bldEe.vhd:105' bound to instance 'state_U' of component 'aes128_encrypt_bldEe' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:794]
+INFO: [Synth 8-638] synthesizing module 'aes128_encrypt_bldEe' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_bldEe.vhd:125]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 16 - type: integer 
+	Parameter AddressWidth bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'aes128_encrypt_bldEe_ram' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_bldEe.vhd:13' bound to instance 'aes128_encrypt_bldEe_ram_U' of component 'aes128_encrypt_bldEe_ram' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_bldEe.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'aes128_encrypt_bldEe_ram' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_bldEe.vhd:36]
+	Parameter MEM_TYPE bound to: block - type: string 
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 4 - type: integer 
+	Parameter MEM_SIZE bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'aes128_encrypt_bldEe_ram' (1#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_bldEe.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'aes128_encrypt_bldEe' (2#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_bldEe.vhd:125]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 16 - type: integer 
+	Parameter AddressWidth bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'aes128_encrypt_bldEe' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_bldEe.vhd:105' bound to instance 'round_key_U' of component 'aes128_encrypt_bldEe' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:813]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 176 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'aes128_encrypt_blfYi' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_blfYi.vhd:105' bound to instance 'expanded_key_U' of component 'aes128_encrypt_blfYi' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:832]
+INFO: [Synth 8-638] synthesizing module 'aes128_encrypt_blfYi' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_blfYi.vhd:125]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 176 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'aes128_encrypt_blfYi_ram' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_blfYi.vhd:13' bound to instance 'aes128_encrypt_blfYi_ram_U' of component 'aes128_encrypt_blfYi_ram' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_blfYi.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'aes128_encrypt_blfYi_ram' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_blfYi.vhd:36]
+	Parameter MEM_TYPE bound to: block - type: string 
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 8 - type: integer 
+	Parameter MEM_SIZE bound to: 176 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'aes128_encrypt_blfYi_ram' (3#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_blfYi.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'aes128_encrypt_blfYi' (4#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_blfYi.vhd:125]
+INFO: [Synth 8-3491] module 'aes128_expand_key_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:12' bound to instance 'grp_aes128_expand_key_hw_fu_342' of component 'aes128_expand_key_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:851]
+INFO: [Synth 8-638] synthesizing module 'aes128_expand_key_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:32]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:476]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:479]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:485]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:489]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:493]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:495]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:498]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:502]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:505]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:509]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:514]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:516]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:520]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:524]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:528]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:532]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:536]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:542]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:544]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:548]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:552]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:556]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:558]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:562]
+INFO: [Common 17-14] Message 'Synth 8-5534' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'aes128_expand_keybkb' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_keybkb.vhd:127' bound to instance 'sbox_hw_U' of component 'aes128_expand_keybkb' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:779]
+INFO: [Synth 8-638] synthesizing module 'aes128_expand_keybkb' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_keybkb.vhd:140]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'aes128_expand_keybkb_rom' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_keybkb.vhd:12' bound to instance 'aes128_expand_keybkb_rom_U' of component 'aes128_expand_keybkb_rom' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_keybkb.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'aes128_expand_keybkb_rom' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_keybkb.vhd:27]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 8 - type: integer 
+	Parameter MEM_SIZE bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'aes128_expand_keybkb_rom' (5#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_keybkb.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'aes128_expand_keybkb' (6#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_keybkb.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'aes128_expand_key_hw' (7#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_expand_key_hw.vhd:32]
+INFO: [Synth 8-3491] module 'aes128_extract_round' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_extract_round.vhd:12' bound to instance 'grp_aes128_extract_round_fu_349' of component 'aes128_extract_round' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:869]
+INFO: [Synth 8-638] synthesizing module 'aes128_extract_round' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_extract_round.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'aes128_extract_round' (8#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_extract_round.vhd:38]
+INFO: [Synth 8-3491] module 'aes128_sub_bytes_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_sub_bytes_hw.vhd:12' bound to instance 'grp_aes128_sub_bytes_hw_fu_358' of component 'aes128_sub_bytes_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:893]
+INFO: [Synth 8-638] synthesizing module 'aes128_sub_bytes_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_sub_bytes_hw.vhd:33]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'aes128_sub_bytes_cud' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_sub_bytes_cud.vhd:146' bound to instance 'sbox_hw_U' of component 'aes128_sub_bytes_cud' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_sub_bytes_hw.vhd:192]
+INFO: [Synth 8-638] synthesizing module 'aes128_sub_bytes_cud' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_sub_bytes_cud.vhd:162]
+	Parameter DataWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'aes128_sub_bytes_cud_rom' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_sub_bytes_cud.vhd:12' bound to instance 'aes128_sub_bytes_cud_rom_U' of component 'aes128_sub_bytes_cud_rom' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_sub_bytes_cud.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'aes128_sub_bytes_cud_rom' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_sub_bytes_cud.vhd:30]
+	Parameter DWIDTH bound to: 8 - type: integer 
+	Parameter AWIDTH bound to: 8 - type: integer 
+	Parameter MEM_SIZE bound to: 256 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'aes128_sub_bytes_cud_rom' (9#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_sub_bytes_cud.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'aes128_sub_bytes_cud' (10#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_sub_bytes_cud.vhd:162]
+INFO: [Synth 8-256] done synthesizing module 'aes128_sub_bytes_hw' (11#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_sub_bytes_hw.vhd:33]
+INFO: [Synth 8-3491] module 'aes128_mix_column_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_mix_column_hw.vhd:12' bound to instance 'grp_aes128_mix_column_hw_fu_365' of component 'aes128_mix_column_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:912]
+INFO: [Synth 8-638] synthesizing module 'aes128_mix_column_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_mix_column_hw.vhd:26]
+INFO: [Synth 8-3491] module 'gmul_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/gmul_hw.vhd:12' bound to instance 'tmp_gmul_hw_fu_44' of component 'gmul_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_mix_column_hw.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'gmul_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/gmul_hw.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'gmul_hw' (12#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/gmul_hw.vhd:21]
+INFO: [Synth 8-3491] module 'gmul_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/gmul_hw.vhd:12' bound to instance 'tmp_s_gmul_hw_fu_52' of component 'gmul_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_mix_column_hw.vhd:89]
+INFO: [Synth 8-3491] module 'gmul_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/gmul_hw.vhd:12' bound to instance 'tmp_9_gmul_hw_fu_60' of component 'gmul_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_mix_column_hw.vhd:96]
+INFO: [Synth 8-3491] module 'gmul_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/gmul_hw.vhd:12' bound to instance 'tmp_1_gmul_hw_fu_68' of component 'gmul_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_mix_column_hw.vhd:103]
+INFO: [Synth 8-3491] module 'gmul_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/gmul_hw.vhd:12' bound to instance 'tmp_4_gmul_hw_fu_76' of component 'gmul_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_mix_column_hw.vhd:110]
+INFO: [Synth 8-3491] module 'gmul_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/gmul_hw.vhd:12' bound to instance 'tmp_5_gmul_hw_fu_84' of component 'gmul_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_mix_column_hw.vhd:117]
+INFO: [Synth 8-3491] module 'gmul_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/gmul_hw.vhd:12' bound to instance 'tmp_6_gmul_hw_fu_92' of component 'gmul_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_mix_column_hw.vhd:124]
+INFO: [Synth 8-3491] module 'gmul_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/gmul_hw.vhd:12' bound to instance 'tmp_2_gmul_hw_fu_100' of component 'gmul_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_mix_column_hw.vhd:131]
+INFO: [Synth 8-3491] module 'gmul_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/gmul_hw.vhd:12' bound to instance 'tmp_3_gmul_hw_fu_108' of component 'gmul_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_mix_column_hw.vhd:138]
+INFO: [Synth 8-3491] module 'gmul_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/gmul_hw.vhd:12' bound to instance 'tmp_7_gmul_hw_fu_116' of component 'gmul_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_mix_column_hw.vhd:145]
+INFO: [Synth 8-3491] module 'gmul_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/gmul_hw.vhd:12' bound to instance 'tmp_8_gmul_hw_fu_124' of component 'gmul_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_mix_column_hw.vhd:152]
+INFO: [Synth 8-3491] module 'gmul_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/gmul_hw.vhd:12' bound to instance 'tmp_10_gmul_hw_fu_132' of component 'gmul_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_mix_column_hw.vhd:159]
+INFO: [Synth 8-256] done synthesizing module 'aes128_mix_column_hw' (13#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_mix_column_hw.vhd:26]
+INFO: [Synth 8-3491] module 'aes128_add_round_key' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_add_round_key.vhd:12' bound to instance 'grp_aes128_add_round_key_fu_373' of component 'aes128_add_round_key' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:924]
+INFO: [Synth 8-638] synthesizing module 'aes128_add_round_key' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_add_round_key.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'aes128_add_round_key' (14#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_add_round_key.vhd:39]
+INFO: [Synth 8-3491] module 'aes128_shift_row_hw' declared at 'c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_shift_row_hw.vhd:12' bound to instance 'grp_aes128_shift_row_hw_fu_379' of component 'aes128_shift_row_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:949]
+INFO: [Synth 8-638] synthesizing module 'aes128_shift_row_hw' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_shift_row_hw.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'aes128_shift_row_hw' (15#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_shift_row_hw.vhd:35]
+WARNING: [Synth 8-6014] Unused sequential element sout_V_dest_V_1_sel_rd_reg was removed.  [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:1186]
+WARNING: [Synth 8-6014] Unused sequential element sout_V_id_V_1_sel_rd_reg was removed.  [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:1220]
+WARNING: [Synth 8-6014] Unused sequential element sout_V_keep_V_1_sel_rd_reg was removed.  [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:1254]
+WARNING: [Synth 8-6014] Unused sequential element sout_V_strb_V_1_sel_rd_reg was removed.  [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:1336]
+WARNING: [Synth 8-6014] Unused sequential element sout_V_user_V_1_sel_rd_reg was removed.  [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:1370]
+INFO: [Synth 8-256] done synthesizing module 'aes128_encrypt_block_hw' (16#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_encrypt_block_hw.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'system_aes128_encrypt_block_0_0' (17#1) [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ip/system_aes128_encrypt_block_0_0/synth/system_aes128_encrypt_block_0_0.vhd:81]
+WARNING: [Synth 8-3331] design aes128_shift_row_hw has unconnected port state_offset[4]
+WARNING: [Synth 8-3331] design aes128_shift_row_hw has unconnected port n[3]
+WARNING: [Synth 8-3331] design gmul_hw has unconnected port b[2]
+WARNING: [Synth 8-3331] design aes128_sub_bytes_cud has unconnected port reset
+WARNING: [Synth 8-3331] design aes128_extract_round has unconnected port expanded_key_offset[9]
+WARNING: [Synth 8-3331] design aes128_extract_round has unconnected port expanded_key_offset[8]
+WARNING: [Synth 8-3331] design aes128_expand_keybkb has unconnected port reset
+WARNING: [Synth 8-3331] design aes128_encrypt_blfYi has unconnected port reset
+WARNING: [Synth 8-3331] design aes128_encrypt_bldEe has unconnected port reset
+WARNING: [Synth 8-3331] design aes128_encrypt_block_hw has unconnected port sin_TKEEP[0]
+WARNING: [Synth 8-3331] design aes128_encrypt_block_hw has unconnected port sin_TSTRB[0]
+WARNING: [Synth 8-3331] design aes128_encrypt_block_hw has unconnected port sin_TUSER[0]
+WARNING: [Synth 8-3331] design aes128_encrypt_block_hw has unconnected port sin_TLAST[0]
+WARNING: [Synth 8-3331] design aes128_encrypt_block_hw has unconnected port sin_TID[0]
+WARNING: [Synth 8-3331] design aes128_encrypt_block_hw has unconnected port sin_TDEST[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 471.672 ; gain = 179.371
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 471.672 ; gain = 179.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 471.672 ; gain = 179.371
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ip/system_aes128_encrypt_block_0_0/constraints/aes128_encrypt_block_hw_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ip/system_aes128_encrypt_block_0_0/constraints/aes128_encrypt_block_hw_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.runs/system_aes128_encrypt_block_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.runs/system_aes128_encrypt_block_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 835.996 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 836.191 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 837.758 ; gain = 1.762
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:33 . Memory (MB): peak = 837.758 ; gain = 545.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:33 . Memory (MB): peak = 837.758 ; gain = 545.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.runs/system_aes128_encrypt_block_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:33 . Memory (MB): peak = 837.758 ; gain = 545.457
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "expanded_key_d0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "round_key_address1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "state_address1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'state_addr_reg_201_reg[3:0]' into 'tmp_9_reg_206_reg[3:0]' [c:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.srcs/sources_1/bd/system/ipshared/ca4b/hdl/vhdl/aes128_add_round_key.vhd:132]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "exitcond_fu_137_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5544] ROM "exitcond2_fu_442_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sin_V_data_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_data_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_last_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond2_fu_442_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sin_V_data_V_0_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_data_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_last_V_1_state_cmp_full" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "grp_aes128_shift_row_hw_fu_379_state_offset" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "grp_aes128_shift_row_hw_fu_379_n" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sin_V_data_V_0_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sin_V_data_V_0_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sin_V_dest_V_0_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sin_V_dest_V_0_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_data_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_data_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_dest_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_dest_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_id_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_id_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_keep_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_keep_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_last_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_last_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_strb_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_strb_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_user_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sout_V_user_V_1_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal ram_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:36 . Memory (MB): peak = 837.758 ; gain = 545.457
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 15    
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 96    
+	   3 Input      8 Bit         XORs := 2     
+	   4 Input      8 Bit         XORs := 4     
++---Registers : 
+	               88 Bit    Registers := 1     
+	               75 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 66    
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 10    
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 11    
+	                1 Bit    Registers := 13    
++---RAMs : 
+	               1K Bit         RAMs := 1     
+	              128 Bit         RAMs := 2     
++---ROMs : 
+	                              ROMs := 3     
++---Muxes : 
+	  89 Input     88 Bit        Muxes := 1     
+	   2 Input     75 Bit        Muxes := 2     
+	   2 Input     74 Bit        Muxes := 1     
+	   2 Input     73 Bit        Muxes := 1     
+	   2 Input     72 Bit        Muxes := 1     
+	   2 Input     71 Bit        Muxes := 1     
+	   2 Input     70 Bit        Muxes := 1     
+	   2 Input     69 Bit        Muxes := 1     
+	   2 Input     68 Bit        Muxes := 1     
+	   2 Input     67 Bit        Muxes := 1     
+	   2 Input     66 Bit        Muxes := 1     
+	   2 Input     65 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     63 Bit        Muxes := 1     
+	   2 Input     62 Bit        Muxes := 1     
+	   2 Input     61 Bit        Muxes := 1     
+	   2 Input     60 Bit        Muxes := 1     
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input     56 Bit        Muxes := 1     
+	   2 Input     54 Bit        Muxes := 1     
+	   2 Input     52 Bit        Muxes := 1     
+	   2 Input     50 Bit        Muxes := 1     
+	   2 Input     48 Bit        Muxes := 1     
+	   2 Input     47 Bit        Muxes := 1     
+	   2 Input     46 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	  17 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	  10 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	  88 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 60    
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   6 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	  16 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 13    
+	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 23    
+	   4 Input      2 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 39    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module aes128_encrypt_bldEe_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---RAMs : 
+	              128 Bit         RAMs := 1     
+Module aes128_encrypt_blfYi_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---RAMs : 
+	               1K Bit         RAMs := 1     
+Module aes128_expand_keybkb_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module aes128_expand_key_hw 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 70    
+	   3 Input      8 Bit         XORs := 2     
++---Registers : 
+	               88 Bit    Registers := 1     
+	                8 Bit    Registers := 20    
++---Muxes : 
+	  89 Input     88 Bit        Muxes := 1     
+	  88 Input      8 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+Module aes128_extract_round 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 15    
++---Registers : 
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
++---Muxes : 
+	  10 Input      9 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module aes128_sub_bytes_cud_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---ROMs : 
+	                              ROMs := 2     
+Module aes128_sub_bytes_hw 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 12    
++---Muxes : 
+	  17 Input     16 Bit        Muxes := 1     
+	  16 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module gmul_hw 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 3     
+Module aes128_mix_column_hw 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      8 Bit         XORs := 4     
+Module aes128_add_round_key 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 2     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 4     
++---Muxes : 
+	   6 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module aes128_shift_row_hw 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   6 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module aes128_encrypt_block_hw 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               75 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 20    
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 9     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input     75 Bit        Muxes := 2     
+	   2 Input     74 Bit        Muxes := 1     
+	   2 Input     73 Bit        Muxes := 1     
+	   2 Input     72 Bit        Muxes := 1     
+	   2 Input     71 Bit        Muxes := 1     
+	   2 Input     70 Bit        Muxes := 1     
+	   2 Input     69 Bit        Muxes := 1     
+	   2 Input     68 Bit        Muxes := 1     
+	   2 Input     67 Bit        Muxes := 1     
+	   2 Input     66 Bit        Muxes := 1     
+	   2 Input     65 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     63 Bit        Muxes := 1     
+	   2 Input     62 Bit        Muxes := 1     
+	   2 Input     61 Bit        Muxes := 1     
+	   2 Input     60 Bit        Muxes := 1     
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input     56 Bit        Muxes := 1     
+	   2 Input     54 Bit        Muxes := 1     
+	   2 Input     52 Bit        Muxes := 1     
+	   2 Input     50 Bit        Muxes := 1     
+	   2 Input     48 Bit        Muxes := 1     
+	   2 Input     47 Bit        Muxes := 1     
+	   2 Input     46 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 1     
+	   2 Input     23 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 23    
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 5     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 18    
+	   4 Input      2 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 38    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "exitcond_fu_137_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "exitcond2_fu_442_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "exitcond2_fu_442_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Common 17-14] Message 'Synth 8-5544' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3331] design aes128_shift_row_hw has unconnected port state_offset[4]
+WARNING: [Synth 8-3331] design aes128_shift_row_hw has unconnected port n[3]
+WARNING: [Synth 8-3331] design aes128_extract_round has unconnected port expanded_key_offset[9]
+WARNING: [Synth 8-3331] design aes128_extract_round has unconnected port expanded_key_offset[8]
+WARNING: [Synth 8-3331] design aes128_encrypt_block_hw has unconnected port sin_TKEEP[0]
+WARNING: [Synth 8-3331] design aes128_encrypt_block_hw has unconnected port sin_TSTRB[0]
+WARNING: [Synth 8-3331] design aes128_encrypt_block_hw has unconnected port sin_TUSER[0]
+WARNING: [Synth 8-3331] design aes128_encrypt_block_hw has unconnected port sin_TLAST[0]
+WARNING: [Synth 8-3331] design aes128_encrypt_block_hw has unconnected port sin_TID[0]
+WARNING: [Synth 8-3331] design aes128_encrypt_block_hw has unconnected port sin_TDEST[0]
+INFO: [Synth 8-3971] The signal state_U/aes128_encrypt_bldEe_ram_U/ram_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal round_key_U/aes128_encrypt_bldEe_ram_U/ram_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal expanded_key_U/aes128_encrypt_blfYi_ram_U/ram_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_expand_key_hw_fu_342/tmp_3_2_reg_2789_reg[2]' (FDE) to 'U0/grp_aes128_expand_key_hw_fu_342/tmp_3_24_reg_2777_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_expand_key_hw_fu_342/tmp_3_2_reg_2789_reg[3]' (FDE) to 'U0/grp_aes128_expand_key_hw_fu_342/tmp_3_24_reg_2777_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_expand_key_hw_fu_342/tmp_3_2_reg_2789_reg[4]' (FDE) to 'U0/grp_aes128_expand_key_hw_fu_342/tmp_3_24_reg_2777_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_expand_key_hw_fu_342/tmp_3_2_reg_2789_reg[7]' (FDE) to 'U0/grp_aes128_expand_key_hw_fu_342/tmp_3_24_reg_2777_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_extract_round_fu_349/tmp_reg_533_reg[0]' (FDE) to 'U0/grp_aes128_extract_round_fu_349/tmp_reg_533_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_extract_round_fu_349/tmp_reg_533_reg[1]' (FDE) to 'U0/grp_aes128_extract_round_fu_349/tmp_reg_533_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_extract_round_fu_349/tmp_reg_533_reg[2]' (FDE) to 'U0/grp_aes128_extract_round_fu_349/tmp_reg_533_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\grp_aes128_extract_round_fu_349/tmp_reg_533_reg[3] )
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_add_round_key_fu_373/i_15_3_reg_222_reg[0]' (FDE) to 'U0/grp_aes128_add_round_key_fu_373/tmp_9_reg_206_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_add_round_key_fu_373/i_15_3_reg_222_reg[1]' (FDE) to 'U0/grp_aes128_add_round_key_fu_373/tmp_9_reg_206_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_shift_row_hw_fu_379/tmp_4_reg_158_reg[2]' (FDE) to 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_17_reg_168_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_16_reg_163_reg[0]' (FDE) to 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_16_reg_163_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_17_reg_168_reg[0]' (FDE) to 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_16_reg_163_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_add_round_key_fu_373/state_addr_34_reg_217_reg[1]' (FDE) to 'U0/grp_aes128_add_round_key_fu_373/tmp_9_reg_206_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_16_reg_163_reg[1]' (FDE) to 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_18_reg_173_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_17_reg_168_reg[1]' (FDE) to 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_18_reg_173_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_add_round_key_fu_373/state_addr_36_reg_242_reg[2]' (FDE) to 'U0/grp_aes128_add_round_key_fu_373/state_addr_35_reg_232_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_add_round_key_fu_373/state_addr_34_reg_217_reg[2]' (FDE) to 'U0/grp_aes128_add_round_key_fu_373/tmp_9_reg_206_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_16_reg_163_reg[2]' (FDE) to 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_17_reg_168_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_17_reg_168_reg[2]' (FDE) to 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_18_reg_173_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_add_round_key_fu_373/state_addr_36_reg_242_reg[3]' (FDE) to 'U0/grp_aes128_add_round_key_fu_373/state_addr_35_reg_232_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_add_round_key_fu_373/state_addr_34_reg_217_reg[3]' (FDE) to 'U0/grp_aes128_add_round_key_fu_373/tmp_9_reg_206_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_16_reg_163_reg[3]' (FDE) to 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_17_reg_168_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_17_reg_168_reg[3]' (FDE) to 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_18_reg_173_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_18_reg_173_reg[0]' (FDE) to 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_reg_153_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_reg_153_reg[0]' (FDE) to 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_reg_153_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\grp_aes128_shift_row_hw_fu_379/state_addr_18_reg_173_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\grp_aes128_shift_row_hw_fu_379/state_addr_reg_153_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_18_reg_173_reg[2]' (FDE) to 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_reg_153_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_18_reg_173_reg[3]' (FDE) to 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_reg_153_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_shift_row_hw_fu_379/tmp_4_reg_158_reg[0]' (FDE) to 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_reg_153_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/grp_aes128_shift_row_hw_fu_379/tmp_4_reg_158_reg[1]' (FDE) to 'U0/grp_aes128_shift_row_hw_fu_379/state_addr_reg_153_reg[3]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:58 . Memory (MB): peak = 860.469 ; gain = 568.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++---------------------+---------------------------------------------+---------------+----------------+
+|Module Name          | RTL Object                                  | Depth x Width | Implemented As | 
++---------------------+---------------------------------------------+---------------+----------------+
+|aes128_expand_key_hw | sbox_hw_U/aes128_expand_keybkb_rom_U/q0_reg | 256x8         | Block RAM      | 
+|aes128_sub_bytes_hw  | sbox_hw_U/aes128_sub_bytes_cud_rom_U/q0_reg | 256x8         | Block RAM      | 
+|aes128_sub_bytes_hw  | sbox_hw_U/aes128_sub_bytes_cud_rom_U/q1_reg | 256x8         | Block RAM      | 
++---------------------+---------------------------------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping  Report (see note below)
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|aes128_encrypt_bldEe_ram: | ram_reg    | 16 x 8(WRITE_FIRST)    | W | R | 16 x 8(WRITE_FIRST)    | W | R | Port A and B     | 1      | 0      | 
+|aes128_encrypt_bldEe_ram: | ram_reg    | 16 x 8(WRITE_FIRST)    | W | R | 16 x 8(WRITE_FIRST)    | W | R | Port A and B     | 1      | 0      | 
+|aes128_encrypt_blfYi_ram: | ram_reg    | 256 x 8(WRITE_FIRST)   | W | R | 256 x 8(WRITE_FIRST)   | W | R | Port A and B     | 1      | 0      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance U0/i_16_0/state_U/aes128_encrypt_bldEe_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance U0/i_16_0/state_U/aes128_encrypt_bldEe_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance U0/i_16_3/round_key_U/aes128_encrypt_bldEe_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance U0/i_16_3/round_key_U/aes128_encrypt_bldEe_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance U0/i_16_4/expanded_key_U/aes128_encrypt_blfYi_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance U0/i_16_4/expanded_key_U/aes128_encrypt_blfYi_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance U0/grp_aes128_expand_key_hw_fu_342/i_16_0/sbox_hw_U/aes128_expand_keybkb_rom_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance U0/i_16_28/grp_aes128_sub_bytes_hw_fu_358/sbox_hw_U/aes128_sub_bytes_cud_rom_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance U0/i_16_35/grp_aes128_sub_bytes_hw_fu_358/sbox_hw_U/aes128_sub_bytes_cud_rom_U/q1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:01:10 . Memory (MB): peak = 860.469 ; gain = 568.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:19 . Memory (MB): peak = 933.012 ; gain = 640.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|aes128_encrypt_bldEe_ram: | ram_reg    | 16 x 8(WRITE_FIRST)    | W | R | 16 x 8(WRITE_FIRST)    | W | R | Port A and B     | 1      | 0      | 
+|aes128_encrypt_bldEe_ram: | ram_reg    | 16 x 8(WRITE_FIRST)    | W | R | 16 x 8(WRITE_FIRST)    | W | R | Port A and B     | 1      | 0      | 
+|aes128_encrypt_blfYi_ram: | ram_reg    | 256 x 8(WRITE_FIRST)   | W | R | 256 x 8(WRITE_FIRST)   | W | R | Port A and B     | 1      | 0      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance U0/state_U/aes128_encrypt_bldEe_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance U0/state_U/aes128_encrypt_bldEe_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance U0/round_key_U/aes128_encrypt_bldEe_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance U0/round_key_U/aes128_encrypt_bldEe_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance U0/expanded_key_U/aes128_encrypt_blfYi_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance U0/expanded_key_U/aes128_encrypt_blfYi_ram_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance U0/grp_aes128_expand_key_hw_fu_342/sbox_hw_U/aes128_expand_keybkb_rom_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance U0/grp_aes128_expand_key_hw_fu_342/sbox_hw_U/aes128_expand_keybkb_rom_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance U0/grp_aes128_sub_bytes_hw_fu_358/sbox_hw_U/aes128_sub_bytes_cud_rom_U/q1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:01:21 . Memory (MB): peak = 934.043 ; gain = 641.742
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:01:22 . Memory (MB): peak = 934.043 ; gain = 641.742
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:01:22 . Memory (MB): peak = 934.043 ; gain = 641.742
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:01:23 . Memory (MB): peak = 934.043 ; gain = 641.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:01:23 . Memory (MB): peak = 934.043 ; gain = 641.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:01:23 . Memory (MB): peak = 934.043 ; gain = 641.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:01:23 . Memory (MB): peak = 934.043 ; gain = 641.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |LUT1       |    31|
+|2     |LUT2       |   221|
+|3     |LUT3       |   172|
+|4     |LUT4       |   142|
+|5     |LUT5       |   210|
+|6     |LUT6       |   654|
+|7     |MUXF7      |     9|
+|8     |RAMB18E1   |     3|
+|9     |RAMB18E1_1 |     2|
+|10    |FDRE       |   703|
+|11    |FDSE       |     7|
++------+-----------+------+
+
+Report Instance Areas: 
++------+------------------------------------+---------------------------+------+
+|      |Instance                            |Module                     |Cells |
++------+------------------------------------+---------------------------+------+
+|1     |top                                 |                           |  2154|
+|2     |  U0                                |aes128_encrypt_block_hw    |  2154|
+|3     |    expanded_key_U                  |aes128_encrypt_blfYi       |     2|
+|4     |      aes128_encrypt_blfYi_ram_U    |aes128_encrypt_blfYi_ram   |     2|
+|5     |    grp_aes128_add_round_key_fu_373 |aes128_add_round_key       |    84|
+|6     |    grp_aes128_expand_key_hw_fu_342 |aes128_expand_key_hw       |  1197|
+|7     |      sbox_hw_U                     |aes128_expand_keybkb       |   253|
+|8     |        aes128_expand_keybkb_rom_U  |aes128_expand_keybkb_rom   |   253|
+|9     |    grp_aes128_extract_round_fu_349 |aes128_extract_round       |    52|
+|10    |    grp_aes128_shift_row_hw_fu_379  |aes128_shift_row_hw        |    73|
+|11    |    grp_aes128_sub_bytes_hw_fu_358  |aes128_sub_bytes_hw        |   199|
+|12    |      sbox_hw_U                     |aes128_sub_bytes_cud       |    61|
+|13    |        aes128_sub_bytes_cud_rom_U  |aes128_sub_bytes_cud_rom   |    35|
+|14    |    round_key_U                     |aes128_encrypt_bldEe       |     1|
+|15    |      aes128_encrypt_bldEe_ram_U    |aes128_encrypt_bldEe_ram_1 |     1|
+|16    |    state_U                         |aes128_encrypt_bldEe_0     |   198|
+|17    |      aes128_encrypt_bldEe_ram_U    |aes128_encrypt_bldEe_ram   |   198|
++------+------------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:01:23 . Memory (MB): peak = 934.043 ; gain = 641.742
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:01:02 . Memory (MB): peak = 934.043 ; gain = 275.656
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:01:23 . Memory (MB): peak = 934.043 ; gain = 641.742
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 934.043 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+343 Infos, 31 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:01:26 . Memory (MB): peak = 934.043 ; gain = 650.266
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 934.043 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.runs/system_aes128_encrypt_block_0_0_synth_1/system_aes128_encrypt_block_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_aes128_encrypt_block_0_0, cache-ID = b7b69511110d21c2
+INFO: [Coretcl 2-1174] Renamed 16 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 934.043 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/pacel/Documents/Spring_2024/ECE1155/hardware-encryption/ECE1155_Term_Report/ECE1155_Term_Report.runs/system_aes128_encrypt_block_0_0_synth_1/system_aes128_encrypt_block_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file system_aes128_encrypt_block_0_0_utilization_synth.rpt -pb system_aes128_encrypt_block_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 12 18:46:31 2024...

@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"aes128_encrypt_block_hw": {
-			"proto_instances": {
-			}
-		}
-	}
-}

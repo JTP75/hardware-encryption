@@ -1,0 +1,149 @@
+
+
+================================================================
+== Vivado HLS Report for 'aes128_add_round_key'
+================================================================
+* Date:           Thu Apr 12 20:25:23 2018
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        AES_HLS_ECE1155
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     5.634|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   33|   33|   33|   33|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |   32|   32|         2|          -|          -|    16|    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond)
+3 --> 
+	2  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 4 [1/1] (1.76ns)   --->   "br label %1" [AES_HLS_ECE1155/src/aes_hw.cpp:219]   --->   Operation 4 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 2.32>
+ST_2 : Operation 5 [1/1] (0.00ns)   --->   "%i = phi i5 [ 0, %0 ], [ %i_15, %2 ]"   --->   Operation 5 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 6 [1/1] (1.36ns)   --->   "%exitcond = icmp eq i5 %i, -16" [AES_HLS_ECE1155/src/aes_hw.cpp:219]   --->   Operation 6 'icmp' 'exitcond' <Predicate = true> <Delay = 1.36> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)"   --->   Operation 7 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (1.78ns)   --->   "%i_15 = add i5 %i, 1" [AES_HLS_ECE1155/src/aes_hw.cpp:219]   --->   Operation 8 'add' 'i_15' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %3, label %2" [AES_HLS_ECE1155/src/aes_hw.cpp:219]   --->   Operation 9 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%tmp = zext i5 %i to i64" [AES_HLS_ECE1155/src/aes_hw.cpp:221]   --->   Operation 10 'zext' 'tmp' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%round_key_addr = getelementptr [16 x i8]* %round_key, i64 0, i64 %tmp" [AES_HLS_ECE1155/src/aes_hw.cpp:221]   --->   Operation 11 'getelementptr' 'round_key_addr' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 12 [2/2] (2.32ns)   --->   "%round_key_load = load i8* %round_key_addr, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:221]   --->   Operation 12 'load' 'round_key_load' <Predicate = (!exitcond)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%state_addr = getelementptr [16 x i8]* %state, i64 0, i64 %tmp" [AES_HLS_ECE1155/src/aes_hw.cpp:221]   --->   Operation 13 'getelementptr' 'state_addr' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_2 : Operation 14 [2/2] (2.32ns)   --->   "%state_load = load i8* %state_addr, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:221]   --->   Operation 14 'load' 'state_load' <Predicate = (!exitcond)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "ret void" [AES_HLS_ECE1155/src/aes_hw.cpp:223]   --->   Operation 15 'ret' <Predicate = (exitcond)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 5.63>
+ST_3 : Operation 16 [1/2] (2.32ns)   --->   "%round_key_load = load i8* %round_key_addr, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:221]   --->   Operation 16 'load' 'round_key_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 17 [1/2] (2.32ns)   --->   "%state_load = load i8* %state_addr, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:221]   --->   Operation 17 'load' 'state_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 18 [1/1] (0.99ns)   --->   "%tmp_s = xor i8 %state_load, %round_key_load" [AES_HLS_ECE1155/src/aes_hw.cpp:221]   --->   Operation 18 'xor' 'tmp_s' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 19 [1/1] (2.32ns)   --->   "store i8 %tmp_s, i8* %state_addr, align 1" [AES_HLS_ECE1155/src/aes_hw.cpp:221]   --->   Operation 19 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "br label %1" [AES_HLS_ECE1155/src/aes_hw.cpp:219]   --->   Operation 20 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', AES_HLS_ECE1155/src/aes_hw.cpp:219) [5]  (1.77 ns)
+
+ <State 2>: 2.32ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', AES_HLS_ECE1155/src/aes_hw.cpp:219) [5]  (0 ns)
+	'getelementptr' operation ('round_key_addr', AES_HLS_ECE1155/src/aes_hw.cpp:221) [12]  (0 ns)
+	'load' operation ('round_key_load', AES_HLS_ECE1155/src/aes_hw.cpp:221) on array 'round_key' [13]  (2.32 ns)
+
+ <State 3>: 5.63ns
+The critical path consists of the following:
+	'load' operation ('round_key_load', AES_HLS_ECE1155/src/aes_hw.cpp:221) on array 'round_key' [13]  (2.32 ns)
+	'xor' operation ('tmp_s', AES_HLS_ECE1155/src/aes_hw.cpp:221) [16]  (0.99 ns)
+	'store' operation (AES_HLS_ECE1155/src/aes_hw.cpp:221) of variable 'tmp_s', AES_HLS_ECE1155/src/aes_hw.cpp:221 on array 'state' [17]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
